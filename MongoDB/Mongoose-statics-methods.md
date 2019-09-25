@@ -30,6 +30,8 @@ userSchema.methods.test2 = async function(user: any) {
 export const userSchema = mongoose.models.userSchema || mongoose.model('User', userSchema);
 ```
 
+<br>
+
 `statics`
 
 * Java의 static 메소드와 동일하다고 보면 된다. 즉, 객체를 생성하지 않고 바로 컬렉션에 있는 데이터에 접근할 수 있다.
