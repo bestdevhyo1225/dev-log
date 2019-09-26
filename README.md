@@ -4,6 +4,8 @@
 
 ### :book: AWS
 
+* [AWS Lambda](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Lambda.md)
+
 * [AWS CloudFront & Lambda@Edge](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/CloudFront-Lambda%40Edge.md)
 
 <br>
