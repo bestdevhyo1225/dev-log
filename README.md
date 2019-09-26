@@ -8,6 +8,8 @@
 
 * [AWS CloudFront & Lambda@Edge](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/CloudFront-Lambda%40Edge.md)
 
+* [AWS Cognito](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Cognito.md)
+
 <br>
 
 ### :book: MongoDB
