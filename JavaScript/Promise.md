@@ -34,7 +34,9 @@ square(2, function(x) {
 
 ```javascript
 function square(x) {
-    return new Promise((resolve, reject) => resolve(x * x))
+    return new Promise((resolve, reject) => { 
+        setTimeout(() => resolve(x * x), 100);
+    });
 }
 
 square(2)
