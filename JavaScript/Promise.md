@@ -58,7 +58,7 @@ Promise는 세 가지 상태를 통해 동작 한다. (`Pending`, `Fullfilled`, 
 
 * **`Fullfilled`**
 
-    * 비동기 처리 로직이 완료되어 resolve 메소드가 호출되고, resolve 함수 인자에 비동기 처리의 결과 값이 전달된다.
+    * 비동기 처리 로직이 완료되어 resolve 메소드가 호출되고, resolve 함수 인자에 비동기 처리의 결과 값이 전달된다.
 
 * **`Rejected`**
 
