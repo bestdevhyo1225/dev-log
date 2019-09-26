@@ -50,3 +50,16 @@ square(2)
 
 ### :book: Promise는 어떤 방식으로 동작되나요?
 
+Promise는 세 가지 상태를 통해 동작 한다. (`Pending`, `Fullfilled`, `Rejected`)
+
+* **`Pending`**
+
+    * new Promise(executor)로 Promise 객체를 생성할 때, 비동기 처리 로직이 아직 완료되지 않은 대기 상태이다.
+
+* **`Fullfilled`**
+
+    * 비동기 처리 로직이 완료되어 resolve 메소드가 호출되고, resolve 함수 인자에 비동기 처리의 결과 값이 전달된다.
+
+* **`Rejected`**
+
+    * 비동기 처리가 실패하거나 오류가 발생한 상태이다.
