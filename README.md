@@ -12,7 +12,11 @@
 
 <br>
 
-### :closed_book: Linux
+### :closed_book: CS
+
+* **`Operating System`**
+
+    * [Program, Process, Thread](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Program-Process-Thread.md)
 
 <br>
 
@@ -20,19 +24,11 @@
 
 * [Mongoose Schema 사용자 정의 메소드 (statics vs methods)](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Mongoose-statics-methods.md)
 
-<br> 
-
-### :green_book: MySQL
-
 <br>
 
 ### :blue_book: JavaScript
 
 * [JavaScript - Promise](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Promise.md)
-
-<br>
-
-### :blue_book: TypeScript
 
 <br>
 
