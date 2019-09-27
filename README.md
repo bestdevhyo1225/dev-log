@@ -2,7 +2,7 @@
 
 <br>
 
-### :paperclip: AWS
+### :closed_book: AWS
 
 * [AWS Lambda](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Lambda.md)
 
@@ -12,18 +12,22 @@
 
 <br>
 
-### :paperclip: MongoDB
+### :green_book: MongoDB
 
 * [Mongoose Schema 사용자 정의 메소드 (statics vs methods)](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Mongoose-statics-methods.md)
 
 <br>
 
-### :paperclip: JavaScript
+### :blue_book: JavaScript
 
 * [JavaScript - Promise](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Promise.md)
 
 <br>
 
-### :paperclip: ETC
+### :blue_book: TypeScript
+
+<br>
+
+### :orange_book: ETC
 
 * [Third-Party가 뭐지?](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/Third-Party.md)
