@@ -14,9 +14,11 @@
 
 * `SQL의 대표적인 예시 - SELECT, INSERT, DELETE, UPDATE..`
 
-> 만약 사용자가 게시글을 올린다. (INSERT)
->
-> 작성한 게시글을 바로 봐야 한다. (SELECT)
+`트랜잭션(Transaction)` 이해하기 위한 간단한 예를 들어 보면 다음과 같다.
+
+    1. 만약 사용자가 홈페이지에서 게시글을 올린다. (INSERT)
+
+    2. 사용자는 자기가 작성한 게시글을 바로 봐야 한다. (SELECT)
 
 여기서 `트랜잭션(Transaction)`은 `INSERT`와 `SELECT`를 합쳐서 수행한 `작업의 단위`를 말한다.
 
