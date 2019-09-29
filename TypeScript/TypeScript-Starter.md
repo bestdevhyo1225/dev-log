@@ -14,13 +14,15 @@ TypeScript로 개발하면서 항상 주의해야 하는부분은 버전을 잘 
 
 <br>
 
-### :book: TypeScript란 무엇인가
+### :book: TypeScript의 특징
 
-`TypeScript 언어의 문법에 맞춰 작성된 소스 코드`를 `JavaScript 런타임 환경에서 실행 가능한 코드`로 변환 시켜주는 것을 말한다.
+`TypeScript 언어의 문법에 맞춰 작성된 소스 코드`를 `JavaScript 런타임 환경에서 실행 가능한 코드`로 변환 시켜준다.
 
 * 변환시켜주는 행위를 `Compile`이라고 한다.
 
 * 변환시켜주는 행위를 하는 프로그램을 `Compiler(TypeScript Complier)`라고 한다.
+
+* `Compile` 해서 사용해야하기 때문에 TypeScript를 `Compiled Language`라고 한다.
 
 <br>
 
