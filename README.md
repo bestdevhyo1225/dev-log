@@ -30,6 +30,8 @@
 
 * [JavaScript - Promise](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Promise.md)
 
+* [JavaScript - Async / Await](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Async-Await.md)
+
 <br>
 
 ### :blue_book: TypeScript
