@@ -16,7 +16,7 @@
 
 * **`Operating System`**
 
-    * [Program, Process, Thread](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Program-Process-Thread.md)
+    * [Program, Process, Thread](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Program-Process-Thread.md)
 
 <br>
 
