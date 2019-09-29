@@ -4,8 +4,8 @@
 
 ### :book: Serverless Framework가 무엇인가요?
 
-The open-source, application framework to easily build serverless architectures on AWS Lambda & more.
-오픈소스이며, AWS Lambda 등에서 서버리스 아키텍처를 쉽게 구축할 수 있는 애플리케이션 프레임워크이다. 
+The open-source, application framework to easily build serverless architectures on AWS Lambda & more.<br>
+( 오픈소스이며, AWS Lambda 등에서 서버리스 아키텍처를 쉽게 구축할 수 있는 애플리케이션 프레임워크이다. )
 
 출처 : [https://serverless.com/](https://serverless.com/)
 
