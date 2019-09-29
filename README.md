@@ -18,6 +18,10 @@
 
     * [Program, Process, Thread](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Program-Process-Thread.md)
 
+* **`Database`**
+
+    * [트랜잭션(Transaction)이 뭔가요?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Transaction.md)
+
 <br>
 
 ### :green_book: MongoDB
