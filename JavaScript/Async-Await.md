@@ -91,7 +91,7 @@ interface Todo {
 }
 
 // fetch 예시 1
-function fetchUser(): void {
+function fetchUser(): User {
     const url: string = 'domain.com/api/user/1';
     return fetch(url).then((res: Response) => {
         return res.json();
@@ -99,7 +99,7 @@ function fetchUser(): void {
 }
 
 // fetch 예시 2
-function fetchTodo(): void {
+function fetchTodo(): Todo {
     const url: string = 'domain.com/api/todo/1';
     return fetch(url).then((res: Response) => {
         return res.json();
@@ -131,7 +131,7 @@ interface Todo {
 }
 
 // fetch 예시 1
-function fetchUser(): void {
+function fetchUser(): User {
     const url: string = 'domain.com/api/user/1';
     return fetch(url).then((res: Response) => {
         return res.json();
@@ -139,7 +139,7 @@ function fetchUser(): void {
 }
 
 // fetch 예시 2
-function fetchTodo(): void {
+function fetchTodo(): Todo {
     const url: string = 'domain.com/api/todo/1';
     return fetch(url).then((res: Response) => {
         return res.json();
