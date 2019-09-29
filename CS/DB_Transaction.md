@@ -14,19 +14,19 @@
 
 * `SQL의 대표적인 예시 - SELECT, INSERT, DELETE, UPDATE..`
 
-`트랜잭션(Transaction)`을 이해하기 위한 간단한 예를 들어 보면 다음과 같다.
+트랜잭션(Transaction)을 이해하기 위한 간단한 예를 들어 보면 다음과 같다.
 
 * `첫 번째로 사용자가 홈페이지에서 게시글을 올린다. (INSERT)`
 
 * `사용자는 자기가 작성한 게시글을 바로 봐야 한다. (SELECT)`
 
-여기서 `트랜잭션(Transaction)`은 INSERT와 SELECT를 합쳐서 수행한 `작업의 단위`를 말한다.
+여기서 트랜잭션(Transaction)은 INSERT와 SELECT를 합쳐서 수행한 `작업의 단위`를 말한다.
 
 <br>
 
 ### :book: 트랜잭션(Transaction)의 중요한 특징이 있나요?
 
-가장 중요하고 주의할 점은 `트랜잭션(Transaction)`은 질의어가 한 문장이 아니라, 질의어가 복수의 문장으로 이루어져 있고, 그것을 하나의 덩어리 다뤄야 한다는 것이 핵심이다. `트랜잭션(Transaction)`은 복수의 질의어를 사용하는 사용자 기준에 따라 정해지는 것을 의미한다. 마지막으로 `트랜잭션(Transaction)`은 4가지의 특성을 가지고 있고, 그것은 바로 `원자성(Atomicity)`, `일관성(Consistency)`, `고립성(Isolation)`, `지속성(Durability)`이 있다.
+가장 중요하고 주의할 점은 트랜잭션(Transaction)은 질의어가 한 문장이 아니라, 질의어가 복수의 문장으로 이루어져 있고, 그것을 하나의 덩어리 다뤄야 한다는 것이 핵심이다. 트랜잭션(Transaction)은 복수의 질의어를 사용하는 사용자 기준에 따라 정해지는 것을 의미한다. 마지막으로 트랜잭션(Transaction)은 4가지의 특성을 가지고 있고, 그것은 바로 `원자성(Atomicity)`, `일관성(Consistency)`, `고립성(Isolation)`, `지속성(Durability)`이 있다.
 
 <br>
 
