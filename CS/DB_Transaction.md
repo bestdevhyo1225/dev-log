@@ -12,13 +12,13 @@
 
 데이터베이스 관리 시스템인 DBMS의 경우 SQL이라는 질의어를 통해 데이터베이스에 접근하는 것을 의미한다.
 
-* SQL의 대표적인 예시 - SELECT, INSERT, DELETE, UPDATE..
+* `SQL의 대표적인 예시 - SELECT, INSERT, DELETE, UPDATE..`
 
-`트랜잭션(Transaction)` 이해하기 위한 간단한 예를 들어 보면 다음과 같다.
+`트랜잭션(Transaction)`을 이해하기 위한 간단한 예를 들어 보면 다음과 같다.
 
-    1. 만약 사용자가 홈페이지에서 게시글을 올린다. (INSERT)
+* `첫 번째로 사용자가 홈페이지에서 게시글을 올린다. (INSERT)`
 
-    2. 사용자는 자기가 작성한 게시글을 바로 봐야 한다. (SELECT)
+* `사용자는 자기가 작성한 게시글을 바로 봐야 한다. (SELECT)`
 
 여기서 `트랜잭션(Transaction)`은 INSERT와 SELECT를 합쳐서 수행한 `작업의 단위`를 말한다.
 
