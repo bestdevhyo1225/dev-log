@@ -14,7 +14,7 @@ TypeScript로 개발하면서 항상 주의해야 하는부분은 버전을 잘 
 
 <br>
 
-### :book: TypeScript의 특징
+### :book: TypeScript의 특징은?
 
 `TypeScript 언어의 문법에 맞춰 작성된 소스 코드`를 `JavaScript 런타임 환경에서 실행 가능한 코드`로 변환 시켜준다.
 
