@@ -32,6 +32,12 @@
 
 <br>
 
+### :blue_book: TypeScript
+
+* [TypeScript를 시작하면서 알아둘 것](https://github.com/bestdevhyo1225/dev-log/blob/master/TypeScript/TypeScript-Starter.md)
+
+<br>
+
 ### :orange_book: ETC
 
 * [Third-Party가 뭐지?](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/Third-Party.md)
