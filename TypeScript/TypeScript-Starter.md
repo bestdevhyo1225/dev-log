@@ -32,11 +32,11 @@ TypeScript로 개발하면서 항상 주의해야 하는부분은 버전을 잘 
 
 ### :book: TypeScript를 사용하면서 알아야 할 것을 정리하자면
 
-* **JavaScript 실행 환경**
+* JavaScript 실행 환경
 
-* **TypeScript Compiler 사용법**
+* TypeScript Compiler 사용법
 
-* **TypeScript 문법**
+* TypeScript 문법
 
 <br>
 
