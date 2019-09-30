@@ -30,6 +30,12 @@
 
 <br>
 
+### :green_book: MySQL
+
+* [MySQL Architecture](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Architecture.md)
+
+<br>
+
 ### :green_book: MongoDB
 
 * [Mongoose Schema 사용자 정의 메소드 (statics vs methods)](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Mongoose-statics-methods.md)
