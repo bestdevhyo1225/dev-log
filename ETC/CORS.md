@@ -4,7 +4,7 @@
 
 ### :book: CORS란??
 
-Cross-Site Http Request를 가능하게 하는 표준 규약이다. HTTP 요청은 기본적으로 Cross-Site Http Request가 가능하지만, JavaScript로 다른 웹 페이지에 접근할 때는 `Same Origin Policy`로 인해 요청이 불가능하다.
+Cross-Site Http Request를 가능하게 하는 표준 규약이다. HTTP 요청은 기본적으로 Cross-Site Http Request가 가능하지만, JavaScript로 다른 웹 페이지에 접근할 때는 `Same Origin Policy`로 인해 요청이 불가능하다.
 
 <br>
 
