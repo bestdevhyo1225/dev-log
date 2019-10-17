@@ -28,11 +28,17 @@
 
     * [트랜잭션(Transaction)이 뭔가요?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Transaction.md)
 
+* **`Network`**
+
+    * [Port & Port 번호](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_Port.md)
+
 <br>
 
 ### :green_book: MySQL
 
 * [MySQL Architecture](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Architecture.md)
+
+* [MySQL에서 트랜잭션, 잠금, 트랜잭션의 격리 수준]()
 
 <br>
 
