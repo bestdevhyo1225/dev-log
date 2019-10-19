@@ -28,7 +28,7 @@
 
     * [프로세스 제어 블록(Process Control Block, PCB)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Process-Control-Block.md)
 
-    * [프로세스 문맥(Process Context)]((https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Process-Context.md))
+    * [프로세스 문맥(Process Context)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Process-Context.md)
 
 * **`Database`**
 
