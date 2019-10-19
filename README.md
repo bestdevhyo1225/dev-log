@@ -26,6 +26,10 @@
 
     * [시분할 시스템(Time Sharing System)이란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Time-Sharing-System.md)
 
+    * [프로세스 제어 블록(Process Control Block, PCB)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Process-Control-Block.md)
+
+    * [프로세스 문맥(Process Context)]((https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Process-Context.md))
+
 * **`Database`**
 
     * [트랜잭션(Transaction)이 뭔가요?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Transaction.md)
