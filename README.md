@@ -24,6 +24,8 @@
 
     * [Program, Process, Thread](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Program-Process-Thread.md)
 
+    * [시분할 시스템(Time Sharing System)이란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Time-Sharing-System.md)
+
 * **`Database`**
 
     * [트랜잭션(Transaction)이 뭔가요?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Transaction.md)
