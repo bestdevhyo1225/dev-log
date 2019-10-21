@@ -1,4 +1,4 @@
-## SSH (Secure Shell) 프로토콜
+## SSH (Secure Shell)
 
 <br>
 
