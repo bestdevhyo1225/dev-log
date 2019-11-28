@@ -13,7 +13,7 @@ The open-source, application framework to easily build serverless architectures 
 
 ### :book: Serverless가 무엇인가요?
 
-Serverless를 직역하자면, 서버가 없다는 뜻이지만 서버가 없는 것이 아니다. 어떠한 작업을 수행하기 위해서 컴퓨터를 혹은 가상 머신에 서버를 설정하고, 서버를 통하여 작업을 처리하는 것이 아님을 의마한다.
+Serverless를 직역하자면, 서버가 없다는 뜻이지만 서버가 없는 것이 아니다. 어떠한 작업을 수행하기 위해서 컴퓨터를 혹은 가상 머신에 서버를 설정하고, 서버를 통하여 작업을 처리하는 것이 아님을 의미한다.
 
 <br>
 
