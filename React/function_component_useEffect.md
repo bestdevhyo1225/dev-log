@@ -1,4 +1,4 @@
-## 함수형 컴포넌트 - useEffect()로 간단한 Life Cycle 사용하기
+## 함수형 컴포넌트 - useEffect()로 간단한 Life Cycle 구현하기
 
 <br>
 
