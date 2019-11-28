@@ -71,6 +71,8 @@ function FuncComponent(props: FuncComponentProps) {
 }
 ```
 
+<br>
+
 ### :book: 정리
 
-함수형 컴포넌트 hooks인 useEffect 함수를 잘 활용하면 클래스 컴포넌트의 `componentDidMount`, `componentDidUpdate`, `componentWillUnmount` Life Cycle를 구현할 수 있다.
+함수형 컴포넌트 hooks인 useEffect 함수를 잘 활용하면, 클래스 컴포넌트의 `componentDidMount`, `componentDidUpdate`, `componentWillUnmount` Life Cycle를 구현할 수 있다.
