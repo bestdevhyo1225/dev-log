@@ -42,6 +42,8 @@
 
     * [서브넷 마스크(Subnet Mask)란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_Subnet-Mask.md)
 
+    * [MTU(Maximum Transmission Unit)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_MTU.md)
+
 <br>
 
 ### :green_book: MySQL
