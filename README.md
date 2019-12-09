@@ -64,6 +64,8 @@
 
 * [JavaScript - Async / Await](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Async-Await.md)
 
+* [JavaScript - Generator](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Generator.md)
+
 <br>
 
 ### :blue_book: TypeScript
