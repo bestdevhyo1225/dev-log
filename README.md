@@ -32,6 +32,8 @@
 
 * **`Database`**
 
+    * [색인(Index)이란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Index.md)
+
     * [트랜잭션(Transaction)이 뭔가요?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Transaction.md)
 
 * **`Network`**
