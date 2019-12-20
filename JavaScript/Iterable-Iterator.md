@@ -4,7 +4,7 @@
 
 ### :book: Iterable / Iterator 프로토콜
 
-* Iterable : Iterator를 리턴하는 [Symbol.iterator]() 를 가진 값
+* Iterable : Iterator를 리턴하는 `[Symbol.iterator]()` 를 가진 값
 
 * Iterator : { value, done } 객체를 리턴하는 next() 를 가진 값
 
