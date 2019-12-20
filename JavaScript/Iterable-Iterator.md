@@ -1,4 +1,4 @@
-### Iterable
+### Iterable / Iterator
 
 <br>
 
@@ -8,7 +8,7 @@
 
 * Iterator : { value, done } 객체를 리턴하는 next() 를 가진 값
 
-* Iterable / Iterator 프로토콜 : Iterable을 for...of, 전개 연산자등과 함께 동작하도록한 규약 
+* Iterable / Iterator 프로토콜 : Iterable을 for...of, 전개 연산자등과 함께 동작하도록한 규약 
 
 ```javascript
 // 사용자 정의 이터러블..
