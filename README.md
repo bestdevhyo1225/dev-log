@@ -64,11 +64,13 @@
 
 ### :blue_book: JavaScript
 
+* [JavaScript - Iterable / Iterator](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Iterable-Iterator.md)
+
+* [JavaScript - Generator](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Generator.md)
+
 * [JavaScript - Promise](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Promise.md)
 
 * [JavaScript - Async / Await](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Async-Await.md)
-
-* [JavaScript - Generator](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Generator.md)
 
 <br>
 
