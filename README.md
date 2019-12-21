@@ -54,6 +54,8 @@
 
 * [MySQL에서 트랜잭션, 잠금, 트랜잭션의 격리 수준](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Transaction-Lock-IsolationLevel.md)
 
+* [MySQL에서 JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Join.md)
+
 <br>
 
 ### :green_book: MongoDB
