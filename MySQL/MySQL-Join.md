@@ -45,7 +45,7 @@ for ( const record1 in table1 ) { // 외부 루프 (OUTER)
 }
 ```
 
-**`LEFT OUTER JOIN (LEFT JOIN)`**
+**LEFT OUTER JOIN (LEFT JOIN)**
 
 아래의 sql문을 보면, `LEFT OUTER JOIN` 키워드 왼쪽에 테이블이 사용됐고 오른쪽 salaries 테이블이 사용됐기 때문에 employees가 `OUTER 테이블`이 된다. 따라서 **최종 결과는 employees 테이블의 레코드에 의해 결정된다.**
 
@@ -56,9 +56,9 @@ LEFT OUTER JOIN salaries AS s -- LEFT JOIN이라 salaries가 INNER 테이블
 ON e.emp_no = s.emp_no;
 ```
 
-**`RIGHT OUTER JOIN (RIGHT JOIN)`**
+**RIGHT OUTER JOIN (RIGHT JOIN)**
 
-아래으 sql문을 보면, `RIGHT OUTER JOIN` 키워드 오른쪽에 employees 테이블이 사용됐고 왼쪽에 salaries 테이블이 사용됐으므로 employees가 `OUTER 테이블`이 된다.
+아래으 sql문을 보면, `RIGHT OUTER JOIN` 키워드 오른쪽에 employees 테이블이 사용됐고 왼쪽에 salaries 테이블이 사용됐으므로 employees가 `OUTER 테이블`이 된다. 따라서 **최종 결과는 employees 테이블의 레코드에 의해 결정된다.**
 
 ```sql
 SELECT *
