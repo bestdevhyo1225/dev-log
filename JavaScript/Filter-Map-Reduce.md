@@ -101,7 +101,7 @@ console.log(count); // 5
 
 * 같은 결과지만 호출이 5번 된 이유는 intialValue 를 0 으로 지정해주었기 때문에 preValue 가 0 으로 설정된다.
 
-> ### map, filter 로 구현한 코드 reduce 로 구현하기
+> #### map, filter 로 구현한 코드 reduce 로 구현하기
 
 ```javascript
 // map - 문자열 길이 구하기
@@ -122,7 +122,7 @@ const arr2 = arr1.reduce( (preValue, curValue) => {
 console.log(arr2);
 ```
 
-> ### Object.keys
+> #### Object.keys
 
 * Object.keys 메소드는 Object 의 property 를 배열로 만들어 줍니다.
 
@@ -151,9 +151,3 @@ const sum = Object.keys(obj).reduce( (preValue, curValue) => {
 	return preValue + obj[curValue]; // 콜백 함수 내에서 obj 에 접근해야 한다.
 }, 0 );
 ```
-
-<br>
-
-### :bookmark: 참고 사이트
-
-* [ 자바 스크립트의 유용한 배열 메소드 사용하기 .. map(), filter(), find(), reduce() ](
