@@ -1,5 +1,7 @@
 ### SQL 모음
 
+<br>
+
 * AUTO_INCREMENT 초기화 하기
 
 ```sql
