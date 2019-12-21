@@ -56,6 +56,8 @@
 
 * [MySQL에서 JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Join.md)
 
+* [자주 사용할 것 같은 SQL 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-SQL.md)
+
 <br>
 
 ### :green_book: MongoDB
