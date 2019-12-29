@@ -11,3 +11,5 @@
 * [https://swiftcoding.org/nginx-routing-conf](https://swiftcoding.org/nginx-routing-conf)
 
 * [https://www.securesign.kr/guides/NGINX-SSL-Certificate-Install](https://www.securesign.kr/guides/NGINX-SSL-Certificate-Install)
+
+* [https://blog.iwanhae.ga/nginx-ssl-https/](https://blog.iwanhae.ga/nginx-ssl-https/)
