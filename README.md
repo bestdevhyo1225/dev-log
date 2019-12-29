@@ -46,6 +46,8 @@
 
     * [MTU(Maximum Transmission Unit)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_MTU.md)
 
+    * [HTTPS 공부할 참고 자료](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_nginx_https_reference.md)
+
 <br>
 
 ### :green_book: MySQL
