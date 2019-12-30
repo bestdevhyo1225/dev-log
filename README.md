@@ -90,6 +90,12 @@
 
 <br>
 
+### :blue_book: Java
+
+* [빌드 도구 - Maven 그리고 Gradle](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/Maven-Gradle.md)
+
+<br>
+
 ### :blue_book: React
 
 * [함수형 컴포넌트 - useEffect()로 간단한 Life Cycle 사용하기](https://github.com/bestdevhyo1225/dev-log/blob/master/React/function_component_useEffect.md)
