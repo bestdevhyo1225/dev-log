@@ -44,7 +44,7 @@ Groovy 언어 기반의 빌드 도구이며, Groovy는 JVM에서 실행되는 �
 
 `정리`
 
-* 오픈 소스 기반의 Build 자동화 시스템으로 Groovy 기반의 DSL(Domain-Specific Language)로 작성한다.
+* 오픈 소스 기반의 Build 자동화 시스템으로 Groovy 기반의 DSL(Domain-Specific Language)로 작성한다.
 
 * Build-by-Convention 을 바탕으로 한다. (스크립트 규모가 작고 읽기 쉽다.)
 
