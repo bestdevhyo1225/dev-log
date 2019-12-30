@@ -107,3 +107,5 @@
 * [Third-Party가 뭐지?](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/Third-Party.md)
 
 * [CORS(Cross-Origin Resource Sharing)](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/CORS.md)
+
+* [.jar에 대해서 알아봅시다..](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/JAR.md)
