@@ -12,4 +12,4 @@
 
 * [https://www.securesign.kr/guides/NGINX-SSL-Certificate-Install](https://www.securesign.kr/guides/NGINX-SSL-Certificate-Install)
 
-* [https://blog.iwanhae.ga/nginx-ssl-https/](https://blog.iwanhae.ga/nginx-ssl-https/)
+* [https://minwan1.github.io/2019/01/09/2019-01-14-https/](https://minwan1.github.io/2019/01/09/2019-01-14-https/)
