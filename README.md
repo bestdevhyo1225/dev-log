@@ -36,6 +36,8 @@
 
     * [트랜잭션(Transaction)이 뭔가요?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Transaction.md)
 
+    * [Reflection에 대해서 간단한 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Reflection.md)
+
 * **`Network`**
 
     * [Port & Port 번호](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_Port.md)
@@ -109,3 +111,5 @@
 * [CORS(Cross-Origin Resource Sharing)](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/CORS.md)
 
 * [.jar에 대해서 알아봅시다..](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/JAR.md)
+
+* [Mac에서 Iterm2 세팅시, 참고자료](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/Iterm2-Setting.md)
