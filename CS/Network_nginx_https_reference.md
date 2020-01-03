@@ -12,4 +12,4 @@
 
 * [https://minwan1.github.io/2019/01/09/2019-01-14-https/](https://minwan1.github.io/2019/01/09/2019-01-14-https/)
 
-* [Nginx 웹 서버를 활용해서 https 적용하기](https://swiftcoding.org/nginx-routing)
+* [Nginx 웹 서버를 활용해서 https 적용하기](https://swiftcoding.org/nginx-routing)
