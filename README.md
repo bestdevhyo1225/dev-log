@@ -111,3 +111,5 @@
 * [CORS(Cross-Origin Resource Sharing)](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/CORS.md)
 
 * [.jar에 대해서 알아봅시다..](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/JAR.md)
+
+* [Mac에서 Iterm2 세팅시, 참고자료](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/Iterm2-Setting.md)
