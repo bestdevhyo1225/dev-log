@@ -22,4 +22,4 @@
 
 ### :book: 장점
 
-Reflection을 사용하면, DB 서버에 부하 분산을 유도해낼 수 있다. 더 나아가 실 서비스에선 Clustering을 통해, `Master 서버`가 ShutDown 되었을 때, `Slave 서버`를 `Master`로 승격하여 FailOver를 통한 고가용성 DB서버를 구축할 수 있다.  
+Reflection을 사용하면, DB 서버에 부하 분산을 유도해낼 수 있다. 더 나아가 실 서비스에선 Clustering을 통해, `Master 서버`가 ShutDown 되었을 때, `Slave 서버`를 `Master`로 승격하여 FailOver를 통한 고가용성 DB서버를 구축할 수 있다.  
