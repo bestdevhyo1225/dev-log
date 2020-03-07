@@ -10,6 +10,8 @@
 
 * [AWS Cognito](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Cognito.md)
 
+* [AWS Network 구성할 참고 자료 (VPC, NAT, Private Subnet 등등)](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Network.md)
+
 <br>
 
 ### :closed_book: Serverless
