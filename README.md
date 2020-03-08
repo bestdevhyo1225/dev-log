@@ -52,6 +52,8 @@
 
     * [HTTPS 공부할 참고 자료](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_nginx_https_reference.md)
 
+    * [gRPC를 사용하기 전에 HTTP2에 대해서 알아보자](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_HTTP2.md)
+
 <br>
 
 ### :green_book: MySQL
