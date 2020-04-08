@@ -14,6 +14,8 @@
 
 - [AWS ECS & ECR 요약](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/ECS_ECR.md)
 
+- [AWS Fargate에 대해서 간단하게 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Fargate.md)
+
 <br>
 
 ### :closed_book: Docker
