@@ -1,6 +1,6 @@
 ## AWS Fargate
 
-### AWS Farget란 무엇인가...
+### :book: AWS Farget란 무엇인가...
 
 - 매니지드 컨테이너 오케스트레이션 서비스인 ECS와 EKS를 기반으로 작동하는 서비스이다.
 
