@@ -12,6 +12,8 @@
 
 - [AWS Network 구성할 참고 자료 (VPC, NAT, Private Subnet 등등)](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Network.md)
 
+- [AWS ECS & ECR 요약](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/ECS_ECR.md)
+
 <br>
 
 ### :closed_book: Docker
