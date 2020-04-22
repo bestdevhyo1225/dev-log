@@ -2,7 +2,7 @@
 
 프로그래머스 알고리즘 문제에서 안정 정렬, 불안정 정렬과 관련된 문제를 풀었다. 조금 애를 먹었기 때문에 간단히 정리하려고 한다.
 
-[프로그래머스 - 파일명 정렬](https://programmers.co.kr/learn/courses/30/lessons/17686)
+- [프로그래머스 - 파일명 정렬](https://programmers.co.kr/learn/courses/30/lessons/17686)
 
 <br>
 
