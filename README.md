@@ -68,6 +68,10 @@
 
   - [gRPC를 사용하기 전에 HTTP2에 대해서 알아보자](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_HTTP2.md)
 
+- **`Computer Architecture`**
+
+- [캐시(Cache)에 대해서](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Computer_Architecture_cache.md)
+
 <br>
 
 ### :green_book: MySQL
