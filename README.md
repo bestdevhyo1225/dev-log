@@ -96,7 +96,7 @@
 
 ### :green_book: Redis
 
-- [Redis 참고 자료](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Precautions.md)
+- [Redis 자료 모음](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Precautions.md)
 
 <br>
 
