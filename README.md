@@ -98,6 +98,8 @@
 
 - [Redis 자료 모음](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Precautions.md)
 
+- [Hashes Zip List](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Hashes_Ziplist.md)
+
 <br>
 
 ### :blue_book: JavaScript
