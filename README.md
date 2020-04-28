@@ -94,6 +94,12 @@
 
 <br>
 
+### :green_book: Redis
+
+- [Redis 참고 자료](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Precautions.md)
+
+<br>
+
 ### :blue_book: JavaScript
 
 - [JavaScript - Iterable / Iterator](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Iterable-Iterator.md)
