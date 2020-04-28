@@ -14,13 +14,14 @@
 
 - redis.conf의 ADVANCED CONFIG 섹션을 보면, Hashes의 내부 타입을 결정할 2개의 파라미터가 있다.
 
-  - `hash-max-ziplist-entries 512`
+  ```
+  hash-max-ziplist-entries 512
+  hash-max-ziplist-value 64
+  ```
 
-    - 필드의 개수가 512개 이하이면 `Zip List`에 저장되고, 513개 이상이면 `HashTable`에 저장한다.
+  - 필드의 개수가 512개 이하이면 `Zip List`에 저장되고, 513개 이상이면 `HashTable`에 저장한다.
 
-  - `hash-max-ziplist-value 64`
-
-    - String 바이트 수가 64바이트 이하이면 `Zip List`에 저장되고, 65바이트부터는 `HashTable`에 저장한다.
+  - String 바이트 수가 64바이트 이하이면 `Zip List`에 저장되고, 65바이트부터는 `HashTable`에 저장한다.
 
 - 메모리가 부족하면, 이 파라미터를 적절히 조절해서 메모리를 적게 사용할 수 있도록 도와준다.
 
