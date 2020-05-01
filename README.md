@@ -114,6 +114,8 @@
 
 - [JavaScript - Filter, Map, Reduce](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Filter-Map-Reduce.md)
 
+- [Javascript - Await 및 Promise.all()을 적절하게 사용하여 수행시간을 단축하자](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Await_Optimization.md)
+
 <br>
 
 ### :blue_book: TypeScript

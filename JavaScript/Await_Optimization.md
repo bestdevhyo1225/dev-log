@@ -1,4 +1,4 @@
-## Await를 잘 쓰는 방법
+## Await 및 Promise.all()을 적절하게 사용하여 수행시간을 단축하자
 
 <br>
 
@@ -31,6 +31,8 @@ const checkValidKey = (key) => {
 };
 ```
 
+<br>
+
 - main1 함수는 위의 코드를 호출하여 사용하는 부분이다.
 - readProducts(), readCounpons(), readKey() 함수는 독립적이다. 즉, 어떤것을 먼저 호출해도 각자에게 영향을 주지 않는다.
 - readKey(), checkValidKey(key) 함수의 관계를 따져보면, checkValidKey(key) 함수는 readKey()가 반드시 호출되어야 사용할 수 있는 함수이므로 의존적인 관계를 가지고 있다.
@@ -53,6 +55,8 @@ const main1 = async () => {
 };
 ```
 
+<br>
+
 - 위의 코드를 독립적인 관계, 의존적인 관계로 나눠서 수행 시간을 줄일 수 있다.
 - 독립적인 관계를 가지는 readProducts(), readCounpons(), readKey() 함수들은 Promise.all 함수를 사용하여 병렬적으로 처리한다.
 - 그리고 나서 checkValidKey(key) 함수를 호출한다.
@@ -72,6 +76,8 @@ const main2 = async () => {
   if (result) console.log("end");
 };
 ```
+
+<br>
 
 - Promise.all 함수가 비동기 함수들을 병렬적으로 처리해주는 특성을 살려 수행시간을 더 단축할 수 있다.
 - 총 수행시간은 `1,200ms`이 된다.
