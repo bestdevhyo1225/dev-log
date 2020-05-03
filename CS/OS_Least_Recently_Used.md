@@ -12,7 +12,7 @@
 
 ### :book: LRU 알고리즘 주요 동작
 
-![image](https://user-images.githubusercontent.com/23515771/80915599-50e0be80-8d8e-11ea-9ed1-3df09cc7ec36.png)
+<img src="https://user-images.githubusercontent.com/23515771/80915599-50e0be80-8d8e-11ea-9ed1-3df09cc7ec36.png" width="500px" height="400px">
 
 <br>
 
