@@ -46,6 +46,8 @@
 
   - [프로세스 문맥(Process Context)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Process-Context.md)
 
+  - [Least Recently Used(LRU) 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Least_Recently_Used.md)
+
 - **`Database`**
 
   - [색인(Index)이란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Index.md)
