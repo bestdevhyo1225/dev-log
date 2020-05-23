@@ -16,25 +16,17 @@
 
 - [AWS Fargate에 대해서 간단하게 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Fargate.md)
 
-<br>
-
 ### :closed_book: Docker
 
 - [자주 사용하는 command 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Docker/Docker-command.md)
-
-<br>
 
 ### :closed_book: Kubernetes
 
 - [Pod에 대해서 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Pod.md)
 
-<br>
-
 ### :closed_book: Serverless
 
 - [Serverless Framework](https://github.com/bestdevhyo1225/dev-log/blob/master/Serverless/ServerlessFramework.md)
-
-<br>
 
 ### :closed_book: CS
 
@@ -80,8 +72,6 @@
 
   - [캐시(Cache)에 대해서](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Computer_Architecture_cache.md)
 
-<br>
-
 ### :green_book: MySQL
 
 - [MySQL Architecture](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Architecture.md)
@@ -94,21 +84,15 @@
 
 - [자주 사용할 것 같은 SQL 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-SQL.md)
 
-<br>
-
 ### :green_book: MongoDB
 
 - [Mongoose Schema 사용자 정의 메소드 (statics vs methods)](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Mongoose-statics-methods.md)
-
-<br>
 
 ### :green_book: Redis
 
 - [Redis 자료 모음](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Precautions.md)
 
 - [Hashes Zip List](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Hashes_Ziplist.md)
-
-<br>
 
 ### :blue_book: JavaScript
 
@@ -124,25 +108,17 @@
 
 - [Javascript - Await 및 Promise.all()을 적절하게 사용하여 수행시간을 단축하자](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Await_Optimization.md)
 
-<br>
-
 ### :blue_book: TypeScript
 
 - [TypeScript를 시작하면서 알아둘 것](https://github.com/bestdevhyo1225/dev-log/blob/master/TypeScript/TypeScript-Starter.md)
-
-<br>
 
 ### :blue_book: Java
 
 - [빌드 도구 - Maven 그리고 Gradle](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/Maven-Gradle.md)
 
-<br>
-
 ### :blue_book: React
 
 - [함수형 컴포넌트 - useEffect()로 간단한 Life Cycle 사용하기](https://github.com/bestdevhyo1225/dev-log/blob/master/React/function_component_useEffect.md)
-
-<br>
 
 ### :orange_book: ETC
 
