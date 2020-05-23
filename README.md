@@ -26,7 +26,7 @@
 
 ### :closed_book: Kubernetes
 
-- [Pod에 대해서 정리](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes)
+- [Pod에 대해서 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Pod.md)
 
 <br>
 
