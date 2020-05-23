@@ -22,6 +22,10 @@
 
 - [자주 사용하는 command 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Docker/Docker-command.md)
 
+### :closed_book: Kubernetes
+
+- [Pod에 대해서 정리](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes)
+
 <br>
 
 ### :closed_book: Serverless
