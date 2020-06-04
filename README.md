@@ -26,6 +26,8 @@
 
 - [Volume에 대해서 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Volume.md)
 
+- [ConfigMap, Secret 오브젝트 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/ConfigMap_Secret.md)
+
 ### :closed_book: Serverless
 
 - [Serverless Framework](https://github.com/bestdevhyo1225/dev-log/blob/master/Serverless/ServerlessFramework.md)
