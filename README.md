@@ -22,9 +22,11 @@
 
 ### :closed_book: Kubernetes
 
-- [Pod에 대해서 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Pod.md)
+- [Pod 오브젝트 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Pod.md)
 
-- [Volume에 대해서 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Volume.md)
+- [Service 오브젝트 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Service.md)
+
+- [Volume 오브젝트 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Volume.md)
 
 - [ConfigMap, Secret 오브젝트 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/ConfigMap_Secret.md)
 
