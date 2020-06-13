@@ -2,7 +2,7 @@
 
 <br>
 
-## 사용해야 하는 이유?
+## :question: 사용해야 하는 이유?
 
 `Kubernetes Cluster`에는 전체 사용할 수 있는 자원이 있고, `Cluster`안에는 각각의 `Namespace`가 있다. 그리고 `Namespace` 안에는 `Pod`들이 있다.`Pod`는 필요한 자원을 `Cluster`자원을 공유해서 사용한다. 만약 한 `Pod`가 `Cluster`에 남은 자원을 모두 사용해버리면 다른 `Pod`에 입장에서 쓸 자원이 없고, 자원이 필요할 때 문제가 발생한다.
 
@@ -20,7 +20,7 @@
 
 <br>
 
-## Namespace
+## :book: Namespace
 
 - 한 `Namespace`에서 같은 타입의 오브젝트(`Pod`, `Service` 등등)들은 중복된 이름을 가질 수 없다.
 
@@ -32,24 +32,50 @@
 
 <br>
 
-## ResourceQuota
-
-```
-request.memory : Namespace에 들어갈 Pod들의 전체 Request 자원의 크기를 설정한다.
-
-limit.memory : 메모리 limit를 설정한다.
-```
+## :book: ResourceQuota
 
 - `Cluster`, `Namespace`의 자원 한계를 설정하는 오브젝트이다.
 
-- 한가지 주의할 점, `ResourceQuota`가 정의된 `Namespace`에서 `Pod`를 만들때 반드시 `request.memory`, `limit.memory`를 명시해야 한다.
+```
+requests.memory : Namespace에 들어갈 Pod들의 전체 Request 자원의 크기를 설정한다.
+
+limits.memory : 메모리 limit를 설정한다.
+```
+
+- 한가지 주의할 점, `ResourceQuota`가 정의된 `Namespace`에서 `Pod`를 만들때, 반드시 `requests.memory`, `limits.memory`를 명시해야 한다.
 
 <br>
 
-## LimitRange
+## :book: LimitRange
+
+- 각각의 `Pod`마다 `Namespace`에 들어올 수 있는지 자원을 체크해준다.
+
+```
+min : Pod에서 설정되는 메모리의 값이 min을 넘어야 한다.
+max : Pod에서 설정되는 메모리 값이 max를 초과할 수 없다.
+maxLimitRequestRatio: request값과 limit값의 비율이 최대 maxLimitRequestRatio를 넘으면 안된다는 뜻이다.
+```
+
+```
+ex)
+min: 1G
+max: 4G
+maxLimitRequestRatio: 3
+
+pod1
+  limits.memory: 5G
+
+pod2
+  requests.memory: 4G
+  limits.memory: 1G
+```
+
+- pod1은 max를 초과하기 때문에 들어올 수 없다.
+
+- pod2는 min, max값을 통과하지만 maxLimitRequestRatio가 3보다 큰 4이기 때문에 들어올 수 없다. (1 x 4 = 4)
 
 <br>
 
-## 참고
+## :bookmark: 참고
 
 - [인프런 - 대세는 쿠버네티스 ^o^](https://www.inflearn.com/course/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%EA%B8%B0%EC%B4%88)
