@@ -30,7 +30,7 @@
 
 - [ConfigMap, Secret 오브젝트 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/ConfigMap_Secret.md)
 
-- [Namespace, ResourceQuota, LimitRange](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Namespace_ResourceQuota_LimitRange.md)
+- [Namespace, ResourceQuota, LimitRange 오브젝트 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Namespace_ResourceQuota_LimitRange.md)
 
 ### :closed_book: Serverless
 
