@@ -72,7 +72,7 @@ pod2
 
 - pod1은 max를 초과하기 때문에 들어올 수 없다.
 
-- pod2는 min, max값을 통과하지만 maxLimitRequestRatio가 3보다 큰 4이기 때문에 들어올 수 없다. (1 x 4 = 4)
+- pod2는 min, max값을 통과하지만 maxLimitRequestRatio가 3보다 큰 4이기 때문에 들어올 수 없다. (4 / 1 = 4)
 
 <br>
 
