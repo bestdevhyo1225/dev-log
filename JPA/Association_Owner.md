@@ -32,3 +32,5 @@ public class Member {
 
 }
 ```
+
+참고로 `@ManyToOne` 또는 `@OneToOne`에서는 `fetch = LAZY` 상태로 해둘것을 권장한다.
