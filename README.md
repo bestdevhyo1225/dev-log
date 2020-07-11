@@ -128,6 +128,8 @@
 
 - [연관 관계 주인 정하기](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Association_Owner.md)
 
+- [연관 관계 주의사항(양방향)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Association_Precautions.md)
+
 - [지연 로딩과 즉시 로딩](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Lazy_Eager_Loading.md)
 
 ### :blue_book: React
