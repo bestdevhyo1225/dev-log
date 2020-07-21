@@ -292,3 +292,8 @@
 
 - 65Byte 부터는 HashTable에 저장한다.
 
+<br>
+
+## 참고
+
+- [Redis Gate - Redis Configuration file](http://redisgate.kr/redis/server/redis_conf_han.php)
