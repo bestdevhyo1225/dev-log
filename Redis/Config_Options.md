@@ -1,6 +1,6 @@
 # Redis Config 옵션 정리
 
-- [Network]()
+- [Network](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md#green_book-network)
 
 - [General]()
 
@@ -19,7 +19,7 @@
 - [Advanced Config]()
 
 
-## :gear: Network
+## :green_book: Network
 
 ### Bind
 
@@ -45,7 +45,7 @@
 
 <br>
 
-## :gear: General
+## :green_book: General
 
 ### Demonize
 
@@ -71,7 +71,7 @@
 
 <br>
 
-## :gear: Snap Shotting
+## :green_book: Snap Shotting
 
 ### Save
 
@@ -83,7 +83,7 @@
 
 <br>
 
-## :gear: Replication
+## :green_book: Replication
 
 ### Replicaof
 
@@ -151,7 +151,7 @@
 
 <br>
 
-## :gear: Security
+## :green_book: Security
 
 ### Require Pass
 
@@ -163,7 +163,7 @@
 
 <br>
 
-## :gear: Clients
+## :green_book: Clients
 
 ### Max Client
 
@@ -175,7 +175,7 @@
 
 <br>
 
-## :gear: Memory Management
+## :green_book: Memory Management
 
 ### Max Memory
 
@@ -225,7 +225,7 @@
 
 <br>
 
-## :gear: Append Only mode
+## :green_book: Append Only mode
 
 ### Append Only
 
@@ -237,7 +237,7 @@
 
 <br>
 
-## :gear: Advanced Config
+## :green_book: Advanced Config
 
 ### List
 
