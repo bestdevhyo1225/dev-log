@@ -2,22 +2,21 @@
 
 - [Network](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md#green_book-network)
 
-- [General]()
+- [General](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md#green_book-general)
 
-- [Snap Shotting]()
+- [Snap Shotting](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md#green_book-snap-shotting)
 
-- [Replication]()
+- [Replication](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md#green_book-replication)
 
-- [Security]()
+- [Security](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md#green_book-security)
 
-- [Clients]()
+- [Clients](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md#green_book-clients)
 
-- [Memory Management]()
+- [Memory Management](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md#green_book-memory-management)
 
-- [Append Only mode]()
+- [Append Only mode](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md#green_book-append-only-mode)
 
-- [Advanced Config]()
-
+- [Advanced Config](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md#green_book-advanced-config)
 
 ## :green_book: Network
 

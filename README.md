@@ -102,6 +102,8 @@
 
 - [Hashes Zip List](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Hashes_Ziplist.md)
 
+- [Configuration 옵션 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md)
+
 ### :blue_book: JavaScript
 
 - [JavaScript - Iterable / Iterator](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Iterable-Iterator.md)
