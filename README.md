@@ -136,6 +136,8 @@
 
 - [지연 로딩과 즉시 로딩](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Lazy_Eager_Loading.md)
 
+- [영속성 컨텍스트](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Persistence_Context.md)
+
 ### :blue_book: React
 
 - [함수형 컴포넌트 - useEffect()로 간단한 Life Cycle 사용하기](https://github.com/bestdevhyo1225/dev-log/blob/master/React/function_component_useEffect.md)
