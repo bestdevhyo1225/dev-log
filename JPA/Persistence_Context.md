@@ -28,7 +28,7 @@
 
 ## Entity의 생명주기
 
-`비영속` : 영속성 컨텍스트와 전혀 관계 없는 상태
+**`비영속`** - 영속성 컨텍스트와 전혀 관계 없는 상태
 
 ```java
 Member member = new Member();
@@ -36,7 +36,7 @@ member.setId("id")
 member.setUsername("janghyoseok");
 ```
 
-`영속` : 영속성 컨텍스트에 관리되는 상태 (DB에 저장되지 않는다.)
+**`영속`** - 영속성 컨텍스트에 관리되는 상태 (DB에 저장되지 않는다.)
 
 ```java
 EntityManagerFactory emf = Persistence.createEntityManagerFactory(persistenceUnitName);
@@ -47,7 +47,7 @@ em.getTransaction().begin();
 em.persist(member);
 ```
 
-`준영속` : 영속성 컨텍스트에서 분리한 상태
+**`준영속`** - 영속성 컨텍스트에서 분리한 상태
 
 ```java
 EntityManagerFactory emf = Persistence.createEntityManagerFactory(persistenceUnitName);
@@ -57,7 +57,7 @@ EntityManager em = emf.createEntityManager();
 em.detach(member);
 ```
 
-`삭제` : Database에서 영구적으로 삭제하는 상태
+**`삭제`** - Database에서 영구적으로 삭제하는 상태
 
 ```java
 EntityManagerFactory emf = Persistence.createEntityManagerFactory(persistenceUnitName);
