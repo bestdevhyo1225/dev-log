@@ -119,6 +119,19 @@ Member member = em.find(Member.class, "member1");
 
 <br>
 
+## 영속 Entity 동일성 보장
+
+```java
+Member findMember1 = em.find(Member.class, 1L);
+Member findMember2 = em.find(Member.class, 1L);
+
+system.out.println(a == b); // true
+```
+
+1차 캐시로 반복 가능한 읽기(Repeatable Read) 등급의 트랜잭션 격리 수준을 데이터베이스가 아닌 애플리케이션 차원에서 제공한다.
+
+<br>
+
 ## 참고
 
 - [인프런 - 자바 ORM 표준 JPA 프로그래밍 (기본편)](https://www.inflearn.com/course/ORM-JPA-Basic/dashboard)
