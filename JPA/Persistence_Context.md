@@ -115,7 +115,7 @@ Member member = em.find(Member.class, "member1");
 
 <br>
 
-하지만, 그다지 큰 이점은 없다. Entity Manager는 보통 트랜잭션 단위로 만들고, 트랜잭션이 끝날때 같이 종료하기 때문이다. 따라서 1차 캐시는 한 트랜잭션내에서만 확보하고 있다는 것 (비즈니스 로직이 복잡하면, 큰 이점을 볼 가능성도 있음)
+> 하지만, 그다지 큰 이점은 없다. Entity Manager는 보통 트랜잭션 단위로 만들고, 트랜잭션이 끝날때 같이 종료하기 때문이다. 따라서 1차 캐시는 한 트랜잭션내에서만 확보하고 있다는 것 (비즈니스 로직이 복잡하면, 큰 이점을 볼 가능성도 있음)
 
 <br>
 
@@ -128,7 +128,7 @@ Member findMember2 = em.find(Member.class, 1L);
 system.out.println(a == b); // true
 ```
 
-1차 캐시로 반복 가능한 읽기(Repeatable Read) 등급의 트랜잭션 격리 수준을 데이터베이스가 아닌 애플리케이션 차원에서 제공한다.
+> 1차 캐시로 반복 가능한 읽기(Repeatable Read) 등급의 트랜잭션 격리 수준을 데이터베이스가 아닌 애플리케이션 차원에서 제공한다.
 
 <br>
 
@@ -158,7 +158,7 @@ transaction.commit();
 
 ### 4. 엔티티 수정시, 변경 감지
 
-엔티티 수정의 경우에는 값을 변경하고, `update` 또는 `save`와 같은 메소드를 호출해야할 것 같은데 그렇게 하지 않아도 JPA가 변경을 감지한다.
+> 엔티티 수정의 경우에는 값을 변경하고, `update` 또는 `save`와 같은 메소드를 호출해야할 것 같은데 그렇게 하지 않아도 JPA가 변경을 감지한다.
 
 ```java
 EntityManager em = emf.createEntityManager();
