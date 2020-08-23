@@ -83,7 +83,7 @@ em.remove(member);
 
 <br>
 
-## 엔티티 조회, 1차 캐시
+### 1. 엔티티 조회, 1차 캐시
 
 ```java
 Member member = new Member();
@@ -119,7 +119,7 @@ Member member = em.find(Member.class, "member1");
 
 <br>
 
-## 영속 Entity 동일성 보장
+### 2. 영속 Entity 동일성 보장
 
 ```java
 Member findMember1 = em.find(Member.class, 1L);
@@ -129,6 +129,57 @@ system.out.println(a == b); // true
 ```
 
 1차 캐시로 반복 가능한 읽기(Repeatable Read) 등급의 트랜잭션 격리 수준을 데이터베이스가 아닌 애플리케이션 차원에서 제공한다.
+
+<br>
+
+### 3. 트랜잭션을 지원하는 쓰기 지연
+
+```java
+EntityManager em = emf.createEntityManager();
+EntityTransactio transaction = em.getTransaction();
+
+transaction.begin();
+
+em.persist(memberA);
+em.persist(memberB);
+// 여기까지 INSERT SQL을 데이터베이스에 보내지 않는다.
+
+// 커밋하는 순간 데이터베이스 INSERT SQL을 보낸다.
+transaction.commit();
+```
+
+![image](https://user-images.githubusercontent.com/23515771/90604725-3eed3380-e238-11ea-8916-2a5473f75fe5.png)
+
+![image](https://user-images.githubusercontent.com/23515771/90605125-e23e4880-e238-11ea-82a5-5ada430a371c.png)
+
+![image](https://user-images.githubusercontent.com/23515771/90973403-b1be1d80-e55c-11ea-8f86-ce63be2bf5a6.png)
+
+<br>
+
+### 4. 엔티티 수정시, 변경 감지
+
+엔티티 수정의 경우에는 값을 변경하고, `update` 또는 `save`와 같은 메소드를 호출해야할 것 같은데 그렇게 하지 않아도 JPA가 변경을 감지한다.
+
+```java
+EntityManager em = emf.createEntityManager();
+EntityTransaction transaction = em.getTransaction();
+
+transaction.begin();
+
+// 영속 엔티티 조회
+Member memberA = em.find(Member.class, "memberA");
+
+// 영속 엔티티 데이터 수정
+memberA.setUsername("hi");
+memberA.setAge(10);
+
+// 변경을 하려면 아래와 같은 코드가 필요하지 않을까 생각하지만, 필요없다.
+// em.update(memberA);
+
+transaction.commit();
+```
+
+![image](https://user-images.githubusercontent.com/23515771/90973626-d3200900-e55e-11ea-816c-c0c955bca7de.png)
 
 <br>
 
