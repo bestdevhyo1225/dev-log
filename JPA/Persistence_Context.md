@@ -148,9 +148,19 @@ em.persist(memberB);
 transaction.commit();
 ```
 
+> 1차 캐시에 MemberA 엔티티를 저장한다.
+
 ![image](https://user-images.githubusercontent.com/23515771/90604725-3eed3380-e238-11ea-8916-2a5473f75fe5.png)
 
+<br>
+
+> 1차 캐시에 MemberB 엔티티를 저장한다.
+
 ![image](https://user-images.githubusercontent.com/23515771/90605125-e23e4880-e238-11ea-82a5-5ada430a371c.png)
+
+<br>
+
+> transaction 에서 commit 하는 순간 데이터베이스에 INSERT SQL을 보낸다.
 
 ![image](https://user-images.githubusercontent.com/23515771/90973403-b1be1d80-e55c-11ea-8f86-ce63be2bf5a6.png)
 
@@ -178,6 +188,8 @@ memberA.setAge(10);
 
 transaction.commit();
 ```
+
+> 1차 캐시에는 스냅샷이 있는데 기존 스냅샷과 현재 엔티티를 비교하고, 값이 변경되었음을 감지하면 UPDATE SQL을 생성한다.
 
 ![image](https://user-images.githubusercontent.com/23515771/90973626-d3200900-e55e-11ea-816c-c0c955bca7de.png)
 
