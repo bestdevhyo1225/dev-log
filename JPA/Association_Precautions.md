@@ -98,41 +98,79 @@ public class Main {
 
 - 연관 관계 편의 메소드를 생성하자
 
-  ```java
-    @Entity
-    public class Member {
-        @Id @GeneratedValue
-        @Column(name = "member_id")
-        private Long id;
+- 연관 관계 주인은 정해져 있지만 연관 관계 편의 메소드를 작성하는 것은 기준에 따라 다르다. (한 곳으로 정해야한다. Member에 작성할지? Team에 작성할지?)
 
-        @ManyToOne(fetch = LAZY)
-        @JoinColumn(name = "team")
-        private Team team;
+### 1. Member에 연관 관계 메소드를 정하는 경우
 
-        @Column(name = "username")
-        private String name;
+```java
+@Entity
+public class Member {
+    @Id @GeneratedValue
+    @Column(name = "member_id")
+    private Long id;
 
-        // 연관 관계 편의 메소드
-        public void changeTeam(final Team team) {
-            this.team = team;
-            team.getMembers().add(this);
-        }
+    @ManyToOne(fetch = LAZY)
+    @JoinColumn(name = "team")
+    private Team team;
+
+    @Column(name = "username")
+    private String name;
+
+    // 연관 관계 편의 메소드 - Member를 기준으로 했다면
+    public void changeTeam(final Team team) {
+        this.team = team;
+        team.getMembers().add(this);
     }
+}
 
-    public class Main {
-        public static void main(String[] args) {
-            Team team = new Team();
-            team.setName('team');
-            em.persist(Team);
+public class Main {
+    public static void main(String[] args) {
+        Team team = new Team();
+        team.setName('team');
+        em.persist(Team);
 
-            Member member = new Member();
-            member.setName('member');
-            member.changeTeam(team);
+        Member member = new Member();
+        member.setName('member');
+        member.changeTeam(team);
 
-            em.persist(member);
-        }
+        em.persist(member);
     }
-  ```
+}
+```
+
+### Team에 연관 관계 메소드를 정하는 경우
+
+```java
+@Entity
+public class Team {
+    @Id @GeneratedValue
+    @Column(name = "team_id")
+    private Long id;
+
+    private String name;
+
+    @OneToMany(mappedBy = "team")
+    private List<Member> members;
+
+    public addMembers(final Member member) {
+        this.members.add(member);
+        member.setTeam(this);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Member member = new Member();
+        member.setName('member');
+        em.persist(member);
+
+        Team team = new Team();
+        team.setName('team');
+        team.addMembers(member);
+        em.persist(Team);
+    }
+}
+```
 
 <br>
 
