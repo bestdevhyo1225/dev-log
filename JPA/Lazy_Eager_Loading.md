@@ -6,6 +6,8 @@
 
 간단하게 요약하자면, 객체가 실제 사용될 때 로딩하는 방식이다.
 
+- JPA에서 `@OneToMany`, `@ManyToMany`는 기본적으로 `Lazy Loading`으로 설정되어 있다.
+
 ```java
 Member member = memberRepository.find(memberId); // SELECT * FROM MEMBER 쿼리가 날라감
 
@@ -27,6 +29,8 @@ String teamName = team.getName(); // SELECT * FROM TEAM 쿼리가 날라감
 ## 즉시 로딩 (Eager Loading)
 
 실제로 서비스를 운영하다가 Member를 가져올 때, 90% 이상으로 Team도 같이 가져온다면, 즉시 로딩을 고려해보는 것이 좋다.
+
+- JPA에서 `@ManyToOne`, `@OneToOne`은 기본적으로 `Eager Loading`으로 설정되어 있기 때문에 각별히 주의해야 한다. (`Lazy Loading`으로 반드시 설정할 것)
 
 ```java
 Member member = memberRepository.find(memberId); // SELECT M.*, T.* FROM MEMBER JOIN TEAM ....
