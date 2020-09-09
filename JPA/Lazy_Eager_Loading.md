@@ -48,6 +48,42 @@ String teamName = team.getName();
 
   - 필요하지 않는 데이터가 포함 되어있는 경우, 사용하면 안되고 성능적으로 좋지 않다.
 
+  - 즉시 로딩으로 설정된 테이블이 10개라면, 10개 테이블을 조인하기 때문에 엄청난 양의 쿼리가 실행된다. 즉, 비효율적이라고 할 수 있다.
+
+  - 즉시 로딩 JPQL에서는 `N+1` 문제가 있다.
+
+<br>
+
+## JPQL에서 즉시 로딩의 N+1 문제점
+
+```java
+// Member 와 Team 은 1 : N 관계
+Team team1 = new Team();
+team1.setName("A");
+em.persist(team1);
+
+Team team2 = new Team();
+team2.setName("B");
+em.persist(team2);
+
+Member member1 = new Member();
+member1.setName("hyoseok1");
+member1.setTeam(team1)
+em.persist(member1);
+
+Member member2 = new Member();
+member2.setName("hyoseok2");
+member2.setTeam(team2);
+em.persist(member2);
+
+List<Member> members = em.createQuery("select m from Member m", Member.class)
+        .getResultList();
+
+// 결과는?
+```
+
+Member 리스트를 조회하는 1번의 쿼리와 2개의 Team을 조회하는 쿼리가 개별적으로 나간다. 팀이 N개 있다면, 1번의 쿼리와 N개의 쿼리가 나간다.
+
 <br>
 
 ## Tip
