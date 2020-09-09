@@ -138,6 +138,8 @@
 
 - [영속성 컨텍스트](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Persistence_Context.md)
 
+- [프록시](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Proxy.md)
+
 ### :blue_book: React
 
 - [함수형 컴포넌트 - useEffect()로 간단한 Life Cycle 사용하기](https://github.com/bestdevhyo1225/dev-log/blob/master/React/function_component_useEffect.md)
