@@ -92,6 +92,8 @@
 
 - [MySQL 쿼리 최적화 - JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-JOIN.md)
 
+- [MySQL 인덱스를 걸때 고려사항](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Index.md)
+
 - [자주 사용할 것 같은 SQL 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-SQL.md)
 
 ### :green_book: MongoDB
