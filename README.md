@@ -126,9 +126,9 @@
 
 - [TypeScript를 시작하면서 알아둘 것](https://github.com/bestdevhyo1225/dev-log/blob/master/TypeScript/TypeScript-Starter.md)
 
-### :blue_book: Java
+### :blue_book: Spring
 
-- [빌드 도구 - Maven 그리고 Gradle](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/Maven-Gradle.md)
+- [빌드 도구 - Maven 그리고 Gradle](https://github.com/bestdevhyo1225/dev-log/blob/master/Spring/Maven-Gradle.md)
 
 ### :blue_book: JPA
 
