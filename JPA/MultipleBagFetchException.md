@@ -365,15 +365,19 @@ Hibernate:
 
 <br>
 
-## 결론
+## 정리
 
-- `Hibernate default_batch_fetch_size`을 글로벌로 설정하고, 최대한 N+1 문제를 최대한 `in` 쿼리로 기본적인 성능을 보장하게 한다.
+`Hibernate default_batch_fetch_size` 옵션으로 인해 **최소한의 성능이 보장**된 것일 뿐, **최선은 아니다.** 따라서 가장 먼저 `Fetch Join`을 적용해 최대한 성능을 개선하고, `Fetch Join`으로 해결되지 않는 문제들은 `Hibernate default_batch_fetch_size` 적용해서 최소한의 성능을 보장해주자.
+
+<br>
+
+## 결론
 
 - `@OneToOne`, `@ManyToOne`의 관계에서는 모두 `Fetch Join`을 적용하여, 한방 쿼리를 수행한다.
 
 - `@OneToMany`, `@ManyToMany`의 관계에서는 가장 데이터가 많은 자식 엔티티에 `Fetch Join`을 적용하여, 한방 쿼리를 수행한다.
 
-  - `Fetch Join`을 적용할 수 없는 나머지 자식 엔티티들은 `default_batch_fetch_size` 옵션을 통해 `in` 쿼리로 최대한 성능을 보장한다.
+  - `Fetch Join`을 적용할 수 없는 나머지 자식 엔티티들은 `default_batch_fetch_size` 옵션을 통해 `in` 쿼리로 최소한의 성능을 보장한다.
 
 <br>
 
