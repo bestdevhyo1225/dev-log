@@ -247,30 +247,33 @@ Hibernate:
 
 ## 별로 큰 차이가 없는거 아닌가?
 
-`Product`의 결과가 많으면 많을수록 쿼리 수행 횟수가 획기적으로 개선할 수 있다. 만약에 `2만개`의 `Product`를 조회한다면, 다음과 같은 상황으로 나눠 볼 수 있다.
+`Product`의 결과가 많으면 많을수록 쿼리 수행 횟수가 획기적으로 개선할 수 있다. 만약에 `20,000`개의 `Product`를 조회한다면, 다음과 같은 상황으로 나눠 볼 수 있다.
 
 - `default_batch_fetch_size` 옵션 미적용 --> (**총 40,001번의 쿼리 수행**)
 
-  1. Product 조회 쿼리 `1`번
+  - Product 조회 쿼리 `1`번
 
-  2. Product의 ProductDescription 자식들 조회 쿼리가 `20,000`번
+  - Product의 ProductDescription 자식들 조회 쿼리가 `20,000`번
 
-  3. Product의 ProductImage 자식들 조회 쿼리가 `20,000`번
+  - Product의 ProductImage 자식들 조회 쿼리가 `20,000`번
 
 - `default_batch_fetch_size = 1000` 옵션 적용 --> (**총 41번의 쿼리 수행**)
 
-  1. Product 조회 쿼리 `1`번
+  - Product 조회 쿼리 `1`번
 
-  2. Product의 ProductDescription 자식들 조회 쿼리가 `20`번 (`20,000 / 1,000`)
+  - Product의 ProductDescription 자식들 조회 쿼리가 `20`번 (`20,000 / 1,000`)
 
-  3. Product의 ProductImage 자식들 조회 쿼리가 `20`번 (`20,000 / 1,000`)
+  - Product의 ProductImage 자식들 조회 쿼리가 `20`번 (`20,000 / 1,000`)
+
+<br>
 
 > Tip)
-> 보통 옵션값을 1,000 이상 주지는 않습니다.
-> in절 파라미터로 1,000 개 이상을 주었을때,
-> 너무 많은 in절 파라미터로 인해 문제가 발생할수도 있기 때문입니다.
-
-옵션을 1000으로 두었기 때문에 `Product`가 1000개를 넘지 않으면, 단일 쿼리로 수행 된다는 장점이 있다.
+> <br>
+> 보통 옵션값을 1,000 이상 주지는 않는다.
+> <br>
+> 만약에 in절 파라미터로 1,000 개 이상을 주었을때,
+> <br>
+> 너무 많은 in절 파라미터로 인해 문제가 발생할수도 있기 때문...
 
 <br>
 
