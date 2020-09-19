@@ -136,11 +136,11 @@
 
 - [연관 관계 주의사항(양방향)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Association_Precautions.md)
 
-- [지연 로딩과 즉시 로딩](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Lazy_Eager_Loading.md)
+- [Persistence Context](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Persistence_Context.md)
 
-- [영속성 컨텍스트](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Persistence_Context.md)
+- [Proxy](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Proxy.md)
 
-- [프록시](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Proxy.md)
+- [Lazy & Eager Loading](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Lazy_Eager_Loading.md)
 
 - [Fetch Join](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Fetch_Join.md)
 
