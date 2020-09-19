@@ -198,10 +198,7 @@ public void Basic_findAll_Use_Batch_Size() throws Exception {
 ```sql
 ------- product -------
 Hibernate:
-    /* select
-        generatedAlias0
-    from
-        Product as generatedAlias0 */
+    /* SELECT generatedAlias0 FROM Product AS generatedAlias0 */
     select -- Product 전체 쿼리
         product0_.product_id as product_1_1_,
         product0_.name as name2_1_,
@@ -329,12 +326,7 @@ public void Jpql_findAll_Use_Batch_Size() throws Exception {
 ```sql
 ------- product fetch join image -------
 Hibernate:
-    /* SELECT
-        DISTINCT p
-    FROM
-        Product p
-    JOIN
-        FETCH p.productImages */
+    /* SELECT DISTINCT p FROM Product p JOIN FETCH p.productImages */
     select -- Product, ProductImage Fetch 조인 쿼리
         distinct product0_.product_id as product_1_1_0_,
         productima1_.product_image_id as product_1_3_1_,
