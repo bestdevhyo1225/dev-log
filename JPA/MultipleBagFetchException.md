@@ -22,6 +22,8 @@ WHERE m.name = 'hyoseok'
 
 1. 자식 테이블을 모두 `Lazy Loading`으로 처리
 
+2. 자식 테이블 하나에만 `Fetch Join`을 걸고, 나머진 `Lazy Loading`로 처리 (해당 예시는 생략했음)
+
 ```java
 @Test
 public void Basic_findAll_No_Use_Batch_Size() throws Exception {
