@@ -327,7 +327,7 @@ public void Jpql_findAll_Use_Batch_Size() throws Exception {
 ```
 
 ```sql
-------- product -------
+------- product fetch join image -------
 Hibernate:
     /* SELECT
         DISTINCT p
