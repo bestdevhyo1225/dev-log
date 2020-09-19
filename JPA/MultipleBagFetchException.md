@@ -369,6 +369,10 @@ Hibernate:
 
 `Hibernate default_batch_fetch_size` 옵션으로 인해 **최소한의 성능이 보장**된 것일 뿐, **최선은 아니다.** 따라서 가장 먼저 `Fetch Join`을 적용해 최대한 성능을 개선하고, `Fetch Join`으로 해결되지 않는 문제들은 `Hibernate default_batch_fetch_size` 적용해서 최소한의 성능을 보장해주자.
 
+<br>
+
+## 결론
+
 - `@OneToOne`, `@ManyToOne`의 관계에서는 모두 `Fetch Join`을 적용하여, 한방 쿼리를 수행한다.
 
 - `@OneToMany`, `@ManyToMany`의 관계에서는 가장 데이터가 많은 자식 엔티티에 `Fetch Join`을 적용하여, 한방 쿼리를 수행한다.
