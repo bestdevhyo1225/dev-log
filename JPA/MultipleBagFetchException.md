@@ -277,6 +277,111 @@ Hibernate:
 
 <br>
 
+## 조금만 더 성능을 최적화 해보자!!!
+
+기존에 `default_batch_fetch_size` 옵션이 적용된 상태에서 `Fetch Join`을 적용해보자
+
+```java
+public void Jpql_findAll_Use_Batch_Size() throws Exception {
+    /*
+        SELECT DISTINCT p FROM Product p JOIN FETCH p.productImages
+
+        --- 총 2번의 쿼리 발생 ---
+
+        1) Product, ProductImage Fetch 조인 쿼리
+        2) Product 1, 2번의 ProductDescription 자식들 조회 쿼리 -> In (1, 2)
+    */
+
+    // given
+    List<ProductImage> productImages1 = new ArrayList<>();
+    productImages1.add(ProductImage.createProductImage("imageUrl1-1"));
+    productImages1.add(ProductImage.createProductImage("imageUrl1-2"));
+
+    List<ProductDescription> productDescriptions1 = new ArrayList<>();
+    productDescriptions1.add(ProductDescription.createProductDescription("title1-1", "contents1-1"));
+    productDescriptions1.add(ProductDescription.createProductDescription("title1-2", "contents1-2"));
+
+    Product product1 = Product.createProduct("name", 20000, productImages1, productDescriptions1);
+
+    this.productRepository.save(product1);
+
+    List<ProductImage> productImages2 = new ArrayList<>();
+    productImages2.add(ProductImage.createProductImage("imageUrl2-1"));
+    productImages2.add(ProductImage.createProductImage("imageUrl2-2"));
+
+    List<ProductDescription> productDescriptions2 = new ArrayList<>();
+    productDescriptions2.add(ProductDescription.createProductDescription("title2-1", "contents2-1"));
+    productDescriptions2.add(ProductDescription.createProductDescription("title2-2", "contents2-2"));
+
+    Product product2 = Product.createProduct("name", 20000, productImages2, productDescriptions2);
+
+    this.productRepository.save(product2);
+
+    // when
+    long totalPrice = this.productService.getTotalPriceByJpql();
+
+    // then
+    assertThat(totalPrice).isEqualTo(40000);
+}
+```
+
+```sql
+------- product -------
+Hibernate:
+    /* SELECT
+        DISTINCT p
+    FROM
+        Product p
+    JOIN
+        FETCH p.productImages */
+    select -- Product, ProductImage Fetch 조인 쿼리
+        distinct product0_.product_id as product_1_1_0_,
+        productima1_.product_image_id as product_1_3_1_,
+        product0_.name as name2_1_0_,
+        product0_.price as price3_1_0_,
+        productima1_.image_url as image_ur2_3_1_,
+        productima1_.product_id as product_3_3_1_,
+        productima1_.product_id as product_3_3_0__,
+        productima1_.product_image_id as product_1_3_0__
+    from
+        product product0_
+    inner join
+        product_image productima1_
+            on product0_.product_id=productima1_.product_id
+------- description -------
+Hibernate:
+    /* load one-to-many com.example.jpa20200918.domain.product.Product.productDescriptions */
+    select -- Product 1, 2번의 ProductDescription 자식들 조회 쿼리 -> In (1, 2)
+        productdes0_.product_id as product_4_2_1_,
+        productdes0_.product_description_id as product_1_2_1_,
+        productdes0_.product_description_id as product_1_2_0_,
+        productdes0_.contents as contents2_2_0_,
+        productdes0_.product_id as product_4_2_0_,
+        productdes0_.title as title3_2_0_
+    from
+        product_description productdes0_
+    where
+        productdes0_.product_id in (
+            ?, ?
+        )
+```
+
+다음과 같이 기존에 `default_batch_fetch_size` 옵션이 적용된 상태에서 `Fetch Join`을 적용해보면, 3번의 쿼리 수행에서 2번의 쿼리 수행으로 성능이 개선되었다.
+
+<br>
+
+## 결론
+
+- `Hibernate default_batch_fetch_size`을 글로벌로 설정하고, 최대한 N+1 문제를 최대한 `in` 쿼리로 기본적인 성능을 보장하게 한다.
+
+- `@OneToOne`, `@ManyToOne`의 관계에서는 모두 `Fetch Join`을 적용하여, 한방 쿼리를 수행한다.
+
+- `@OneToMany`, `@ManyToMany`의 관계에서는 가장 데이터가 많은 자식 엔티티에 `Fetch Join`을 적용하여, 한방 쿼리를 수행한다.
+
+  - `Fetch Join`을 적용할 수 없는 나머지 자식 엔티티들은 `default_batch_fetch_size` 옵션을 통해 `in` 쿼리로 최대한 성능을 보장한다.
+
+<br>
+
 ## 참고
 
 - [인프런 - 자바 ORM 표준 JPA 프로그래밍 (기본편)](https://www.inflearn.com/course/ORM-JPA-Basic/dashboard)
