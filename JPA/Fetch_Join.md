@@ -18,7 +18,7 @@ Join 한 번에 `Member`, `Team`을 함께 조회한다.
 
 `JPQL`
 
-```sql
+```
 SELECT m FROM Member m JOIN FETCH m.team
 ```
 
@@ -50,7 +50,7 @@ for (Member member : members) {
 
 `JPQL`
 
-```sql
+```
 SELECT t FROM Team t JOIN FETCH t.members WHERE t.name = '팀A'
 ```
 
@@ -89,7 +89,7 @@ for (Team team : teams) {
 
 즉, 아래와 같은 JPQL을 작성해서 `1 : N` Fetch Join을 사용하면 됨
 
-```sql
+```
 SELECT DISTINCT t FROM Team t JOIN FETCH t.members WHERE t.name = '팀A'
 ```
 
