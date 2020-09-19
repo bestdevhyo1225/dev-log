@@ -282,6 +282,7 @@ Hibernate:
 기존에 `default_batch_fetch_size` 옵션이 적용된 상태에서 `Fetch Join`을 적용해보자
 
 ```java
+@Test
 public void Jpql_findAll_Use_Batch_Size() throws Exception {
     /*
         SELECT DISTINCT p FROM Product p JOIN FETCH p.productImages
