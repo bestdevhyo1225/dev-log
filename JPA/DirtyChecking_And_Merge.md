@@ -25,6 +25,21 @@ JPA에선 데이터를 변경하는 방법에 있어서 2가지 방법이 있다
 변경 감지는 다음과 같은 코드에 의해서 동작한다.
 
 ```java
+@Entity
+public class Member {
+  private Long id;
+  private String name;
+  private String email;
+  private String password;
+  private String password;
+  private Adress address;
+
+  public void change(String name, String email) {
+    this.name = name;
+    this.email = email;
+  }
+}
+
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
@@ -36,14 +51,7 @@ public class MemberService {
   public void update(UpdateMemberDto updateMemberDto) {
     // Member를 조회한다. -> 현재 영속성 컨텍스트에서 관리되는 상태
     Member findMember = this.memberRepository.findOne(updateMemberDto.getMemberId());
-    /*
-      Member 엔티티의 값을 변경한다. -> change() 메소드는 Member 엔티티의 비즈니스 로직
-
-      public void change(String name, String email) {
-        this.name = name;
-        this.email = email;
-      }
-    */
+    // Member 엔티티의 값을 변경한다. -> change() 메소드는 Member 엔티티의 비즈니스 로직
     findMember.change(updateMemberDto.getName(), updateMemberDto.getEmail());
   }
 
