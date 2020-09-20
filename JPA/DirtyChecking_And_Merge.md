@@ -36,7 +36,14 @@ public class MemberService {
   public void update(UpdateMemberDto updateMemberDto) {
     // Member를 조회한다. -> 현재 영속성 컨텍스트에서 관리되는 상태
     Member findMember = this.memberRepository.findOne(updateMemberDto.getMemberId());
-    // Member 엔티티의 값을 변경한다. -> change() 메소드는 Member 엔티티의 비즈니스 로직
+    /*
+      Member 엔티티의 값을 변경한다. -> change() 메소드는 Member 엔티티의 비즈니스 로직
+
+      public void change(String name, String email) {
+        this.name = name;
+        this.email = email;
+      }
+    */
     findMember.change(updateMemberDto.getName(), updateMemberDto.getEmail());
   }
 
