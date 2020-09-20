@@ -84,7 +84,7 @@ List<Member> members = em.createQuery("select m from Member m", Member.class)
 
 - Member 리스트를 조회하는 1번의 쿼리와 2개의 Team을 조회하는 쿼리가 개별적으로 나간다. 팀이 N개 있다면, 1번의 쿼리와 N개의 쿼리가 나간다.
 
-- 추가로, JPQL에서는 `LAZY`, `EAGER` 옵션과 상관없이 `N + 1` 문제를 발생시킨다. (이러한 문제 때문에 `Fetch Join`을 사용해서 해결함)
+- 추가로 JPQL에서는 `LAZY`, `EAGER` 옵션과 상관없이 `N + 1` 문제를 발생시킨다. (이러한 문제 때문에 `Fetch Join`을 사용해서 해결함)
 
 <br>
 
