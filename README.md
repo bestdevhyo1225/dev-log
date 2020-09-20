@@ -138,6 +138,8 @@
 
 - [Persistence Context](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Persistence_Context.md)
 
+- [DirtyChecking and Merge](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/DirtyChecking_And_Merge.md)
+
 - [Proxy](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Proxy.md)
 
 - [Lazy & Eager Loading](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Lazy_Eager_Loading.md)
