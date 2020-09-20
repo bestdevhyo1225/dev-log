@@ -27,11 +27,14 @@ JPA에선 데이터를 변경하는 방법에 있어서 2가지 방법이 있다
 ```java
 @Entity
 public class Member {
+  @Id
+  @GeneratedValue(strategy = IDENTITY)
   private Long id;
   private String name;
   private String email;
   private String password;
   private String password;
+  @Embedded
   private Adress address;
 
   public void change(String name, String email) {
@@ -75,8 +78,7 @@ public class MemberService {
   @Transactional
   public void update(UpdateMemberDto updateMemberDto) {
     /*
-      준영속 상태의 엔티티를 생성
-      -> 트랜잭션이 있더라도 영속성 컨텍스트에서 관리되지 않는 상태이기 때문에 변경된 상태가 아님
+      준영속 상태의 엔티티를 생성 -> 트랜잭션이 있더라도 영속성 컨텍스트에서 관리되지 않는 상태이기 때문에 변경된 상태가 아님
     */
     Member member = new Member();
     member.setId(updateMemberDto.getMemberId());
