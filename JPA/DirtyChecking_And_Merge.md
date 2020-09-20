@@ -104,7 +104,7 @@ Member mergedMember = this.memberRepository.merge(member);
 
 ## 병합의 내부 동작은 어떻게 처리될까?
 
-병합의 내부 프로세스는 `변경 감지(Dirty Checking)과 똑같은 프로세스로 동작`하지만 조금 차이가 있다.
+병합의 내부 프로세스는 `변경 감지(Dirty Checking)과 똑같은 프로세스`로 동작하지만 조금 차이가 있다.
 
 ```java
 // 병합 내부 프로세스
