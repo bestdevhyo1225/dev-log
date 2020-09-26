@@ -24,7 +24,7 @@ em.createQuery("select distinct o from Order o" +
 
 <br>
 
-#### :question: 페이징 처리를 사용하지 못하는 이유
+#### 페이징 처리를 사용하지 못하는 이유 :question:
 
 `OneToMany`와 같은 `ToMany` 관계에서 `Fetch Join`을 하게되면, 기본적으로 데이터가 부풀려진다.
 
@@ -57,13 +57,13 @@ em.createQuery("select distinct o from Order o" +
 
 <br>
 
-#### :question: JPA가 이렇게 동작하는 이유
+#### JPA가 이렇게 동작하는 이유 :question:
 
 JPA에서는 실제로 사용자가 이렇게 4개 데이터를 사용할 수도 있고, 아니면 중복된 데이터를 제거한 2개를 사용하고 싶을수도 있기 때문에 다음과 같이 동작한다.
 
 <br>
 
-#### :question: 페이징 처리를 해야 한다면 어떻게 해야할까
+#### 페이징 처리를 해야 한다면 어떻게 해야할까 :question:
 
 페이징 처리를 하려면, 쿼리를 분리해야한다.
 
