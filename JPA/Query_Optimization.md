@@ -24,7 +24,7 @@ em.createQuery("select distinct o from Order o" +
 
 <br>
 
-### 페이징 처리를 사용하지 못하는 이유 :question:
+### 페이징 처리를 사용하지 못하는 이유
 
 `OneToMany`와 같은 `ToMany` 관계에서 `Fetch Join`을 하게되면, 기본적으로 데이터가 부풀려진다.
 
@@ -57,13 +57,13 @@ em.createQuery("select distinct o from Order o" +
 
 <br>
 
-### JPA가 이렇게 동작하는 이유 :question:
+### JPA가 이렇게 동작하는 이유
 
 JPA에서는 실제로 사용자가 이렇게 4개 데이터를 사용할 수도 있고, 아니면 중복된 데이터를 제거한 2개를 사용하고 싶을수도 있기 때문에 다음과 같이 동작한다.
 
 <br>
 
-### 페이징 처리를 해야 한다면 어떻게 해야할까 :question:
+### 페이징 처리를 해야 한다면 어떻게 해야할까
 
 페이징 처리를 하려면, 쿼리를 분리해야한다.
 
@@ -88,6 +88,20 @@ em.createQuery("select distinct o from Order o" +
 ## 권장 순서
 
 강의를 진행주시는 김영한님께서는 다음과 같은 쿼리 최적화 순서를 권장하신다.
+
+1. 엔티티 조회 방식으로 우선 접근
+
+   1. `ToOne`의 관계들은 모두 `Fetch Join`을 적용해서 쿼리 수 최적화
+
+   2. `ToMany`인 `Collection Fetch Join`의 경우
+
+      2-1. 페이징이 필요하다면? `Hibernate default_batch_fetch_size` 또는 `@BatchSize` 옵션을 적용
+
+      2-2. 페이징이 필요없다면? 판단에 의해서 그냥 `Fetch Join` 사용
+
+2. 엔티티 조회 방식으로 해결이 안되면, DTO 조회 방식
+
+3. 그래도 안된다면, Native SQL 또는 Spring JDBC Template 사용
 
 <br>
 
