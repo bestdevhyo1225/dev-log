@@ -22,11 +22,11 @@ em.createQuery("select distinct o from Order o" +
 
 위와 같이 `Fetch Join`을 사용해서 1번 쿼리에 모두 가져오면 된다. 하지만, 페이징 처리를 해야한다면, 위의 방법을 사용하지 못한다.
 
-#### :question: 페이징 처리를 사용하지 못하는 이유?
+<br>
+
+#### :question: 페이징 처리를 사용하지 못하는 이유
 
 `OneToMany`와 같은 `ToMany` 관계에서 `Fetch Join`을 하게되면, 기본적으로 데이터가 부풀려진다.
-
-<br>
 
 > Order에는 데이터가 2개
 
@@ -34,8 +34,6 @@ em.createQuery("select distinct o from Order o" +
 | :-----: | :-----------------: | :----: |
 |    1    | 2020-09-26 11:00:00 | ORDER  |
 |    2    | 2020-09-26 11:00:00 | ORDER  |
-
-<br>
 
 > OrderItem에는 Order당 데이터가 2개
 
@@ -46,8 +44,6 @@ em.createQuery("select distinct o from Order o" +
 |      3      |    2    |   20000    |   3   |
 |      4      |    2    |   40000    |   4   |
 
-<br>
-
 > Order기준으로 OrderItem을 Join한다면?
 
 | orderId |      orderDate      | status | orderItemId | orderPrice | count |
@@ -57,15 +53,15 @@ em.createQuery("select distinct o from Order o" +
 |    2    | 2020-09-26 11:00:00 | ORDER  |      3      |   20000    |   3   |
 |    2    | 2020-09-26 11:00:00 | ORDER  |      4      |   20000    |   4   |
 
-<br>
-
 위와 같은 상황이 발생하고, JPA에서는 Database 결과들을 가져오기 때문에 총 4개를 가져온다. 사용자는 Order의 데이터 2개를 원했는데, 4개가 조회된 셈이다.
 
-#### :question: JPA가 이렇게 동작하는 이유?
+#### :question: JPA가 이렇게 동작하는 이유
 
 JPA에서는 실제로 사용자가 이렇게 4개 데이터를 사용할 수도 있고, 아니면 중복된 데이터를 제거한 2개를 사용하고 싶을수도 있기 때문에 다음과 같이 동작한다.
 
-#### :question: 페이징 처리를 해야 한다면 어떻게 해야할까?
+<br>
+
+#### :question: 페이징 처리를 해야 한다면 어떻게 해야할까
 
 페이징 처리를 하려면, 쿼리를 분리해야한다.
 
