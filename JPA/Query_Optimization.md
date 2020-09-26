@@ -95,9 +95,9 @@ em.createQuery("select distinct o from Order o" +
 
    2. `ToMany`인 `Collection Fetch Join`의 경우
 
-      2-1. 페이징이 필요하다면? `Hibernate default_batch_fetch_size` 또는 `@BatchSize` 옵션을 적용
+      - 페이징이 필요하다면? `Hibernate default_batch_fetch_size` 또는 `@BatchSize` 옵션을 적용
 
-      2-2. 페이징이 필요없다면? 판단에 의해서 그냥 `Fetch Join` 사용
+      - 페이징이 필요없다면? 판단에 의해서 그냥 `Fetch Join` 사용
 
 2. 엔티티 조회 방식으로 해결이 안되면, DTO 조회 방식
 
