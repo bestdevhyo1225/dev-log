@@ -148,6 +148,8 @@
 
 - [MultipleBagFetchException](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/MultipleBagFetchException.md)
 
+- [JPA Select Query Optimization (간단 정리)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Query_Optimization.md)
+
 ### :blue_book: React
 
 - [함수형 컴포넌트 - useEffect()로 간단한 Life Cycle 사용하기](https://github.com/bestdevhyo1225/dev-log/blob/master/React/function_component_useEffect.md)
