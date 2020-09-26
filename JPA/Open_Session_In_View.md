@@ -10,7 +10,7 @@
 
 ## OSIV란 뭔가요?
 
-JPA가 언제 DB Connetion을 가져오고 언제 Connection을 반환하는지 여기서 부터 생각해봐야하는데, **가장 기본적으로 Transaction을 시작할 때, JPA 영속성 컨텍스트가 DB Connection을 가져오고, OSIV 옵션 상태에 따라 DB Connection을 어느 시점에 반환할지 결정한다.** 즉, OSIV는 어느 시점에 DB Connection을 반환해야 할지 도와주는 옵션이라고 생각하면 될 것 같다.
+**기본적으로 Transaction을 시작할 때 JPA 영속성 컨텍스트는 DB Connection을 가져오고, OSIV 옵션 상태에 따라, DB Connection을 어느 시점에 반환할지 결정한다.** 즉, OSIV는 어느 시점에 DB Connection을 반환해야 할지 도와주는 옵션이라고 생각하면 될 것 같다.
 
 <br>
 
