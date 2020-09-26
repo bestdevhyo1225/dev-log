@@ -1,6 +1,6 @@
 # JPA 조회 쿼리 최적화
 
-예시를 들어서 일단 간단하게 요약하고, 권장 순서를 정리하려고 한다.
+예시를 들어서 일단 간단하게 요약하여 정리하려고 한다.
 
 <br>
 
@@ -82,26 +82,6 @@ em.createQuery("select distinct o from Order o" +
 
 // OrderItem, Item은 default_batch_fetch_size 옵션을 사용한 지연로딩을 통해 조회
 ```
-
-<br>
-
-## 권장 순서
-
-강의를 진행주시는 김영한님께서는 다음과 같은 쿼리 최적화 순서를 권장하신다.
-
-1. 엔티티 조회 방식으로 우선 접근
-
-   1. `ToOne`의 관계들은 모두 `Fetch Join`을 적용해서 쿼리 수 최적화
-
-   2. `ToMany`인 `Collection Fetch Join`의 경우
-
-      - 페이징이 필요하다면? `Hibernate default_batch_fetch_size` 또는 `@BatchSize` 옵션을 적용
-
-      - 페이징이 필요없다면? 판단에 의해서 그냥 `Fetch Join` 사용
-
-2. 엔티티 조회 방식으로 해결이 안되면, DTO 조회 방식
-
-3. 그래도 안된다면, Native SQL 또는 Spring JDBC Template 사용
 
 <br>
 
