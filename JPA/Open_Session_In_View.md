@@ -10,17 +10,7 @@
 
 ## OSIV란 뭔가요?
 
-JPA가 언제 DB Connetion을 가져오고, 언제 Connection을 반환하는지? 여기서 부터 시작해야한다. `가장 기본적으로 Transaction을 시작할 때, JPA 영속성 컨텍스트가 DB로 부터 Connection을 가져온다.`
-
-```java
-// 예시
-@Service
-@Transactional(readOnly = true)
-public class OrderService {
-}
-```
-
-즉, `OSIV`는 DB Connection을 가져오는 시점부터 반환하는 과정을 조정할 수 있는 옵션이라고 간단하게 이해하면 될 것 같다.
+JPA가 언제 DB Connetion을 가져오고, 언제 Connection을 반환하는지? 여기서 부터 생각해봐야하는데 **가장 기본적으로 Transaction을 시작할 때, JPA 영속성 컨텍스트가 DB로 부터 Connection을 가져오고, OSIV 옵션 상태에 따라 DB Connection을 어디서 반환할지 결정한다.** 즉, OSIV는 어느 시점에 DB Connection을 반환해야 할지 도와주는 옵션이라고 생각하면 될 것 같다.
 
 <br>
 
@@ -60,7 +50,7 @@ DB Connection이 짧아서 리소스를 절약할 수 있다는 가장 큰 장�
 
 ### 단점
 
-`OSIV`가 false이면, 모든 지연로딩을 Transaction안에서 처리해야한다.
+OSIV가 false이면, 모든 지연로딩을 Transaction안에서 처리해야한다.
 
 <br>
 
