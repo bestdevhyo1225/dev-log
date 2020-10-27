@@ -152,6 +152,8 @@
 
 - [OSIV (Open Session In View)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Open_Session_In_View.md)
 
+- [트랜잭션을 지원하는 쓰기 지연을 사용할 시, 주의할 점](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Transactional_Write_Behind.md)
+
 ### :blue_book: React
 
 - [함수형 컴포넌트 - useEffect()로 간단한 Life Cycle 사용하기](https://github.com/bestdevhyo1225/dev-log/blob/master/React/function_component_useEffect.md)
