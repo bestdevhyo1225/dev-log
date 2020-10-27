@@ -50,7 +50,7 @@ internal class OrderTest(@Autowired private val entityManager: EntityManager) {
         entityManager.persist(orderA)
         entityManager.persist(orderB)
 
-        println("----- 현재 INSERT 쿼리는 발생되지 않아야 한다. -----")
+        println("----- 커밋하는 순간 데이터베이스에 INSERT SQL을 보낸다. -----")
 
         entityManager.flush() // 데이터베이스 동기화
         entityManager.clear() // 영속성 컨텍스트 초기화
@@ -59,4 +59,4 @@ internal class OrderTest(@Autowired private val entityManager: EntityManager) {
 }
 ```
 
-<img width="1197" alt="스크린샷 2020-10-27 오후 2 02 51" src="https://user-images.githubusercontent.com/23515771/97259073-4561e200-185d-11eb-9fda-947e456947be.png"><br>
+![스크린샷 2020-10-27 오후 4 54 57](https://user-images.githubusercontent.com/23515771/97272395-30914880-1875-11eb-9b05-3e697ce71f32.png)
