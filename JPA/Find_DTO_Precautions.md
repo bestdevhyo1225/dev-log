@@ -84,4 +84,4 @@ class MemberQueryRepositoryImpl(private val jpaQueryFactory: JPAQueryFactory) : 
 
 > 결과 값도 올바르게 나온다.
 
-<img width="718" alt="스크린샷 2020-10-29 오후 3 33 40" src="https://user-images.githubusercontent.com/23515771/97533748-2057a580-19fc-11eb-8821-1031498328b4.png">
+<img width="1080" alt="스크린샷 2020-10-29 오후 3 35 57" src="https://user-images.githubusercontent.com/23515771/97533908-71679980-19fc-11eb-9344-9d45fc5389b1.png">
