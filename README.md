@@ -154,6 +154,8 @@
 
 - [트랜잭션을 지원하는 쓰기 지연을 사용할 시, 주의할 점](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Transactional_Write_Behind.md)
 
+- [JPQL, Querydsl에서 DTO 직접 조회 시, 주의할 점](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Find_DTO_Precautions.md)
+
 ### :blue_book: React
 
 - [함수형 컴포넌트 - useEffect()로 간단한 Life Cycle 사용하기](https://github.com/bestdevhyo1225/dev-log/blob/master/React/function_component_useEffect.md)
