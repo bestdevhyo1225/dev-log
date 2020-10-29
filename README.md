@@ -92,7 +92,7 @@
 
 - [MySQL 쿼리 최적화 - JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-JOIN.md)
 
-- [MySQL 쿼리 최적화 - WHERE(문자열, 상수 비교)](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-WHERE)
+- [MySQL 쿼리 최적화 - WHERE(문자열, 상수 비교)](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-Where.md)
 
 - [MySQL 인덱스를 걸때 고려사항](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Index.md)
 
