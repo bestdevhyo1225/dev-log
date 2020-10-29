@@ -4,7 +4,7 @@
 
 <br>
 
-## DTO를 직접 조회할 때, Fetch Join을 사용하면 안된다.
+## Join을 사용하고, DTO를 직접 조회를 구현할 때는 Fetch Join을 사용하면 안된다.
 
 > 다음과 같이 조회용 목적인 `QueryRepository`가 있었다.
 
