@@ -41,7 +41,7 @@ WHERE first_name = 'Hyo';
 ```
 
 > **가장 중요!!!** <br>
-> first_name 과 비교하는 값이 상수 값이면, first_name 컬럼 문자열을 ㅆ자로 변환해서 비교를 수행한다. **하지만 first_name 컬럼 타입의 변환이 필요하기 때문에 인덱스를 사용하지 못한다.**
+> first_name 과 비교하는 값이 상수 값이면, first_name 컬럼 문자열을 숫자로 변환해서 비교를 수행한다. **하지만 first_name 컬럼 타입의 변환이 필요하기 때문에 인덱스를 사용하지 못한다.**
 
 ```sql
 -- employees 테이블 (first_name : varchar)
