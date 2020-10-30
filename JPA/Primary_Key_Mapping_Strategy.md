@@ -71,8 +71,6 @@ SEQUENCE 전략은 entityManager.persist()를 호출할 때, 다음과 같이 �
 
 2. 조회한 식별자를 엔티티에 할당한 후에 엔티티를 영속성 컨텍스트에 저장한다.
 
-<br>
-
 ### @SequenceGenerator
 
 |      속성       |                                    기능                                     |       기본값       |
@@ -82,8 +80,6 @@ SEQUENCE 전략은 entityManager.persist()를 호출할 때, 다음과 같이 �
 |  initialValue   | DDL 생성시에만 사용됨, 시퀀스 DDL을 생성할 때, 처음 시작하는 수를 지정한다. |         1          |
 | allocationSize  |           시퀀스 한 번 호출에 증가하는 수 (성능 최적화에 사용됨)            |         50         |
 | catalog, schema |                      데이터베이스 catalog, schema 이름                      |                    |
-
-<br>
 
 ### SEQUENCE 전략과 최적화
 
