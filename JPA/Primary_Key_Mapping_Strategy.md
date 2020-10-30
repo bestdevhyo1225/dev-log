@@ -29,7 +29,7 @@ class Member {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "member_id")
-  val id: Long? = null
+  val id: Long = 0
 
 }
 ```
@@ -60,7 +60,7 @@ class Member {
   @GeneratedValue(strategy = GenerationType.SEQUENCE,
                   generator = "MEMBER_SEQ_GENERATOR")
   @Column(name = "member_id")
-  val id: Long? = null
+  val id: Long = 0
 
 }
 ```
