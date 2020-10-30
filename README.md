@@ -158,6 +158,8 @@
 
 - [JPQL, Querydsl에서 DTO 직접 조회 시, 주의할 점](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Find_DTO_Precautions.md)
 
+- [기본키 생성 전략 (IDENTITY, SEQUENCE) 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Primary_Key_Mapping_Strategy.md)
+
 ### :blue_book: React
 
 - [함수형 컴포넌트 - useEffect()로 간단한 Life Cycle 사용하기](https://github.com/bestdevhyo1225/dev-log/blob/master/React/function_component_useEffect.md)
