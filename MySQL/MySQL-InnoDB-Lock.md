@@ -20,13 +20,13 @@
 
 ## InnoDB의 잠금 종류
 
-- 레코드 락 (Record Lock, Record only Lock)
+### 레코드 락 (Record Lock, Record only Lock)
 
-- 갭 락 (Gap Lock)
+### 갭 락 (Gap Lock)
 
-- 넥스트 키 락 (Next Key Lock)
+### 넥스트 키 락 (Next Key Lock)
 
-- 자동 증가 락 (Auto Increment Lock)
+### 자동 증가 락 (Auto Increment Lock)
 
 > 레코드 락 (Record Lock, Record only Lock)
 
