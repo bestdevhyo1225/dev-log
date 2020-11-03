@@ -28,6 +28,8 @@
 
 **`4. 자동 증가 락 (Auto Increment Lock)`**
 
+<br>
+
 > 레코드 락 (Record Lock, Record only Lock)
 
 - InnoDB 스토리지 엔진은 레코드 자체가 아니라 인덱스의 레코드를 잠근다는 점이다.
