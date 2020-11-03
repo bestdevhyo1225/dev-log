@@ -66,25 +66,25 @@ UPDATE가 실행되면, 1건의 레코드가 업데이트 된다. 이 1건의 UP
 
 > idx_first_name 인덱스를 확인해보면, first_name = 'Georgi'인 모든 인덱스가 잠금 상태가 되버린다.
 
-| first_name | emp_no | 상태 |
-| :--------: | :----: | :--: |
-|   Georgi   | 10001  | 잠금 |
-|   Georgi   | 13457  | 잠금 |
-|   Georgi   | 18320  | 잠금 |
-|   Georgi   | 18705  | 잠금 |
-|   Georgi   | 19203  | 잠금 |
-|    ...     |  ...   |
-|   Georgy   |        |
+| first_name | emp_no | 잠금 상태 |
+| :--------: | :----: | :-------: |
+|   Georgi   | 10001  |     O     |
+|   Georgi   | 13457  |     O     |
+|   Georgi   | 18320  |     O     |
+|   Georgi   | 18705  |     O     |
+|   Georgi   | 19203  |     O     |
+|    ...     |  ...   |    ...    |
+|   Georgy   | 23125  |     X     |
 
 > 실제 변경된 레코드는 first_name = 'Georgi', last_name = 'Klassen' 인 1건의 레코드뿐이다.
 
-|  emp_no   | first_name |  last_name  |       변경 상태        |
-| :-------: | :--------: | :---------: | :--------------------: |
-|   10001   |   Georgi   |   Facello   |           X            |
-|   13457   |   Georgi   |   Atchley   |           X            |
-|   18320   |   Georgi   |  Itzfeldt   |           X            |
-| **18705** | **Georgi** | **Klassen** | O (실제 변경된 레코드) |
-|   19203   |   Georgi   |   Barinka   |           X            |
+|  emp_no   | first_name |  last_name  | 잠금 상태 | 변경 상태 |        기타        |
+| :-------: | :--------: | :---------: | :-------: | :-------: | :----------------: |
+|   10001   |   Georgi   |   Facello   |     O     |     X     |                    |
+|   13457   |   Georgi   |   Atchley   |     O     |     X     |                    |
+|   18320   |   Georgi   |  Itzfeldt   |     O     |     X     |                    |
+| **18705** | **Georgi** | **Klassen** |     O     |     O     | 실제 변경된 레코드 |
+|   19203   |   Georgi   |   Barinka   |     O     |     X     |                    |
 
 마지막으로 해당 테이블에 인덱스가 하나도 없다면, 테이블을 풀 스캔하면서 UPDATE 작업을 한다. 이 과정에서 만약 테이블에 있는 30여 만 건의 레코드가 있다면, 모두 잠그게 된다. 이것이 MySQL 방식이며, MySQL의 InnoDB에서 인덱스 설계가 중요한 이유 또한 이 때문이다.
 
