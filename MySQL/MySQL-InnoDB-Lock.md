@@ -78,13 +78,13 @@ UPDATE가 실행되면, 1건의 레코드가 업데이트 된다. 이 1건의 UP
 
 > 실제 변경된 레코드는 first_name = 'Georgi', last_name = 'Klassen' 인 1건의 레코드뿐이다.
 
-|  emp_no   | first_name |  last_name  | 잠금 상태 | 변경 상태 |        기타        |
-| :-------: | :--------: | :---------: | :-------: | :-------: | :----------------: |
-|   10001   |   Georgi   |   Facello   |     O     |     X     |                    |
-|   13457   |   Georgi   |   Atchley   |     O     |     X     |                    |
-|   18320   |   Georgi   |  Itzfeldt   |     O     |     X     |                    |
-| **18705** | **Georgi** | **Klassen** |     O     |     O     | 실제 변경된 레코드 |
-|   19203   |   Georgi   |   Barinka   |     O     |     X     |                    |
+|  emp_no   | first_name |  last_name  | 잠금 상태 | 변경 상태 |          기타          |
+| :-------: | :--------: | :---------: | :-------: | :-------: | :--------------------: |
+|   10001   |   Georgi   |   Facello   |     O     |     X     |                        |
+|   13457   |   Georgi   |   Atchley   |     O     |     X     |                        |
+|   18320   |   Georgi   |  Itzfeldt   |     O     |     X     |                        |
+| **18705** | **Georgi** | **Klassen** |   **O**   |   **O**   | **실제 변경된 레코드** |
+|   19203   |   Georgi   |   Barinka   |     O     |     X     |                        |
 
 마지막으로 해당 테이블에 인덱스가 하나도 없다면, 테이블을 풀 스캔하면서 UPDATE 작업을 한다. 이 과정에서 만약 테이블에 있는 30여 만 건의 레코드가 있다면, 모두 잠그게 된다. 이것이 MySQL 방식이며, MySQL의 InnoDB에서 인덱스 설계가 중요한 이유 또한 이 때문이다.
 
