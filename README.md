@@ -140,29 +140,31 @@
 
 - [연관 관계 주의사항(양방향)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Association_Precautions.md)
 
-- [Persistence Context](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Persistence_Context.md)
+- [영속성 컨텍스트 (Persistence Context)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Persistence_Context.md)
 
-- [DirtyChecking and Merge](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/DirtyChecking_And_Merge.md)
+- [변경 감지와 병합 (DirtyChecking and Merge)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/DirtyChecking_And_Merge.md)
 
-- [Flush](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Flush.md)
+- [플러시 (Flush)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Flush.md)
 
-- [Proxy](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Proxy.md)
+- [기본키 매핑 전략](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Primary_Key_Mapping_Strategy.md)
 
-- [Lazy & Eager Loading](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Lazy_Eager_Loading.md)
+- [프록시 (Proxy)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Proxy.md)
 
-- [Fetch Join](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Fetch_Join.md)
+- [지연 & 즉시 로딩 (Lazy & Eager Loading)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Lazy_Eager_Loading.md)
+
+- [페치 조인 (Fetch Join)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Fetch_Join.md)
+
+- [트랜잭션 범위의 영속성 컨텍스트 (Transaction-scoped persistence context)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Transaction-scoped_Persistence_Context.md)
+
+- [OSIV (Open Session In View)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Open_Session_In_View.md)
 
 - [MultipleBagFetchException](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/MultipleBagFetchException.md)
 
 - [JPA Select Query Optimization (간단 정리)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Query_Optimization.md)
 
-- [OSIV (Open Session In View)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Open_Session_In_View.md)
-
 - [트랜잭션을 지원하는 쓰기 지연을 사용할 시, 주의할 점](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Transactional_Write_Behind.md)
 
 - [JPQL, Querydsl에서 DTO 직접 조회 시, 주의할 점](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Find_DTO_Precautions.md)
-
-- [기본키 생성 전략 (IDENTITY, SEQUENCE) 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Primary_Key_Mapping_Strategy.md)
 
 ### :blue_book: React
 
