@@ -54,7 +54,7 @@ public interface Subscription {
 MyPublisher.subscribe(MySubscriber);
 ```
 
-> Publisher의 subscribe() 메소드를 호출하게 되면, 메소드 내부에서 subscriber.onSubscribe() 호출하게 된다.
+> Publisher의 subscribe() 메소드를 호출하게 되면, 메소드 내부에서 subscriber.onSubscribe() 호출하며, Publisher에게 데이터 또는 시퀀스를 요청하는 과정이다.
 
 ```java
 public class MyPublisher implements Publisher<Integer> {
