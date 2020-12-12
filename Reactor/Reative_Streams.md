@@ -6,7 +6,7 @@
 
 ## Reactive Streams Interface
 
-Reactive Streams 인터페이스는 아래와 같이 4개로 구성되어 있다.
+Reactive Streams 인터페이스는 아래와 같이 4개로 구성되어 있다. 해당 인터페이스를 직접 구현해서 `Reactive Programming`을 할 수 있다.
 
 - Processor
 
@@ -15,8 +15,6 @@ Reactive Streams 인터페이스는 아래와 같이 4개로 구성되어 있다
 - Subscriber
 
 - Subscription
-
-4가지 중에서 `Publisher`, `Subscriber`, `Subscription`만 정리하려고 한다.
 
 > Publisher
 
