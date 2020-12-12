@@ -95,6 +95,66 @@ SELECT DISTINCT t FROM Team t JOIN FETCH t.members WHERE t.name = '팀A'
 
 <br>
 
+## JPQL에서 Fetch Join과 그냥 Join의 차이점?
+
+JPQL에서 `일반 Join`은 연관된 엔티티를 같이 반환해주지 않는다.
+
+```java
+List<Member> members = queryFactory
+                .selectFrom(member)
+                .join(member.team)
+                .fetch();
+```
+
+아래의 결과를 확인해보면, member 관련된 정보들만 SELECT 한다.
+
+```sql
+-- JPQL
+select member1
+from Member member1
+inner join member1.team
+
+-- SQL
+select  member0_.member_id as member_i1_1_,
+        member0_.age as age2_1_,
+        member0_.team_id as team_id4_1_,
+        member0_.username as username3_1_
+from member member0_
+inner join team team1_
+on member0_.team_id=team1_.team_id
+```
+
+`Fetch Join`의 경우 함께 연관된 엔티티 정보를 모두 가져온다.
+
+```java
+List<Member> members = queryFactory
+                .selectFrom(member)
+                .join(member.team).fetchJoin()
+                .fetch();
+```
+
+결과를 확인해보면, Member와 Team 엔티티 정보를 모두 SELECT 한다.
+
+```sql
+-- JPQL
+select member1
+from Member member1
+inner join fetch member1.team
+
+-- SQL
+select  member0_.member_id as member_i1_1_0_,
+        team1_.team_id as team_id1_2_1_,
+        member0_.age as age2_1_0_,
+        member0_.team_id as team_id4_1_0_,
+        member0_.username as username3_1_0_,
+        team1_.name as name2_2_1_
+from member member0_
+inner join team team1_
+on member0_.team_id=team1_.team_id
+```
+
+<br>
+
 ## 참고
 
 - [인프런 - 자바 ORM 표준 JPA 프로그래밍 (기본편)](https://www.inflearn.com/course/ORM-JPA-Basic/dashboard)
