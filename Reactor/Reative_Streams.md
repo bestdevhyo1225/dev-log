@@ -73,6 +73,7 @@ public class MySubscriber implements Subscriber<Integer> {
 
   @Override
   public void onSubscribe(Subscription subscription) {
+    this.subscription = subscription;
     this.subscription.request(REQUEST_COUNT);
   }
 
