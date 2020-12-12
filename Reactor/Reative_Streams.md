@@ -104,6 +104,12 @@ public class MySubscribtion implements Subscription {
 
 이쯤에서 간단히 정리해보자면, `Subscriber`가 `Publisher`에게 `Request`하는 과정을 `Back-Pressure`라고 표현하고, `Request`하는 데이터 또는 시퀀스의 흐름을 제어할 수 있다. 즉, `Request(1)`를 요청하면 1개의 데이터만 요청할 수 있고, `Request(MAX)`를 요청하면 최대 값에 해당하는 데이터를 요청할 수 있는것이다.
 
+> 로그를 보다보면, request(unbounded)에서 unbounded를 확인 할 수 있는데 unbounded가 의미하는 것은 무엇일까?
+
+- 내부 로직에서 MAX값을 설정하게 된다는 것을 의미한다.
+- Back-Pressure기능을 활용하지 않고, 모든 데이터를 요청하는 것이다.
+- Back-Pressure기능을 사용해서, request(n)에서 n을 변경하고 싶다면, subscriptionConsumer를 넘겨줘야 한다.
+
 <br>
 
 ## 참고
