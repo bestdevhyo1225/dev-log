@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-volume-4
+spec:
+  containers:
+    - name: container
+      image: kubetm/init
+      volumeMounts:
+        - name: pvc-pv
+          mountPath: /mount3
+  volumes:
+    - name: pvc-pv
+      persistentVolumeClaim:
+        claimName: pvc-01

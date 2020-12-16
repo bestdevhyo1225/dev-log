@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: lr-1
+  namespace: nm-3
+spec:
+  limits:
+    - type: Container
+      min:
+        memory: 0.1Gi
+      max:
+        memory: 0.4Gi
+      maxLimitRequestRatio:
+        memory: 3
+      defaultRequest:
+        memory: 0.1Gi
+      default:
+        memory: 0.2Gi

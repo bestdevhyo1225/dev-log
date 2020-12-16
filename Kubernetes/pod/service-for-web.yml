@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-for-web
+spec:
+  selector:
+    type: web
+  ports:
+    - port: 8080

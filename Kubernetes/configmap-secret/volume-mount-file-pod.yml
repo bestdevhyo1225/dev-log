@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-mount
+spec:
+  containers:
+    - name: container
+      image: kubetm/init
+      volumeMounts:
+        - name: file-volume
+          mountPath: /mount
+  volumes:
+    - name: file-volume
+      configMap:
+        name: cm-file

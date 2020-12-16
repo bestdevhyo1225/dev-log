@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-5
+  labels:
+    type: db
+    lo: production
+spec:
+  containers:
+    - name: container
+      image: kubetm/init

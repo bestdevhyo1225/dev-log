@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-for-production
+spec:
+  selector:
+    lo: production
+  ports:
+    - port: 8080

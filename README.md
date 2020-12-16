@@ -24,15 +24,15 @@
 
 ### :closed_book: Kubernetes
 
-- [Pod 오브젝트 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Pod.md)
+- [실습 환경 설정하기](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes)
 
-- [Service 오브젝트 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Service.md)
+- [Pod 실습](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/pod)
 
-- [Volume 오브젝트 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Volume.md)
+- [Service 실습](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/service)
 
-- [ConfigMap, Secret 오브젝트 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/ConfigMap_Secret.md)
+- [Volume 실습](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/volume)
 
-- [Namespace, ResourceQuota, LimitRange 오브젝트 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Namespace_ResourceQuota_LimitRange.md)
+- [ConfigMap, Secret 실습](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/configmap-secret)
 
 ### :closed_book: Serverless
 

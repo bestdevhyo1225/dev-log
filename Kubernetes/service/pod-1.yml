@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-1
+  labels:
+    app: pod
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: minikube
+  containers:
+    - name: container
+      image: kubetm/app
+      ports:
+        - containerPort: 8080
