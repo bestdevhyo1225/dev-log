@@ -44,6 +44,30 @@
 
   - [안정 정렬과 불안정 정렬에 대해서 간단히 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_stable_sort_unstable_sort.md)
 
+  - [선택 정렬 (Selection Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_selection.md)
+
+  - [삽입 정렬 (Insertion Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_insertion.md)
+
+  - [버블 정렬 (Bubble Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_bubble.md)
+
+  - [병합 정렬 (Merge Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_merge.md)
+
+  - [퀵 정렬 (Quick Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_quick.md)
+
+  - [계수 정렬 (Counting Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_counting.md)
+
+  - [기수 정렬 (Radix Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_radix.md)
+
+  - [이분 탐색(Binary Search), Lower_Bound, Upper_Bound 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_binary_search.md)
+
+  - [깊이 우선 탐색(Depth First Search, DFS)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_depth_first_search.md)
+
+  - [다익스트라(Dijkstra) 최단경로 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_dijkstra.md)
+
+  - [최소 스패닝 트리(Minimum Spanning Tree, MST)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_MinimumSpanningTree.md)
+
+  - [최장 증가 수열(Longest Increasing Subsequence, LIS) 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_LongestIncreasingSubsequence.md)
+
 - **`Operating System`**
 
   - [Program, Process, Thread](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Program-Process-Thread.md)
