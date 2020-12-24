@@ -46,7 +46,7 @@
 
   - [상호 배타적 집합](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_DisjointSet.md)
 
-  - [선형 자료구조 (배열, 연결리스트)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_Datastructure_LinearDatastructure_Array_LinkedList.md)
+  - [선형 자료구조 (배열, 연결리스트)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_LinearDatastructure_Array_LinkedList.md)
 
   - [선형 자료구조 (큐, 스택, 데크)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_LinearDatastructure_Queue_Stack_Deque.md)
 
