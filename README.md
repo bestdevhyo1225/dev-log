@@ -40,6 +40,16 @@
 
 ### :closed_book: CS
 
+- **`DataStructure`**
+
+  - [이진 검색 트리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_binary_search_tree.md)
+
+  - [상호 배타적 집합](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_DisjointSet.md)
+
+  - [선형 자료구조 (배열, 연결리스트)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_Datastructure_LinearDatastructure_Array_LinkedList.md)
+
+  - [선형 자료구조 (큐, 스택, 데크)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_LinearDatastructure_Queue_Stack_Deque.md)
+
 - **`Algorithm`**
 
   - [안정 정렬과 불안정 정렬에 대해서 간단히 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_stable_sort_unstable_sort.md)
