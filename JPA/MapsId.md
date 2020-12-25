@@ -38,9 +38,7 @@ public class BookDescription {
 }
 ```
 
-위와 같이 2개의 엔티티가 `@OneToOne` 양방향 연관관계로 설정되어 있다.
-`BookDescription` 엔티티에서 `@MapsId`를 지정해두면, `@Id`는 `Book` 엔티티의 PK인 `bookId`로 매핑된다.
+> 위와 같이 2개의 엔티티가 `@OneToOne` 양방향 연관관계로 설정되어 있다.
+> `BookDescription` 엔티티에서 `@MapsId`를 지정해두면, `@Id`는 `Book` 엔티티의 PK인 `bookId`로 매핑된다.
 
-<br>
-
-풀어서 설명하자면, `Book`, `BookDescription`의 라이프 사이클이 동일한 경우가 있다. 즉, `Book`, `BookDescription`이 저장되고, 수정되는 사이클이 같다면, `Book`을 애그리거트로 두고, `cascade = CascadeType.ALL` 옵션을 통해 `Book`, `BookDescription`을 한 번에 저장되도록 구현할 수 있다. 이 때 `BookDescription` 엔티티의 `@Id`는 `Book` 엔티티의 PK와 동일한 값이 매핑된다.
+> 풀어서 설명하자면, `Book`, `BookDescription`의 라이프 사이클이 동일한 경우가 있다. 즉, `Book`, `BookDescription`이 저장되고, 수정되는 사이클이 같다면, `Book`을 애그리거트로 두고, `cascade = CascadeType.ALL` 옵션을 통해 `Book`, `BookDescription`을 한 번에 저장되도록 구현할 수 있다. 이 때 `BookDescription` 엔티티의 `@Id`는 `Book` 엔티티의 `@Id`와 동일한 값이 매핑된다.
