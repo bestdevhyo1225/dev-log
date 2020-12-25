@@ -206,6 +206,8 @@
 
 - [JPQL, Querydsl에서 DTO 직접 조회 시, 주의할 점](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Find_DTO_Precautions.md)
 
+- [@OneToOne 양방향 관계에서 주의할 점](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/OneToOne_Precautions.md)
+
 ### :blue_book: Reactor
 
 - [Reactive Streams - Publisher, Subscriber, Subscription 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Reactor/Reative_Streams.md)
