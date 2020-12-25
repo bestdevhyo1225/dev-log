@@ -8,7 +8,7 @@
 
 프로젝트를 진행하면서, 양방향 관계 모두 Fetch 전략을 `Lazy`로 설정했지만, `Eager`로 동작하는 문제가 발생했다.
 
-> Book Entity
+> Book
 
 ```java
 @Entity
@@ -26,7 +26,7 @@ public class Book {
 }
 ```
 
-> BookDescription Entity
+> BookDescription
 
 ```java
 @Entity
@@ -135,7 +135,7 @@ void BookDescriptio_Entity를_조회한다() {
 
 > 연관관계 주인이 아닌쪽에서 호출하게 되면, Lazy Loading이 동작하지 않는다. Lazy Loading으로 동작하게 하려면, 다음과 같이 코드를 수정해야 한다.
 
-> Book Entity
+> Book
 
 - `@OneToOne`설정에서 `optional = false`로 설정을 해두면, Null이 아닌 관계가 항상 존재해야 한다는 의미로 해석된다.
 
@@ -156,7 +156,7 @@ public class Book {
 }
 ```
 
-> BookDescription Entity
+> BookDescription
 
 - `@OneToOne` 관계로 설정되어 있는 부분에 `@MapsId`를 추가하게 되면, 외래 키와 매핑한 연관관계를 기본 키에도 매핑하겠다는 뜻이다.
 
