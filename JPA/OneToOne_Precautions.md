@@ -35,9 +35,7 @@ public class Book {
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class BookDescription {
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "book_description_id")
-  private Long id;
+  private Long bookId;
 
   @OneToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "book_id")
@@ -169,9 +167,7 @@ public class Book {
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class BookDescription {
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  @Column(name = "book_description_id")
-  private Long id;
+  private Long bookId;
 
   @MapsId // 추가
   @OneToOne(fetch = FetchType.LAZY)
