@@ -1,7 +1,5 @@
 # ConfigMap, Secret 실습
 
-[시작하기 전에 ConfigMap과 Secret에 대해서 간단하게 알아보기](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/ConfigMap_Secret.md)
-
 <br>
 
 ## Env (Literal)

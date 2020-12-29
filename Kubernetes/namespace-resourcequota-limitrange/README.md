@@ -1,7 +1,5 @@
 # Namespace, ResourceQuota, LimitRange
 
-[시작하기 전에 Namespace, ResourceQuota, LimitRange에 대해서 간단하게 알아보기](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/Namespace_ResourceQuota_LimitRange.md)
-
 <br>
 
 ## Namespace 실습
