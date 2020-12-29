@@ -43,15 +43,15 @@ $ minikube dashboard
 
 ## 기본 오브젝트 실습
 
-- [Pod 실습](https://github.com/bestdevhyo1225/kubernetes-study/tree/master/pod)
+- [Pod 실습](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/pod)
 
-- [Service 실습](https://github.com/bestdevhyo1225/kubernetes-study/tree/master/service)
+- [Service 실습](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/service)
 
-- [Volume 실습](https://github.com/bestdevhyo1225/kubernetes-study/tree/master/volume)
+- [Volume 실습](hhttps://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/volume)
 
-- [ConfigMap, Secret 실습](https://github.com/bestdevhyo1225/kubernetes-study/tree/master/configmap-secret)
+- [ConfigMap, Secret 실습](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/configmap-secret)
 
-- [Namespace, ResourceQuota, LimitRange 실습](https://github.com/bestdevhyo1225/kubernetes-study/tree/master/namespace-resourcequota-limitrange)
+- [Namespace, ResourceQuota, LimitRange 실습](hhttps://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/namespace-resourcequota-limitrange)
 
 <br>
 
