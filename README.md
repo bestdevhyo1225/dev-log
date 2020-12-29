@@ -24,15 +24,7 @@
 
 ### :closed_book: Kubernetes
 
-- [실습 환경 설정하기](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes)
-
-- [Pod 실습](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/pod)
-
-- [Service 실습](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/service)
-
-- [Volume 실습](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/volume)
-
-- [ConfigMap, Secret 실습](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes/configmap-secret)
+- [쿠버네티스 실습 모음](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes)
 
 ### :closed_book: Serverless
 
