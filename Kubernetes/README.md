@@ -41,20 +41,6 @@ $ minikube dashboard
 
 <br>
 
-## 기본 오브젝트 실습
-
-- [Pod 실습](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/pod)
-
-- [Service 실습](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/service)
-
-- [Volume 실습](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/volume)
-
-- [ConfigMap, Secret 실습](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/configmap-secret)
-
-- [Namespace, ResourceQuota, LimitRange 실습](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/namespace-resourcequota-limitrange)
-
-<br>
-
 ## 참고
 
 - [인프런 - 대세는 쿠버네티스 ^o^](https://www.inflearn.com/course/%EC%BF%A0%EB%B2%84%EB%84%A4%ED%8B%B0%EC%8A%A4-%EA%B8%B0%EC%B4%88)

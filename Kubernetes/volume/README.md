@@ -4,7 +4,9 @@
 
 ## emptyDir
 
-:pushpin: `pod-volume-1.yml`에 정의한 내용을 통해 Pod를 생성한다.
+`emptyDir`은 `Pod`안에 컨테이너들이 서로 데이터를 공유가 필요할 때 사용하는 것이다. 최초 볼륨이 생성될 때는 볼륨 안에 내용이 비어있기 때문에 `emptyDir`라고 명칭이 된 것이다. 중요한 점은 `Pod`안에 생성되기 때문에 `Pod`에 문제가 있으면, 데이터가 모두 삭제된다. 따라서 일시적인 데이터만 보관하고 있어야 한다.
+
+> `pod-volume-1.yml`에 정의한 내용을 통해 Pod를 생성한다.
 
 ```zsh
 $ kubectl apply -f pod-volume-1.yml
@@ -12,7 +14,7 @@ $ kubectl apply -f pod-volume-1.yml
 $ kubectl get pods
 ```
 
-:pushpin: container1에 접속해서 mount1이 생성 되었는지 확인한다.
+> container1에 접속해서 mount1이 생성 되었는지 확인한다.
 
 ```zsh
 $ kubectl exec pod-volume-1 -it -c container1 -- /bin/bash
@@ -22,7 +24,7 @@ $ kubectl exec pod-volume-1 -it -c container1 -- /bin/bash
 [root@pod-volume-1 /]$ mount | grep mount1
 ```
 
-:pushpin: /mount1 디렉토리로 이동해서 file을 생성한다.
+> /mount1 디렉토리로 이동해서 file을 생성한다.
 
 ```zsh
 [root@pod-volume-1 /]$ cd mount1
@@ -32,7 +34,7 @@ $ kubectl exec pod-volume-1 -it -c container1 -- /bin/bash
 [root@pod-volume-1 /mount1]$ cat file.txt
 ```
 
-:pushpin: container2로 이동해서 /mount2에 file.txt가 있는지 확인한다.
+> container2로 이동해서 /mount2에 file.txt가 있는지 확인한다.
 
 ```zsh
 $ kubectl exec pod-volume-1 -it -c container2 -- /bin/bash
@@ -49,7 +51,9 @@ $ kubectl exec pod-volume-1 -it -c container2 -- /bin/bash
 
 ## hostPath
 
-:pushpin: pod-volume-2.yml, pod-volume-3.yml에 정의된 Pod를 생성한다.
+`Pod`들이 올라가 있는 `Node`에 볼륨이 필요할 때, 사용한다. 아까 `emptyDir`과는 다르게 `Node`에 볼륨이 올라가 있기 때문에 `Pod`가 죽어도 볼륨안에 있는 데이터는 사라지지 않는다. 그러나 `Pod` 입장에서 보면, 자기 자신이 죽고 다시 재생성 됐을때는 해당 `Node`에서 다시 생성된다는 보장이 없다. 즉, 다른 `Node2`에도 생성이 될 수 있으며, 이러한 경우에는 기존에 사용했던 `Node`의 볼륨을 사용할 수 없다.
+
+> pod-volume-2.yml, pod-volume-3.yml에 정의된 Pod를 생성한다.
 
 - `type: DirectoryOrCreate`로 설정하면, 디렉토리가 없을때 생성한다는 의미이다.
 
