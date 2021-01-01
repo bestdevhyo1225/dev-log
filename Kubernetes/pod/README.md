@@ -4,6 +4,8 @@
 
 <br>
 
+![image](https://kubetm.github.io/img/practice/beginner/Pod%20with%20Container%20Port%20for%20Kubernetes.jpg)
+
 ## Pod
 
 > Pod를 생성합니다.
@@ -33,6 +35,8 @@ $ kubectl apply -f replication-1.yml
 <br>
 
 ## Label 그리고 Service
+
+![image](https://kubetm.github.io/img/practice/beginner/Pod%20with%20Label%20Selector%20for%20Kubernetes.jpg)
 
 > 6개의 Pod를 생성합니다.
 
@@ -73,6 +77,8 @@ $ kubectl apply -f service-for-production.yml
 <br>
 
 ## Node Schedule
+
+![image](https://kubetm.github.io/img/practice/beginner/Pod%20with%20Node%20Schedule%20for%20Kubernetes.jpg)
 
 > 직접 선택
 
