@@ -72,6 +72,43 @@ $ kubectl apply -f service-for-production.yml
 
 <br>
 
+## Node Schedule
+
+> 직접 선택
+
+```yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-3
+spec:
+  nodeSelector: # 직접 선택한다.
+    kubernetes.io/hostname: k8s-node1
+  containers:
+    - name: container
+      image: kubetm/init
+```
+
+> 스케줄러 판단
+
+```yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-4
+spec:
+  containers:
+    - name: container
+      image: kubetm/init
+      resources: # 자원의 사용량에 따라서 스케줄이 판단한다.
+        requests:
+          memory: 2Gi
+        limits:
+          memory: 3Gi
+```
+
+<br>
+
 ## 참고
 
 - [Pod 강의 자료](https://kubetm.github.io/practice/beginner/object-pod/)
