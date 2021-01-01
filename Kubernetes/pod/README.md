@@ -6,7 +6,7 @@
 
 ## Pod
 
-:pushpin: Pod를 생성합니다.
+> Pod를 생성합니다.
 
 ```sh
 # Pod 생성
@@ -23,7 +23,7 @@ $ kubectl describe pod/pod-1
 
 ## ReplicationController
 
-:pushpin: Pod를 만들어주고 Pod가 죽었을 때 다시 생성하는 관리적인 역할을 하는 ReplicationController 생성합니다.
+> Pod를 만들어주고 Pod가 죽었을 때 다시 생성하는 관리적인 역할을 하는 ReplicationController 생성합니다.
 
 ```sh
 # ReplicationController 생성
@@ -34,7 +34,7 @@ $ kubectl apply -f replication-1.yml
 
 ## Label 그리고 Service
 
-:pushpin: 6개의 Pod를 생성합니다.
+> 6개의 Pod를 생성합니다.
 
 ```sh
 # pod-1
@@ -56,14 +56,14 @@ $ kubectl apply -f pod-production-db.yml
 $ kubectl apply -f pod-production-server.yml
 ```
 
-:pushpin: type: web인 Pod을 위한 Service를 생성합니다.
+> type: web인 Pod을 위한 Service를 생성합니다.
 
 ```sh
 # type: web인 Pod들이 여기에 묶인다. ex) pod-1, pod-4
 $ kubectl apply -f service-for-web.yml
 ```
 
-:pushpin: lo: production인 Pod을 위한 Service를 생성합니다.
+> lo: production인 Pod을 위한 Service를 생성합니다.
 
 ```sh
 # lo: production인 Pod들이 여기에 묶인다. ex) pod-4, pod-5, pod-6
