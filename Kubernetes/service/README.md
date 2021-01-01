@@ -4,6 +4,12 @@
 
 ## Cluster IP 타입으로 Service 적용하기
 
+> ClusterIP는 클러스터 내에서만 사용하는 IP이며, 주로 클러스터 내부를 접근할 수 있는 인가된 사용자(운영자)를 위해 사용한다.
+
+- 내부 대쉬보드
+
+- Pod의 서비스 상태 디버깅
+
 ```sh
 # Pod 생성
 $ kubectl apply -f pod-1.yml
@@ -18,7 +24,7 @@ $ kubectl apply -f service-cluster-ip.yml
 $ kubectl get service
 ```
 
-:pushpin: 쿠버네티스 클러스터 내에서는 Service IP에 접근할 수 있고, 외부에서는 접근할 수 없다.
+> 쿠버네티스 클러스터 내에서는 Service IP에 접근할 수 있고, 외부에서는 접근할 수 없다.
 
 ```sh
 # << minikube 클러스터 환경에서 테스트 >>
@@ -37,19 +43,20 @@ Hostname : pod-1
 
 ## Node Port 타입으로 Service 적용하기
 
+> 내부망을 연결하는데 사용하거나 데모 및 임시 연결을 위해 사용한다.
+
 ```sh
+# Node Port 타입의 서비스 시작
 $ kubectl apply -f service-node-port.yml
 ```
 
-:pushpin: 쿠버네티스 클러스터의 연결되어 있는 모든 노드에 대해서 `동일한 포트`가 할당된다.
+> 쿠버네티스 클러스터의 연결되어 있는 모든 노드에 대해서 `동일한 포트`가 할당된다.
 
 - Node 1 : 192.168.0.31:`30000` (Pod-1 있음)
 - Node 2 : 192.168.0.32:`30000` (Pod-2 있음)
 - Service IP : 10.101.147.131
 
-:pushpin: IP와 Port를 통해 접속하면 어떤 노드인지와 상관없이 Service에 바로 연결된다.
-
-:pushpin: 하지만 `externalTrafficPolicy: Local`을 설정하면 해당 노드의 Pod에만 접근한다.
+> IP와 Port를 통해 접속하면 어떤 노드인지와 상관없이 Service에 바로 연결되지만, `externalTrafficPolicy: Local`을 설정하면 해당 노드의 Pod에만 접근할 수 있다.
 
 - externalTrafficPolicy 설정을 하지 않음
 
@@ -98,7 +105,7 @@ $ curl 192.168.0.32:30000
 Hostname : pod-2
 ```
 
-:pushpin: 만약 pod-1이 없으면, `192.168.0.31:30000`로 요청을 날렸을 때 접근이 안된다.
+> 만약 pod-1이 없으면, `192.168.0.31:30000`로 요청을 날렸을 때 접근이 안된다.
 
 ```sh
 $ curl 192.168.0.31:30000/hostname
@@ -107,9 +114,9 @@ $ curl 192.168.0.31:30000/hostname
 
 <br>
 
-## LoadBalancer 타입으로 Service 적용하기
+## Load Balancer 타입으로 Service 적용하기
 
-:pushpin: 로드 밸런서타입은 외부를 노출시켜줄 플러그인을 설치해서 사용하면 된다.
+> Load Balancer 타입은 외부 시스템 노출용이며, 외부를 노출시켜줄 플러그인을 설치해서 사용하면 된다. GCP, AWS 등등 클라우드 서비스에서 제공하는 쿠버네티스 플랫폼을 사용할 때는 자체적으로 플러그인 설치가 되어 있다.
 
 <br>
 
