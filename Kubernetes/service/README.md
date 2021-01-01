@@ -4,6 +4,8 @@
 
 ## Cluster IP 타입으로 Service 적용하기
 
+![image](https://kubetm.github.io/img/practice/beginner/Service%20with%20ClusterIP%20for%20Kubernetes.jpg)
+
 > ClusterIP는 클러스터 내에서만 사용하는 IP이며, 주로 클러스터 내부를 접근할 수 있는 인가된 사용자(운영자)를 위해 사용한다.
 
 - 내부 대쉬보드
@@ -42,6 +44,8 @@ Hostname : pod-1
 <br>
 
 ## Node Port 타입으로 Service 적용하기
+
+![image](https://kubetm.github.io/img/practice/beginner/Service%20with%20NodePort%20for%20Kubernetes.jpg)
 
 > 내부망을 연결하는데 사용하거나 데모 및 임시 연결을 위해 사용한다.
 
@@ -115,6 +119,8 @@ $ curl 192.168.0.31:30000/hostname
 <br>
 
 ## Load Balancer 타입으로 Service 적용하기
+
+![image](https://kubetm.github.io/img/practice/beginner/Service%20with%20LoadBalancer%20for%20Kubernetes.jpg)
 
 > Load Balancer 타입은 외부 시스템 노출용이며, 외부를 노출시켜줄 플러그인을 설치해서 사용하면 된다. GCP, AWS 등등 클라우드 서비스에서 제공하는 쿠버네티스 플랫폼을 사용할 때는 자체적으로 플러그인 설치가 되어 있다.
 
