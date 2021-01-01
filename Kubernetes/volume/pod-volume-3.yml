@@ -14,5 +14,5 @@ spec:
   volumes:
     - name: host-path
       hostPath:
-        path: /node-v
+        path: /node-v # 해당 디렉토리가 미리 만들어져 있어야 에러가 나지 않는다.
         type: DirectoryOrCreate
