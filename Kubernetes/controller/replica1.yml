@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: replica1
+spec:
+  replicas: 1 # 현재 Pod가 1개 있어서 1이라고 지정
+  selector:
+    matchLabels: # 방금 만든 Pod를 선택하도록 matchLabels에 key, value를 넣는다.
+      type: web
+  template: # pod1.yml에 만든 Pod의 내용과 똑같다.
+    metadata:
+      name: pod1 # replicas를 늘려도, 해당 이름을 무시하고 새로운 이름으로 Pod를 만들어준다.
+      labels:
+        type: web
+    spec:
+      containers:
+        - name: container
+          image: tmkube/app:v1 # 버전을 업데이트하고 싶으면, 기존의 Pod를 삭제하고, app:v2로 변경시키면 된다.
+        # Pod를 삭제시키면, 기본적으로 30초후에 삭제되도록 설정이 되어있는데 0을 세팅하면, 바로 삭제된다.
+      terminationGracePeriodSeconds: 0
