@@ -9,7 +9,7 @@
 > HyperVisor중에서 `virtualbox`를 설치합니다.
 
 ```sh
-$ brew cask install virtualbox virtualbox-extension-pack
+$ brew install --cask virtualbox virtualbox-extension-pack
 ```
 
 > 로컬에서 쿠버네티스를 쉽게 실행시켜주는 `minikube`를 설치합니다.
