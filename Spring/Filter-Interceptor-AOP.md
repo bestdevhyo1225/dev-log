@@ -6,7 +6,7 @@ Security와 Logging을 구축하면서, 몰랐던 부분을 간단히 정리
 
 ## Filter, Interceptor, AOP의 흐름
 
-![image](https://user-images.githubusercontent.com/23515771/104183949-115a8e00-5456-11eb-8950-ff550e8fb335.png)
+![image](https://user-images.githubusercontent.com/23515771/104186150-5af8a800-5459-11eb-8ffe-936955084893.png)
 
 1. 서버를 실행시키면, `Servlet`이 올라오는 동안에 `init`이 실행된 후, `doFilter`가 실행된다.
 
