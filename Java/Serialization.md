@@ -17,24 +17,24 @@
 > java.io.ObjectOutputStream 객체를 이용해서 직렬화를 할 수 있다.
 
 ```java
-		BookSerializeResult bookSerializeResult = BookSerializeResult.builder()
+BookSerializeResult bookSerializeResult = BookSerializeResult.builder()
 				.bookId(1L)
 				.title("title")
 				.author("author")
 				.price(20000)
 				.build();
 
-		byte[] serializedBook = null;
-		try (ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream()) {
-			try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream)) {
-				objectOutputStream.writeObject(bookSerializeResult);
-				serializedBook = byteArrayOutputStream.toByteArray();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+byte[] serializedBook = null;
+try (ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream()) {
+	try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream)) {
+		objectOutputStream.writeObject(bookSerializeResult);
+		serializedBook = byteArrayOutputStream.toByteArray();
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+}
 
-		String encodedSerializedBook = Base64.getEncoder().encodeToString(serializedBook);
+String encodedSerializedBook = Base64.getEncoder().encodeToString(serializedBook);
 ```
 
 <br>
@@ -44,20 +44,20 @@
 > java.io.ObjectInputStream 객체를 통해 역직렬화를 할 수 있다.
 
 ```java
-    // 직렬화 된 문자열
-		String encodedSerializedBook = Base64.getEncoder().encodeToString(serializedBook);
+// 직렬화 된 문자열
+String encodedSerializedBook = Base64.getEncoder().encodeToString(serializedBook);
 
-		// 역 직렬화
-		byte[] deserializedBook = Base64.getDecoder().decode(encodedSerializedBook);
+// 역 직렬화
+byte[] deserializedBook = Base64.getDecoder().decode(encodedSerializedBook);
 
-		try (ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(deserializedBook)) {
-			try (ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream)) {
-				Object book = objectInputStream.readObject();
-				BookSerializeResult tempBookSerializeResult = (BookSerializeResult) book;
-			} catch (IOException | ClassNotFoundException e) {
-				e.printStackTrace();
-			}
-		}
+try (ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(deserializedBook)) {
+	try (ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream)) {
+		Object book = objectInputStream.readObject();
+		BookSerializeResult tempBookSerializeResult = (BookSerializeResult) book;
+	} catch (IOException | ClassNotFoundException e) {
+		e.printStackTrace();
+	}
+}
 ```
 
 <br>
@@ -73,27 +73,27 @@
 > 그냥 포맷된 객체의 크기와 JSON 포맷의 크기를 비교해보자.
 
 ```java
-		String encodedSerializedBook = Base64.getEncoder().encodeToString(serializedBook);
+String encodedSerializedBook = Base64.getEncoder().encodeToString(serializedBook);
 
-		// 역 직렬화
-		byte[] deserializedBook = Base64.getDecoder().decode(encodedSerializedBook);
+// 역 직렬화
+byte[] deserializedBook = Base64.getDecoder().decode(encodedSerializedBook);
 
-    // 그냥 포맷된 데이터의 크기
-		System.out.println("Deserialized Book Byte Size = " + deserializedBook.length);
+// 그냥 포맷된 데이터의 크기
+System.out.println("Deserialized Book Byte Size = " + deserializedBook.length);
 
-		ObjectMapper objectMapper = new ObjectMapper();
+ObjectMapper objectMapper = new ObjectMapper();
 
-		try (ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(deserializedBook)) {
-			try (ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream)) {
-				Object book = objectInputStream.readObject();
-				BookSerializeResult tempBookSerializeResult = (BookSerializeResult) book;
-				String strBook = objectMapper.writeValueAsString(tempBookSerializeResult);
-				// JSON 형태로 변환했을때의 크기
-        System.out.println("JSON Book Byte Size = " + strBook.getBytes(StandardCharsets.UTF_8).length);
-			} catch (IOException | ClassNotFoundException e) {
-				e.printStackTrace();
-			}
-		}
+try (ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(deserializedBook)) {
+	try (ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream)) {
+		Object book = objectInputStream.readObject();
+		BookSerializeResult tempBookSerializeResult = (BookSerializeResult) book;
+		String strBook = objectMapper.writeValueAsString(tempBookSerializeResult);
+		// JSON 형태로 변환했을때의 크기
+    System.out.println("JSON Book Byte Size = " + strBook.getBytes(StandardCharsets.UTF_8).length);
+	} catch (IOException | ClassNotFoundException e) {
+		e.printStackTrace();
+	}
+}
 ```
 
 > 아래의 결과를 확인해보면, 크기의 상당한 차이를 확인할 수 있다.
