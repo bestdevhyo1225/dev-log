@@ -174,7 +174,7 @@
 
 ### :blue_book: Java
 
-- [Java 직렬화 개념 간단 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/Serializationn.md)
+- [Java 직렬화 개념 간단 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/Serialization.md)
 
 ### :blue_book: Spring
 
