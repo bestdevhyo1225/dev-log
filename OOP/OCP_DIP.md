@@ -143,3 +143,9 @@ public class OrderServiceImpl implements OrderService {
 > 참고) 위의 문제를 해결하는 방법은 많으며, 그 중에 하나의 예시일 뿐이다.
 
 위와 같이 `AppConfing`와 같은 설정 클래스를 통해 구체화 클래스를 생성하는 방식으로 `OCP` 설계 원칙을 지킬 수 있으며, 이를 사용하는 `OrderServiceImpl` 클래스에서는 `생성자를 통한 의존 관계 주입 방식(DI)`으로 `DIP` 설계 원칙을 지킬 수 있다.
+
+<br>
+
+## 참고
+
+- [[인프런] 스프링 핵심 원리 - 기본편](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8/dashboard)
