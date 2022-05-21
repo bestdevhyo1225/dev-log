@@ -2,7 +2,7 @@
 
 ## Synchronous, Asynchronous
 
-`Synchronous(동기)` 와 `Asynchronous(비동기)` 는 `통신 메커니즘` 에 대한 것이다. 즉, `어떤 방식으로 어떻게 통신하는지` 에 대한 것으로 이해하면 된다.
+`Synchronous(동기)` 와 `Asynchronous(비동기)` 는 **`통신 메커니즘`** 에 대한 것이다. 즉, `어떤 방식으로 어떻게 통신하는지` 에 대한 것으로 이해하면 된다.
 
 ### Synchronous
 
@@ -18,12 +18,12 @@
 
 ## Blocking, Non-Blocking
 
-`Blocking` 과 `Non-Blocking` 은 `프로그램 상태` 의 초점을 맞추면 된다.
+`Blocking` 과 `Non-Blocking` 은 **`호출한 주체의 상태`** 의 초점을 맞추면 된다.
 
 ### Blocking
 
-`Blocking` 은 결과를 얻기 전까지 현재 스레드를 정지 시킨다. 즉, 결과를 받을 때까지 아무 작업도 하지 않고 기다리고 있는 상태이다.
+`Blocking` 은 결과를 얻기 전까지 현재 스레드 또는 호출한 주체의 `상태` 를 정지 시킨다. 즉, 결과를 받을 때까지 아무 작업도 하지 않고 기다리고 있는 상태이다.
 
 ### Non-Blocking
 
-`Non-Blocking` 은 현재 스레드가 정지되지 않으며, 결과를 받을 때까지 다른 작업을 수행할 수 있다.
+`Non-Blocking` 은 현재 스레드 또는 호출한 주체의 `상태` 가 정지되지 않으며, 결과를 받을 때까지 다른 작업을 수행할 수 있다.
