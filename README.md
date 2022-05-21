@@ -93,6 +93,8 @@
   - [프로세스 문맥(Process Context)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Process-Context.md)
 
   - [Least Recently Used(LRU) 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Least_Recently_Used.md)
+  
+  - [Synchronous, Asynchronous, Blocking, Non-Blocking](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Synchronous_Asynchronous_Blocking_NonBlocking.md)
 
 - **`Database`**
 
