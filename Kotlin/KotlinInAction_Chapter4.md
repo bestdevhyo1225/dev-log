@@ -173,9 +173,9 @@ fun eval(e: Expr): Int {
 ```kotlin
 // 파라미터가 하나 있는 '주 생성자'
 class User constructor(_nickname: String) {
-    
+
     private val nickname: String
-    
+
     // 초기화 블록
     init {
         nickname = _nickname
@@ -187,7 +187,7 @@ class User constructor(_nickname: String) {
 
 ```kotlin
 class User constructor(_nickname: String) {
-    
+
     private val nickname = _nickname
 }
 ```
@@ -204,7 +204,7 @@ class Secretive private constructor() {}
 
 ```kotlin
 open class View {
-    
+
     constructor(ctx: Context) {}
     constructor(ctx: Context, attr: AttributeSet) {}
 }
@@ -225,11 +225,151 @@ interface User {
 class PrivateUser(override val nickname: String) : User
 
 class SubscribingUser(private val email: String) : User {
-    override val nickname: String 
+    override val nickname: String
         get() = email.substringBefore('@')
 }
 
 class FacebookUser(private val accountId: Int) : User {
     override val nickname: String = getFacebookName(accountId)
+}
+```
+
+## 4.3 컴파일러가 생성한 메서드 : 데이터 클래스와 클래스 위임
+
+### 4.3.1 모든 클래스가 정의해야 하는 메서드
+
+- 코틀린 클래스도 `toString`, `equals`, `hashCode` 등을 오버라이드 할 수 있다.
+- `toString` : 객체의 프로퍼티들을 문자열로 표현할 수 있다.
+- `equals` : 코틀린에서는 `==` 연산자를 사용한다. (참조 비교는 `===` 연산자를 사용한다.)
+- `hashCode` : `equals` 가 `true` 를 반환하는 두 객체는 반드시 같은 `hashCode` 를 반환해야 한다는 제약이 있다.
+
+```kotlin
+class Client(val name: String, val postalCode: Int) {
+    override fun equals(other: Any?): Boolean {
+        if (other == null || other !is Client) return false
+        return name == other.name && postalCode == other.postalCode
+    }
+    override fun toString(): String = "Client(name=$name, postalCode=$postalCode)"
+    override fun hashCode(): Int = name.hashCode() * 31 + postalCode
+}
+```
+
+### 4.3.2 데이터 클래스 : 모든 클래스가 정의해야 하는 메서드 자동 생성
+
+- `data` 클래스는 `equals`, `toString`, `hashCode` 메서드를 모두 포함하고 있다.
+
+```kotlin
+data class Client(val name: String, val postalCode: Int)
+```
+
+### 4.3.3 클래스 위임 : by 키워드 사용
+
+- 인터페이스를 구현할 때, `by` 키워드를 통해 그 인터페이스에 대한 구현을 다른 객체에 위임 중이라는 사실을 명시할 수 있다.
+
+```kotlin
+class DelegatingCollection<T>(
+    innerList: Collection<T> = ArrayList()
+) : Collection<T> by innerList {
+    // 구현...
+}
+```
+
+## 4.4 object 키워드 : 클래스 선언과 인스턴스 생성
+
+- `object` 키워드는 클래스를 정의하면서 동시에 인스턴스를 생성한다는 공통점이 있다.
+- `객체 선언(object declaration)` 은 싱글턴을 정의하는 방법 중 하나이다.
+- `동반 객체(companion object)` 는 인스턴스 메서드는 아니지만 어떤 클래스와 관련 있는 메서드와 팩토리 메서드들 담을 때 쓰인다.
+- `객체 식` 은 자바의 `무명 내부 클래스(anonymous inner class)` 대신 쓰인다.
+
+### 4.4.1 객체 선언 : 싱글턴 쉽게 만들기
+
+- 코틀린은 `객체 선언` 기능을 통해 싱글턴을 언어에서 기본적으로 지원한다.
+- `객체 선언` : 클래스 선언 + 단일 인스턴스의 선언
+- 주 생성자, 부 생성자는 `객체 선언` 에 쓸 수 없다.
+- 싱글턴 객체는 객체 선언문이 있는 위치에서 생성자 호출 없이 즉시 만들어진다.
+
+```kotlin
+object Payroll {
+    private val allEmployees = arrayListOf<Person>()
+
+    fun calculateSalary() {
+        for (person in allEmployees) {
+            TODO("Not yet implemented")
+        }
+    }
+}
+```
+
+### 4.4.2 동반 객체 : 팩토리 메서드와 정적 멤버가 들어갈 장소
+
+- 코틀린 언어는 자바 static 키워드를 지원하지 않는다.
+- `companion` 키워드를 사용해서 자바의 정적 메서드 호출이나 정적 필드 사용을 할 수 있도록 도와준다.
+
+```kotlin
+class A {
+    companion object {
+        fun bar() {
+            println("Companion object called")
+        }
+    }
+}
+
+A.bar()
+```
+
+- `동반 객체` 는 private 생성자를 호출하기 좋은 위치다.
+- `동반 객체` 는 자신을 둘러싼 클래스의 모든 private 멤버에 접근할 수 있다.
+- `동반 객체` 는 팩토리 패턴을 구현하기 가장 적합한 위치다.
+
+```kotlin
+class User private constructor(val nickname: String) {
+    companion object {
+        fun newSubscribingUser(email: String) = User(email.substringBefore('@'))
+        fun newFacebookUser(accountId: Int) = User(getFacebookName(accountId))
+    }
+}
+```
+
+- `동반 객체` 에도 이름을 붙일 수 있다.
+
+```kotlin
+class Person(val name: String) {
+    companion object Loader {
+        fun fromJSON(jsonText: String): Person {
+            TODO("Not yet implemented")
+        }
+    }
+}
+
+val person1 = Person.Loader.fromJSON("{name: 'Jang'}")
+val person2 = Person.fromJSON("{name: 'Kim'}")
+```
+
+- `동반 객체` 에서 인터페이스를 구현할 수 있다.
+
+```kotlin
+interface JSONFactory<T> {
+    fun fromJSON(jsonText: String): T
+}
+
+class Person(val name: String) {
+    companion object : JSONFactory<Person> {
+        override fun fromJSON(jsonText: String): Person {
+            TODO("Not yet implemented")
+        }
+    }
+}
+```
+
+### 4.4.4 객체 식 : 무명 내부 클래스를 다른 방식으로 작성
+
+- 무명 객체(anonymous object)를 정의할 때도 `object` 키워드를 사용한다.
+- 객체 식은 클래스를 정의하고 그 클래스에 속한 인스턴스를 생성하지만, 그 `클래스나 인스턴스에 이름을 붙이지 않는다.` (자바의 무명 내부 클래스를 대신한다.)
+- 객체 선언과 달리 **`무명 객체는 싱글턴이 아니다.`** 객체 식이 쓰일 때마다 새로운 인스턴스가 생성된다.
+
+```kotlin
+val listener = object : MouseAdapter() {
+    override fun mouseClicked(e: MouseEvent) {}
+    override fun mouseEntered(e: MouseEvent) {}
 }
 ```
