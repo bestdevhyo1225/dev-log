@@ -178,6 +178,10 @@
 
 - [Java 직렬화 개념 간단 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/Serialization.md)
 
+### :blue_book: Kotlin
+
+- [[Kotlin In Action] Chapter4 - 클래스, 객체, 인터페이스](https://github.com/bestdevhyo1225/dev-log/blob/master/Kotlin/KotlinInAction_Chapter4.md)
+
 ### :blue_book: OOP
 
 - [객체 지향 설계 원칙 - OCP, DIP](https://github.com/bestdevhyo1225/dev-log/blob/master/OOP/OCP_DIP.md)
