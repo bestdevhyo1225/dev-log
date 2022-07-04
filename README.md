@@ -18,6 +18,8 @@
 
 - [AWS Fargate에 대해서 간단하게 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Fargate.md)
 
+- [AWS VPC, Subnet, Routing Table, Internet Gateway, NAT Gateway 간단 요약](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/VPC_SUBNET_ROUTINGTABLE_IG_NAT.md)
+
 ### :closed_book: Docker
 
 - [자주 사용하는 command 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Docker/Docker-command.md)
