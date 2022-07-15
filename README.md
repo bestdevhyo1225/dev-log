@@ -183,7 +183,10 @@
 ### :blue_book: Kotlin
 
 - [[Kotlin In Action] Chapter 4 - 클래스, 객체, 인터페이스](https://github.com/bestdevhyo1225/dev-log/blob/master/Kotlin/KotlinInAction_Chapter4.md)
+
 - [[Kotlin In Action] Chapter 5 - 람다로 프로그래밍](https://github.com/bestdevhyo1225/dev-log/blob/master/Kotlin/KotlinInAction_Chapter5.md)
+
+- [[Kotlin In Action] Chapter 8 - 고차함수: 파라미터와 반환 값으로 람다 사용](https://github.com/bestdevhyo1225/dev-log/blob/master/Kotlin/KotlinInAction_Chapter8.md)
 
 ### :blue_book: OOP
 
