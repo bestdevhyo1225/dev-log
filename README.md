@@ -136,7 +136,7 @@
 
 - [MySQL 실행 계획 - select_type 컬럼](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-SelectType.md)
 
-- [MySQL에서 JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Join.md)
+- [MySQL 실행 계획 -  JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-Join.md)
 
 - [MySQL 쿼리 최적화 - JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-JOIN.md)
 
