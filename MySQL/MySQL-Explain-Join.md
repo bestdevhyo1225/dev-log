@@ -1,4 +1,4 @@
-## MySQL에서 JOIN
+# 실행 계획 - Join
 
 <br>
 
