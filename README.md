@@ -204,6 +204,8 @@
 
 - [아카에 대하여](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter1.md)
 
+- [핑퐁 게임](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter2.md)
+
 ### :blue_book: JPA
 
 - [연관 관계 주인 정하기](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Association_Owner.md)
