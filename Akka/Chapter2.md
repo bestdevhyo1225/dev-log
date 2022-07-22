@@ -8,7 +8,7 @@
 - 액터들은 `Akka` 라이브러리가 제공하는 `스레드 스케줄링, 구성 파일, 로그 서비스 등을 공유한다.`
 
 ```java
-ActorSystem actorSystem=ActorSystem.create("TestSystem");
+ActorSystem actorSystem = ActorSystem.create("TestSystem");
 ```
 
 - 하나의 애플리케이션에서 `하나의 ActorSystem` 을 사용하는 것이 일반적이다.
@@ -18,7 +18,7 @@ ActorSystem actorSystem=ActorSystem.create("TestSystem");
 ## Actor 만들기
 
 ```java
-ActorRef ping=actorSystem.actorOf(Props.create(PingActor.class),"pingActor");
+ActorRef ping = actorSystem.actorOf(Props.create(PingActor.class),"pingActor");
 ```
 
 - `Actor` 를 만들기 위해서는 `Props`, `Actor 이름` 이 필요하다.
