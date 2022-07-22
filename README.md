@@ -200,6 +200,10 @@
 
 - [Filter, Interceptor, AOP 간단 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Spring/Filter-Interceptor-AOP.md)
 
+### :blue_book: Akka
+
+- [아카에 대하여](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter1.md)
+
 ### :blue_book: JPA
 
 - [연관 관계 주인 정하기](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Association_Owner.md)
