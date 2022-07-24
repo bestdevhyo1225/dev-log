@@ -206,6 +206,8 @@
 
 - [핑퐁 게임](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter2.md)
 
+- [아카 계층구조](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter3.md)
+
 ### :blue_book: JPA
 
 - [연관 관계 주인 정하기](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Association_Owner.md)
