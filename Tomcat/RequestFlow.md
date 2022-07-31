@@ -4,14 +4,12 @@
 
 ## Socket
 
-서버 애플리케이션이 실행되면, `커널` 영역에서는 통신을 위한 `Socket` 을 생성하는데, `accept()` 를 통해 연결을 받고, 데이터를 `read() / write()` 처리한다.
+`클라이언트 - 서버` 프로그램이 실행되면, `커널` 영역에서는 통신을 위한 `Socket` 을 생성하는데, 아래와 같은 과정을 거치게 된다.
 
-1. socket 생성
-2. bind()
-3. listen()
-4. accept()
-5. read() / write()
-6. close()
+<img width="444" alt="스크린샷 2022-07-31 오후 7 01 14" src="https://user-images.githubusercontent.com/23515771/182021108-899ea452-a530-4f5c-a7ea-a7c2c4750782.png">
+
+여기서 `서버` 프로그램의 과정을 확인해보면 `Socket` 생성 후, `bind()`, `listen()` 과정을 거친다. 그리고 `accept()` 를 통해 클라이언트로 부터 `Connection` 을 받고,
+이후에 데이터를 `read() / write()` 처리한다.
 
 ## Java NIO
 
