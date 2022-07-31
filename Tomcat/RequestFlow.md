@@ -93,7 +93,7 @@ public class EchoServer {
 - `Poller` 에 의해서 처리할 이벤트가 생기면, `Thread Pool` 에서 `Thread` 를 하나 할당하고, 내부의 `doRun()` 메소드에 의해 이벤트를 처리한다.
 - `SocketProcessorBase<S>` 클래스를 상속받았고, 최상위로 올라가면 `Runnable` 인터페이스를 구현했다.
 
-### SocketChannel 객체를 통해 Spring DispatcherServlet 까지 요청이 도달하는 과정
+### 클라이언트 요청이 Tomcat에서 Spring의 DispatcherServlet까지 도달하는 과정
 
 > Acceptor 클래스
 
