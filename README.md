@@ -194,7 +194,7 @@
 
 ### :blue_book: Tomcat
 
-- [클라이언트의 요청이 Tomcat 엔진을 거쳐 Spring DispatcherServlet 요청이 도달하기까지](https://github.com/bestdevhyo1225/dev-log/blob/master/Tomcat/RequestFlow.md)
+- [클라이언트의 요청이 Tomcat을 거쳐 Spring DispatcherServlet에 도달하기까지](https://github.com/bestdevhyo1225/dev-log/blob/master/Tomcat/RequestFlow.md)
 
 ### :blue_book: Spring
 

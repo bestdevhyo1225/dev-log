@@ -1,4 +1,4 @@
-# 클라이언트의 요청이 Tomcat 엔진을 거쳐 Spring DispatcherServlet 요청이 도달하기까지
+# 클라이언트의 요청이 Tomcat을 거쳐 Spring DispatcherServlet에 도달하기까지
 
 클라이언트로 부터 요청을 받았을때 어떻게 `Spring DispatcherServlet` 까지 도달하는지에 대해 궁금했었고, 이를 코드와 함께 분석해봤다.
 
