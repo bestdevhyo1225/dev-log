@@ -19,7 +19,8 @@
 - `SocketChannel` : `TCP` 프로토콜을 사용해서 네트워크를 통해 데이터를 읽고 쓴다.
 - `ServerSocketChannel` : 들어오는 `TCP` 연결을 수신(listening)할 수 있다. 들어오는 연결마다 `SocketChannel` 이 만들어진다.
 
-`Selector` 는 `NIO` 에서 가장 핵심적인 컴포넌트이다. `Channel` 을 등록한 다음에 `Channel` 로 들어오는 `이벤트(connect / accept / read / write)` 를 감지하여,
+`Selector` 는 `NIO` 에서 가장 핵심적인 컴포넌트이다. `Channel` 을 등록한 다음에 `Channel` 로 들어오는 `이벤트(connect / accept / read / write)` 를
+감지하여,
 `이벤트` 를 처리할 수 있도록 한다.
 
 ```java
@@ -64,3 +65,183 @@ public class EchoServer {
     }
 }
 ```
+
+## Tomcat
+
+이제부터 클라이언트의 요청이 `Tomcat` 을 거쳐 `Spring` 의 `DispatcherServlet` 로 전달되는 과정을 확인해보려고 한다.
+
+### NioEndpoint, AbstractEndpoint 클래스
+
+우선 커널 영역에 있는 `Socket` 을 통해 데이터가 전달되면 `NioEndpoint` 클래스의 진입점으로 들어오게 된다. 그리고 해당 클래스는 `AbstractEndpoint` 클래스를 상속받고
+있다.`NioEndpoint` 클래스의 핵심은 `Acceptor`, `Poller`, `SocketProcessor(Worker)` 이다. 이 `3개의 객체` 를 통해 데이터를 전달한다.
+
+#### Acceptor 클래스
+
+- `ServerSocketChannel` 에 `accept()` 를 통해서 커넥션을 얻고, 데이터를 송수신 할 `SocketChannel` 를 생성한다.
+- `Runnable` 인터페이스를 구현했고, `데몬 스레드` 로 실행된다.
+
+#### Poller 클래스
+
+- `PollerEvent` 를 `Queue` 에 담고, 꺼내서 처리한다.
+- `Selector` 컴포넌트로 `SocketChannel` 을 관리한다. (등록 및 이벤트 확인)
+- `Runnable` 인터페이스를 구현했고, `데몬 스레드` 로 실행된다.
+
+#### SocketProcessor 클래스 (Worker)
+
+- `NioEndpoint` 내부에는 우리가 평상시에 `application.yml` 에서 지정하는 `tomcat` 옵션들이 있는데, 여기서 `maxThreads` 및 `minSpareThreads` 값을
+  확인하여, `Thread Pool` 을 미리 생성하고 확보해두고 있는다.
+- `Poller` 에 의해서 처리할 이벤트가 생기면, `Thread Pool` 에서 `Thread` 를 하나 할당하고, 내부의 `doRun()` 메소드에 의해 이벤트를 처리한다.
+- `SocketProcessorBase<S>` 클래스를 상속받았고, 최상위로 올라가면 `Runnable` 인터페이스를 구현했다.
+
+`NioEndpoint` 의 요청을 전달하기 위한 필수 객체들을 간략하게 정리해봤고, 이제 코드를 통해 어떻게 요청이 전달되는지 확인해보자.
+
+> Acceptor 클래스
+
+```java
+public class Acceptor<U> implements Runnable {
+
+    @Override
+    public void run() {
+        try {
+            // 생략...
+
+            while (/* 생략 */) {
+                // 생략...
+                try {
+                    U socket = null;
+                    try {
+                        // Accept the next incoming connection from the server
+                        // socket
+                        socket = endpoint.serverSocketAccept();
+                    } catch (Exception ioe) {
+                        // 생략...
+                    }
+
+                    // 생략...
+
+                    if (/* 생략 */) {
+                        // setSocketOptions() will hand the socket off to
+                        // an appropriate processor if successful
+                        if (!endpoint.setSocketOptions(socket)) {
+                            // 생략
+                        }
+                    } else {
+                        // 생략
+                    }
+                } catch (Throwable t) {
+                    // 생략...
+                }
+            }
+        } finally {
+
+        }
+    }
+}
+```
+
+가장 먼저 `endpoint.serverSocketAccept()` 를 통해 새롭게 생성된 `SocketChannel` 반환 받는다. 그리고 `endpoint.setSocketOptions(socket)` 에 의해서
+이후의 요청을 처리한다.
+
+> NioEndpoint 클래스 내부의 `setSocketOptions` 메서드
+
+```java
+public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel> {
+
+    @Override
+    protected boolean setSocketOptions(SocketChannel socket) {
+        NioSocketWrapper socketWrapper = null;
+        try {
+            NioChannel channel = null;
+            if (nioChannels != null) {
+                channel = nioChannels.pop();
+            }
+            if (channel == null) {
+                // 생략...
+
+                if (isSSLEnabled()) {
+                    channel = new SecureNioChannel(bufhandler, this);
+                } else {
+                    channel = new NioChannel(bufhandler);
+                }
+            }
+            NioSocketWrapper newWrapper = new NioSocketWrapper(channel, this);
+            channel.reset(socket, newWrapper);
+            connections.put(socket, newWrapper);
+            socketWrapper = newWrapper;
+
+            // SocketChannel 을 Selector 에 등록하기 위해서는 non-blocking 모드어야 한다.
+            socket.configureBlocking(false);
+
+            if (getUnixDomainSocketPath() == null) {
+                socketProperties.setProperties(socket.socket());
+            }
+
+            socketWrapper.setReadTimeout(getConnectionTimeout());
+            socketWrapper.setWriteTimeout(getConnectionTimeout());
+            socketWrapper.setKeepAliveLeft(NioEndpoint.this.getMaxKeepAliveRequests());
+
+            // 핵심!
+            // SocketWrapper 객체를 Poller 객체에 등록한다.
+            poller.register(socketWrapper);
+            return true;
+        } catch (Throwable t) {
+            // 생략
+        }
+        // Tell to close the socket if needed
+        return false;
+    }
+}
+```
+
+위의 코드에서 일부 생략한 부분이 있지만, 여기서 핵심은 `NioChannel` 를 생성하고, `SocketChannel` 과 `NioChannel` 를 `NioSocketWrapper` 객체로 감싼
+후, `poller.register(socketWrapper)` 코드에 의해서 `Poller` 로 전달된다.
+
+> Poller 클래스 내부의 `register` 메소드
+
+```java
+public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel> {
+
+    public class Poller implements Runnable {
+
+        public void register(final NioSocketWrapper socketWrapper) {
+            socketWrapper.interestOps(SelectionKey.OP_READ);//this is what OP_REGISTER turns into.
+            PollerEvent event = null;
+            if (eventCache != null) {
+                event = eventCache.pop();
+            }
+            if (event == null) {
+                // NioSocketWrapper 객체를 생성자 인자로 받아 PollerEvent 객체를 생성한다.
+                event = new PollerEvent(socketWrapper, OP_REGISTER);
+            } else {
+                event.reset(socketWrapper, OP_REGISTER);
+            }
+
+            // PollerEvent 등록
+            addEvent(event);
+        }
+    }
+}
+```
+
+중요한 점이 `Poller` 클래스 내부의 `register` 메소드에서 `NioSocketWrapper` 객체를 생성자 인자로 받아 `PollerEvent` 객체를 생성하고, `addEvent(event)`
+메서드를 통해 `PollerEvent` 를 어딘가에 저장한다.
+
+> Poller 클래스 내부의 `addEvent` 메소드
+
+```java
+public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel> {
+
+    public class Poller implements Runnable {
+
+        private final SynchronizedQueue<PollerEvent> events = new SynchronizedQueue<>();
+
+        private void addEvent(PollerEvent event) {
+            events.offer(event);
+
+            // 로직이 있지만 생략...
+        }
+    }
+}
+```
+
+`addEvent` 메서드를 호출하면 `SynchronizedQueue` 에 `PollerEvent` 를 등록한다.
