@@ -19,8 +19,8 @@
 - `SocketChannel` : `TCP` 프로토콜을 사용해서 네트워크를 통해 데이터를 읽고 쓴다.
 - `ServerSocketChannel` : 들어오는 `TCP` 연결을 수신(listening)할 수 있다. 들어오는 연결마다 `SocketChannel` 이 만들어진다.
 
-`Selector` 는 `NIO` 에서 가장 핵심적인 컴포넌트이다. `Channel` 들을 등록하여 `Channel` 로 들어오는 `이벤트(connect / accept / read / write)` 를 감지하여,
-별도의 스레드를 할당해서 `이벤트` 를 처리할 수 있도록 한다.
+`Selector` 는 `NIO` 에서 가장 핵심적인 컴포넌트이다. `Channel` 을 등록한 다음에 `Channel` 로 들어오는 `이벤트(connect / accept / read / write)` 를 감지하여,
+`이벤트` 를 처리할 수 있도록 한다.
 
 ```java
 public class EchoServer {
