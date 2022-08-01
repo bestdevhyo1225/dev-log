@@ -244,4 +244,4 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel>
 }
 ```
 
-`addEvent` 메서드를 호출하면 `SynchronizedQueue` 에 `PollerEvent` 를 등록한다.
+위에서 말한 것처럼 `addEvent` 메서드를 호출하면, 어딘가에 `PollerEvent` 를 저장한다고 했는데, 실제로는 `SynchronizedQueue` 에 `PollerEvent` 를 등록한다.
