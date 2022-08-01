@@ -244,32 +244,215 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel>
 }
 ```
 
-위에서 말한 것처럼 `addEvent` 메서드를 호출하면, 어딘가에 `PollerEvent` 를 저장한다고 했는데, 실제로는 
+위에서 말한 것처럼 `addEvent` 메서드를 호출하면, 어딘가에 `PollerEvent` 를 저장한다고 했는데, 실제로는
 `SynchronizedQueue` 에 `PollerEvent` 를 등록한다.
 
 > NioEndpoint 클래스 내부에 있는 Poller 클래스의 `run`, `events` 메소드
 
 ```java
+public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel> {
+
+    public class Poller implements Runnable {
+
+        private final SynchronizedQueue<PollerEvent> events = new SynchronizedQueue<>();
+
+        public boolean events() {
+            boolean result = false;
+
+            PollerEvent pe = null;
+            for (int i = 0, size = events.size(); i < size && (pe = events.poll()) != null; i++) {
+                result = true;
+
+                NioSocketWrapper socketWrapper = pe.getSocketWrapper();
+                SocketChannel sc = socketWrapper.getSocket().getIOChannel();
+
+                int interestOps = pe.getInterestOps();
+
+                if (sc == null) {
+                    // 생략
+                } else if (interestOps == OP_REGISTER) {
+                    try {
+                        sc.register(getSelector(), SelectionKey.OP_READ, socketWrapper);
+                    } catch (Exception x) {
+                        // 생략
+                    }
+                } else {
+                    final SelectionKey key = sc.keyFor(getSelector());
+                    if (key == null) {
+                        // 생략
+                    } else {
+                        // 생략
+                    }
+                }
+
+                // 생략
+            }
+
+            return result;
+        }
+
+        @Override
+        public void run() {
+            // Loop until destroy() is called
+            while (true) {
+
+                boolean hasEvents = false;
+
+                try {
+                    if (!close) {
+                        hasEvents = events();
+                        if (wakeupCounter.getAndSet(-1) > 0) {
+                            // If we are here, means we have other stuff to do
+                            // Do a non blocking select
+                            keyCount = selector.selectNow();
+                        } else {
+                            keyCount = selector.select(selectorTimeout);
+                        }
+                        wakeupCounter.set(0);
+                    }
+
+                    // 나머지 코드 생략
+
+                } catch (Throwable x) {
+                    // 코드 생략
+                }
+
+                Iterator<SelectionKey> iterator =
+                    keyCount > 0 ? selector.selectedKeys().iterator() : null;
+
+                while (iterator != null && iterator.hasNext()) {
+                    SelectionKey sk = iterator.next();
+                    iterator.remove();
+                    NioSocketWrapper socketWrapper = (NioSocketWrapper) sk.attachment();
+
+                    if (socketWrapper != null) {
+                        processKey(sk, socketWrapper);
+                    }
+                }
+
+                // 생략
+            }
+
+            // 생략
+        }
+    }
+}
 ```
 
-가장 처음에 실행되는 `events()` 는 `Queue` 에서 `PollerEvent` 를 꺼내서 이벤트에 따라 `Selector` 에 등록하거나 
-`Selector` 에서 `Key` 들을 가져온다. 그 다음에 `selectNow()` 또는 `select(selectorTimeout)` 메서드에 의해서 
-등록된 이벤트중에서 하나 이상의 `SocketChannel` 이 준비될 때까지 Block 상태가 되며, 준비된 채널이 있는 경우 채널의 수를 반환한다. 
-그리고 `selector.selectedKeys()` 를 통해 실제로 준비된 `SocketChannel` 들을 받아서 
-`processKey(SelectionKey, NioSocketWrapper)` 메서드를 호출한다. 
+가장 처음에 실행되는 `events()` 는 `Queue` 에서 `PollerEvent` 를 꺼내서 이벤트에 따라 `Selector` 에 등록하거나
+`Selector` 에서 `Key` 들을 가져온다. 그 다음에 `selectNow()` 또는 `select(selectorTimeout)` 메서드에 의해서
+등록된 이벤트중에서 하나 이상의 `SocketChannel` 이 준비될 때까지 Block 상태가 되며, 준비된 채널이 있는 경우 채널의 수를 반환한다.
+그리고 `selector.selectedKeys()` 를 통해 실제로 준비된 `SocketChannel` 들을 받아서
+`processKey(SelectionKey, NioSocketWrapper)` 메서드를 호출한다.
 
 > NioEndpoint 클래스 내부에 있는 Poller 클래스의 `processKey` 메소드
 
 ```java
+public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel> {
+
+    public class Poller implements Runnable {
+
+        private final SynchronizedQueue<PollerEvent> events = new SynchronizedQueue<>();
+
+        protected void processKey(SelectionKey sk, NioSocketWrapper socketWrapper) {
+            try {
+                if (close) {
+                    // 생략
+                } else if (sk.isValid()) {
+                    if (sk.isReadable() || sk.isWritable()) {
+                        if (socketWrapper.getSendfileData() != null) {
+                            // 생략
+                        } else {
+                            // 생략
+
+                            boolean closeSocket = false;
+
+                            if (sk.isReadable()) {
+                                if (socketWrapper.readOperation != null) {
+                                    // 생략
+                                } else if (socketWrapper.readBlocking) {
+                                    // 생략
+                                }
+                                // processSocket 메서드를 호출하는 부분
+                                else if (!processSocket(socketWrapper, SocketEvent.OPEN_READ, true)) {
+                                    closeSocket = true;
+                                }
+                            }
+                            if (!closeSocket && sk.isWritable()) {
+                                if (socketWrapper.writeOperation != null) {
+                                    // 생략
+                                } else if (socketWrapper.writeBlocking) {
+                                    // 생략
+                                }
+                                // processSocket 메서드를 호출하는 부분
+                                else if (!processSocket(socketWrapper, SocketEvent.OPEN_WRITE, true)) {
+                                    closeSocket = true;
+                                }
+                            }
+
+                            // 생략
+                        }
+                    }
+                } else {
+                    // 생략
+                }
+            } catch (CancelledKeyException ckx) {
+                // 생략
+            } catch (Throwable t) {
+                // 생략
+            }
+        }
+    }
+}
 ```
 
-`processKey` 내부에서는 `SelectionKey.isReadable()` 또는 `SelectionKey.isWritable()` 조건에 따라 
+`processKey` 내부에서는 `SelectionKey.isReadable()` 또는 `SelectionKey.isWritable()` 조건에 따라
 `SocketChannel` 에서 전달된 데이터를 처리하는 `processSocket(NioSocketWrapper, SocketEvent, dispatcherFlag)` 메서드를 호출한다.
 
 > AbstractEndpoint 클래스의 `processSocket` 메서드
 
 ```java
+public abstract class AbstractEndpoint<S, U> {
 
+    public boolean processSocket(SocketWrapperBase<S> socketWrapper,
+                                 SocketEvent event, boolean dispatch) {
+        try {
+            if (socketWrapper == null) {
+                return false;
+            }
+
+            SocketProcessorBase<S> sc = null;
+
+            if (processorCache != null) {
+                sc = processorCache.pop();
+            }
+
+            if (sc == null) {
+                // SocketProcessor 객체를 만든다.
+                sc = createSocketProcessor(socketWrapper, event);
+            } else {
+                sc.reset(socketWrapper, event);
+            }
+
+            // Executor 객체를 가져온다.
+            Executor executor = getExecutor();
+            if (dispatch && executor != null) {
+                // Executor 객체를 통해 ThreadPool 에서 Thread 하나를 할당 받아서 실행된다.
+                executor.execute(sc);
+            } else {
+                sc.run();
+            }
+        } catch (RejectedExecutionException ree) {
+            // 생략
+            return false;
+        } catch (Throwable t) {
+            // 생략
+            return false;
+        }
+
+        return true;
+    }
+}
 ```
 
 `SocketProcessor` 객체가 존재하지 않으면, `createSocketProcessor` 메서드를 통해 `SocketProcessor` 를 생성하고,
@@ -278,7 +461,55 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel>
 > NioEndpoint 클래스 내부에 있는 SocketProcessor 클래스의 `doRun` 메소드
 
 ```java
+public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel> {
+
+    protected class SocketProcessor extends SocketProcessorBase<NioChannel> {
+
+        public SocketProcessor(SocketWrapperBase<NioChannel> socketWrapper, SocketEvent event) {
+            super(socketWrapper, event);
+        }
+
+        @Override
+        protected void doRun() {
+            try {
+                // 나머지 코드 생략
+
+                if (handshake == 0) {
+                    SocketState state = SocketState.OPEN;
+
+                    // Socket 으로부터 요청을 처리한다.
+                    if (event == null) {
+                        state = getHandler().process(socketWrapper, SocketEvent.OPEN_READ);
+                    } else {
+                        state = getHandler().process(socketWrapper, event);
+                    }
+
+                    if (state == SocketState.CLOSED) {
+                        // 생략
+                    }
+                } else if (handshake == -1) {
+                    getHandler().process(socketWrapper, SocketEvent.CONNECT_FAIL);
+
+                    // 생략
+                } else if (handshake == SelectionKey.OP_READ) {
+                    // 생략
+                } else if (handshake == SelectionKey.OP_WRITE) {
+                    // 생략
+                }
+            } catch (CancelledKeyException cx) {
+                // 생략
+            } catch (VirtualMachineError vme) {
+                // 생략
+            } catch (Throwable t) {
+                // 생략
+            } finally {
+                // 생략
+            }
+        }
+    }
+}
 ```
 
-`doRun` 메서드에서는 `getHandler().process(NioSocketWrapper, SocketEvent)` 메서드를 호출하는데, 
-`getHandler()` 에서 반환되는 객체는 `coyote` 패키지에 있는 `AbstractProtocol` 클래스의 `process` 메서드를 호출한다. 
+`doRun` 메서드에서는 `getHandler().process(NioSocketWrapper, SocketEvent)` 메서드를 호출하는데,
+`Socket` 으로부터 클라이언트 요청을 처리 본격적으로 처리하게 된다. `getHandler()` 에서 반환되는 객체는 `coyote` 패키지에 있는
+`AbstractProtocol` 클래스의 `process` 메서드를 호출한다. 
