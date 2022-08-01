@@ -302,12 +302,12 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel>
                     if (!close) {
                         // events() 메서드 호출
                         hasEvents = events();
-                        
+
                         if (wakeupCounter.getAndSet(-1) > 0) {
                             // selectorNow() 메서드 호출
                             keyCount = selector.selectNow();
                         } else {
-                          // selector() 메서드 호출
+                            // selector() 메서드 호출
                             keyCount = selector.select(selectorTimeout);
                         }
                         wakeupCounter.set(0);
