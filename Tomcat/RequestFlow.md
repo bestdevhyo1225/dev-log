@@ -13,8 +13,8 @@
 
 ## Java NIO
 
-`Tomcat` 에 요청이 진입되기 전에 알아야 할 부분이 있는데, `Java NIO(New Input Output)` 개념인데, 대표적인 특징으로는 `Channel`, `Buffer`, `Selector` 가
-있다. `NIO` 에서 모든 `I/O` 는 `Channel` 로 시작되며, 4가지의 타입이 있는데, 여기서 확인할 부분은 대표적으로 다음과 같다.
+`Tomcat` 에 요청이 진입되기 전에 알아야 할 부분이 있는데, `Java NIO(New Input Output)` 개념이다. 대표적인 특징으로는 `Channel`, `Buffer`, `Selector` 가
+있다. `NIO` 에서 모든 `I/O` 는 `Channel` 로 시작되며, 4가지의 타입이 있는데, 여기서 확인할 부분은 다음과 같다.
 
 - `SocketChannel` : `TCP` 프로토콜을 사용해서 네트워크를 통해 데이터를 읽고 쓴다.
 - `ServerSocketChannel` : 들어오는 `TCP` 연결을 수신(listening)할 수 있다. 들어오는 연결마다 `SocketChannel` 이 만들어진다.
