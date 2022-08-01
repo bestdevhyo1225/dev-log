@@ -300,12 +300,14 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel>
 
                 try {
                     if (!close) {
+                        // events() 메서드 호출
                         hasEvents = events();
+                        
                         if (wakeupCounter.getAndSet(-1) > 0) {
-                            // If we are here, means we have other stuff to do
-                            // Do a non blocking select
+                            // selectorNow() 메서드 호출
                             keyCount = selector.selectNow();
                         } else {
+                          // selector() 메서드 호출
                             keyCount = selector.select(selectorTimeout);
                         }
                         wakeupCounter.set(0);
