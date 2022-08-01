@@ -468,9 +468,9 @@ server:
       min-spare: 20
       max: 100
 ```
-- **우리가 평상시 `application.yml` 에 설정한 `tomcat` 옵션을 참고해서 `ThreadPool` 을 미리 생성해두고, `SocketProcessor` 객체가 생성될 때마다 `Thread` 를 하나씩
-  할당해준다.**
-- **즉, `Runnable` 의 구현체인 `SocketProcessor` 가 실행된다는 것은 `Request` 당 하나의 `Thread` 를 할당해준다고 이해하면 된다.**
+
+**우리가 평상시 `application.yml` 에 설정한 `tomcat` 옵션을 참고해서 `ThreadPool` 을 미리 생성해두고, `SocketProcessor` 객체가 생성될 때마다 `Thread` 를
+하나씩 할당해준다. 즉, `Runnable` 의 구현체인 `SocketProcessor` 가 실행된다는 것은 `Request` 당 하나의 `Thread` 를 할당해준다고 이해하면 된다.**
 
 > NioEndpoint 클래스 내부에 있는 SocketProcessor 클래스의 `doRun` 메소드
 
