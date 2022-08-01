@@ -460,10 +460,6 @@ public abstract class AbstractEndpoint<S, U> {
 `SocketProcessor` 객체가 존재하지 않으면, `createSocketProcessor` 메서드를 통해 `SocketProcessor` 를 생성하고,
 `Executor` 객체를 통해 `ThreadPool` 에서 하나의 `Thread` 를 할당받아 실행된다.
 
-- **우리가 평상시 `application.yml` 에 설정한 값을 참고해서 `ThreadPool` 을 미리 생성해두고, `SocketProcessor` 객체가 생성될 때마다 `Thread` 를 하나씩
-  할당해준다.**
-- **즉, `Request` 당 하나의 `Thread` 를 할당해준다고 이해하면 된다.**
-
 ```yaml
 server:
   port: 9000
@@ -472,6 +468,11 @@ server:
       min-spare: 20
       max: 100
 ```
+
+- **우리가 평상시 `application.yml` 에 설정한 값을 참고해서 `ThreadPool` 을 미리 생성해두고, `SocketProcessor` 객체가 생성될 때마다 `Thread` 를 하나씩
+  할당해준다.**
+
+- **즉, `Request` 당 하나의 `Thread` 를 할당해준다고 이해하면 된다.**
 
 > NioEndpoint 클래스 내부에 있는 SocketProcessor 클래스의 `doRun` 메소드
 
