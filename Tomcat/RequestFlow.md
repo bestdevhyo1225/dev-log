@@ -95,7 +95,7 @@ public class EchoServer {
 
 ### 클라이언트 요청이 Tomcat에서 Spring의 DispatcherServlet까지 도달하는 과정
 
-> Acceptor 클래스
+> Acceptor 클래스 내부의 `run` 메서드
 
 ```java
 public class Acceptor<U> implements Runnable {
@@ -196,7 +196,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel>
 위의 코드에서 일부 생략한 부분이 있지만, 여기서 핵심은 `NioChannel` 를 생성하고, `SocketChannel` 과 `NioChannel` 를 `NioSocketWrapper` 객체로 감싼
 후, `poller.register(socketWrapper)` 코드에 의해서 `Poller` 로 전달된다.
 
-> Poller 클래스 내부의 `register` 메소드
+> NioEndpoint 클래스 내부에 있는 Poller 클래스의 `register` 메소드
 
 ```java
 public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel> {
@@ -226,7 +226,7 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel>
 중요한 점이 `Poller` 클래스 내부의 `register` 메소드에서 `NioSocketWrapper` 객체를 생성자 인자로 받아 `PollerEvent` 객체를 생성하고, `addEvent(event)`
 메서드를 통해 `PollerEvent` 를 어딘가에 저장한다.
 
-> Poller 클래스 내부의 `addEvent` 메소드
+> NioEndpoint 클래스 내부에 있는 Poller 클래스의 `addEvent` 메소드
 
 ```java
 public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel> {
@@ -244,4 +244,41 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel>
 }
 ```
 
-위에서 말한 것처럼 `addEvent` 메서드를 호출하면, 어딘가에 `PollerEvent` 를 저장한다고 했는데, 실제로는 `SynchronizedQueue` 에 `PollerEvent` 를 등록한다.
+위에서 말한 것처럼 `addEvent` 메서드를 호출하면, 어딘가에 `PollerEvent` 를 저장한다고 했는데, 실제로는 
+`SynchronizedQueue` 에 `PollerEvent` 를 등록한다.
+
+> NioEndpoint 클래스 내부에 있는 Poller 클래스의 `run`, `events` 메소드
+
+```java
+```
+
+가장 처음에 실행되는 `events()` 는 `Queue` 에서 `PollerEvent` 를 꺼내서 이벤트에 따라 `Selector` 에 등록하거나 
+`Selector` 에서 `Key` 들을 가져온다. 그 다음에 `selectNow()` 또는 `select(selectorTimeout)` 메서드에 의해서 
+등록된 이벤트중에서 하나 이상의 `SocketChannel` 이 준비될 때까지 Block 상태가 되며, 준비된 채널이 있는 경우 채널의 수를 반환한다. 
+그리고 `selector.selectedKeys()` 를 통해 실제로 준비된 `SocketChannel` 들을 받아서 
+`processKey(SelectionKey, NioSocketWrapper)` 메서드를 호출한다. 
+
+> NioEndpoint 클래스 내부에 있는 Poller 클래스의 `processKey` 메소드
+
+```java
+```
+
+`processKey` 내부에서는 `SelectionKey.isReadable()` 또는 `SelectionKey.isWritable()` 조건에 따라 
+`SocketChannel` 에서 전달된 데이터를 처리하는 `processSocket(NioSocketWrapper, SocketEvent, dispatcherFlag)` 메서드를 호출한다.
+
+> AbstractEndpoint 클래스의 `processSocket` 메서드
+
+```java
+
+```
+
+`SocketProcessor` 객체가 존재하지 않으면, `createSocketProcessor` 메서드를 통해 `SocketProcessor` 를 생성하고,
+`Executor` 객체를 통해 `ThreadPool` 에서 하나의 `Thread` 를 할당받아 실행된다.
+
+> NioEndpoint 클래스 내부에 있는 SocketProcessor 클래스의 `doRun` 메소드
+
+```java
+```
+
+`doRun` 메서드에서는 `getHandler().process(NioSocketWrapper, SocketEvent)` 메서드를 호출하는데, 
+`getHandler()` 에서 반환되는 객체는 `coyote` 패키지에 있는 `AbstractProtocol` 클래스의 `process` 메서드를 호출한다. 
