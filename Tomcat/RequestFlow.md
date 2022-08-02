@@ -93,7 +93,7 @@ public class EchoServer {
 - `Poller` 에 의해서 처리할 이벤트가 생기면, `Thread Pool` 에서 `Thread` 를 하나 할당하고, 내부의 `doRun()` 메소드에 의해 이벤트를 처리한다.
 - `SocketProcessorBase<S>` 클래스를 상속받았고, 최상위로 올라가면 `Runnable` 인터페이스를 구현했다.
 
-### 클라이언트 요청이 Tomcat에서 Spring의 DispatcherServlet까지 도달하는 과정
+## 클라이언트 요청이 Tomcat에서 Spring의 DispatcherServlet까지 도달하는 과정
 
 > Acceptor 클래스 내부의 `run` 메서드
 
@@ -527,4 +527,310 @@ public class NioEndpoint extends AbstractJsseEndpoint<NioChannel, SocketChannel>
 
 `doRun` 메서드에서는 `getHandler().process(NioSocketWrapper, SocketEvent)` 메서드를 호출하는데,
 `Socket` 으로부터 클라이언트 요청을 처리 본격적으로 처리하게 된다. `getHandler()` 에서 반환되는 객체는 `coyote` 패키지에 있는
-`AbstractProtocol` 클래스의 `process` 메서드를 호출한다. 
+`AbstractProtocol` 클래스 내부에 있는 `ConnectionHandler` 클래스의 `process` 메서드를 호출한다.
+
+> AbstractProtocol 클래스 내부에 있는 ConnectionHandler 클래스의 `process` 메서드
+
+```java
+public abstract class AbstractProtocol<S> implements ProtocolHandler, MBeanRegistration {
+
+    protected static class ConnectionHandler<S> implements AbstractEndpoint.Handler<S> {
+
+        @SuppressWarnings("deprecation")
+        @Override
+        public SocketState process(SocketWrapperBase<S> wrapper, SocketEvent status) {
+            // 생략
+
+            Processor processor = (Processor) wrapper.takeCurrentProcessor();
+
+            try {
+                if (processor == null) {
+                    if (negotiatedProtocol != null && negotiatedProtocol.length() > 0) {
+                        UpgradeProtocol upgradeProtocol = getProtocol().getNegotiatedProtocol(negotiatedProtocol);
+                        if (upgradeProtocol != null) {
+                            processor = upgradeProtocol.getProcessor(wrapper, getProtocol().getAdapter());
+                            if (getLog().isDebugEnabled()) {
+                                // 생략
+                            }
+                        } else if (negotiatedProtocol.equals("http/1.1")) {
+                            // 생략
+                        } else {
+                            // 생략
+                        }
+                    }
+                }
+
+                if (processor == null) {
+                    processor = recycledProcessors.pop();
+
+                    if (getLog().isDebugEnabled()) {
+                        // 생략
+                    }
+                }
+
+                if (processor == null) {
+                    processor = getProtocol().createProcessor();
+                    register(processor);
+
+                    if (getLog().isDebugEnabled()) {
+                        // 생략
+                    }
+                }
+
+                // 생략
+
+                SocketState state = SocketState.CLOSED;
+                do {
+
+                    // Processor 구현체의 process 메서드를 호출한다.
+                    state = processor.process(wrapper, status);
+                } while (state == SocketState.UPGRADING);
+
+            } catch (java.io.IOException e) {
+                // 생략
+            } catch (ProtocolException e) {
+                // 생략
+            } catch (OutOfMemoryError oome) {
+                // 생략
+            } catch (Throwable e) {
+                // 생략
+            }
+        }
+    }
+}
+```
+
+조건에 따라 `Processor` 구현체를 가져오거나, 어딘가에서 꺼내거나 없으면 새롭게 생성한다. 그리고 생성된 `Processor` 구현체 클래스의 `process` 메서드를 호출하는데
+이 때, `SocketWrapper` 와 `SocketEvent` 도 역시 같이 인수에 전달한다.
+
+<img width="351" alt="스크린샷 2022-08-02 오후 9 27 24" src="https://user-images.githubusercontent.com/23515771/182374346-342c6636-7c9d-474d-8d3a-33e0edc72279.png">
+
+그리고 여기서 중요한 부분이 있는데, `Processor` 의 하위 클래스 중에서 `Http11Processor` 클래스가 있는데, 해당 클래스가 생성될 때, `Request`, `Response` 객체를
+생성하며, `CoyoteAdapter` 도 연결한다.
+
+> AbstractProcessorLight 클래스의 `process` 메서드
+
+```java
+public abstract class AbstractProcessorLight implements Processor {
+
+    @Override
+    public SocketState process(SocketWrapperBase<?> socketWrapper, SocketEvent status)
+        throws IOException {
+
+        SocketState state = SocketState.CLOSED;
+        Iterator<DispatchType> dispatches = null;
+        do {
+            if (dispatches != null) {
+                // 생략
+            } else if (status == SocketEvent.DISCONNECT) {
+                // 생략
+            } else if (isAsync() || isUpgrade() || state == SocketState.ASYNC_END) {
+                // 생략
+            } else if (status == SocketEvent.OPEN_WRITE) {
+                // 생략
+            } else if (status == SocketEvent.OPEN_READ) {
+                state = service(socketWrapper);
+            } else if (status == SocketEvent.CONNECT_FAIL) {
+                // 생략
+            } else {
+                // 생략
+            }
+
+            // 생략
+        } while (state == SocketState.ASYNC_END || dispatches != null && state != SocketState.CLOSED);
+
+        return state;
+    }
+}
+```
+
+`process` 메서드를 호출하게 되면, 내부의 `service` 메서드를 호출한다. (`service` 메서드는 하위 클래스인 `Http11Processor` 클래스에 속해 있다.)
+
+> Http11Processor 클래스의 `service` 메서드
+
+```java
+public class Http11Processor extends AbstractProcessor {
+
+    @Override
+    public SocketState service(SocketWrapperBase<?> socketWrapper)
+        throws IOException {
+
+        // CoyoteAdapter 클래스의 service 메서드 호출한다.
+        getAdapter().service(request, response);
+    }
+}
+```
+
+`service` 메서드 내부에는 `CoyoteApdater` 클래스의 `service` 메서드를 호출하는데, 이 때 `Http11Processor` 가 생성될 때 만들어졌던 `Request`, `Response`
+객체를 인자로 담아서 보낸다.
+
+> CoyoteAdapter 클래스의 `service` 메서드
+
+```java
+public class CoyoteAdapter implements Adapter {
+    @Override
+    public void service(org.apache.coyote.Request req, org.apache.coyote.Response res)
+        throws Exception {
+
+        // 핵심 코드
+        connector
+            .getService()
+            .getContainer()
+            .getPipeline()
+            .getFirst()
+            .invoke(request, response);
+    }
+}
+```
+
+내부 로직이 상당히 길어 모든 부분을 생략하고 핵심 부분 하나만 남겨뒀는데, 바로 `connector` 를 통해 `Service`, `Engine(Container)` 를 호출하는 코드이며,
+`getFirst` 메서드를 통해 `Vavle` 라는 구현체를 가져오고 마지막에 `invoke` 메서드를 통해 `Request`, `Response` 객체를 인자로 보낸다.
+
+### Valve
+
+하나의 특정 컨테이너와 관련된 **`요청 처리`** 컴포넌트이다.
+
+- StandardEngineValve
+- StandardHostValve
+- StandardContextValve
+- StandardWrapperValve
+
+4가지 `Valve` 를 하나씩 거쳐 `Request`, `Response` 가 전달된다.
+
+> StandardEngineValve 클래스의 `invoke`
+
+```java
+final class StandardEngineValve extends ValveBase {
+
+    @Override
+    public final void invoke(Request request, Response response)
+        throws IOException, ServletException {
+
+        host.getPipeline().getFirst().invoke(request, response);
+    }
+}
+```
+
+`getFirst()` 를 통해 `StandardHostValve` 의 `invoke` 메서드를 호출하여 `Request`, `Response` 를 전달한다.
+
+> StandardHostValve 클래스의 `invoke`
+
+```java
+final class StandardHostValve extends ValveBase {
+
+    @Override
+    public final void invoke(Request request, Response response)
+        throws IOException, ServletException {
+
+        context.getPipeline().getFirst().invoke(request, response);
+    }
+}
+```
+
+`getFirst()` 를 통해 `StandardContextValve` 의 `invoke` 메서드를 호출하여 `Request`, `Response` 를 전달한다.
+
+> StandardContextValve 클래스의 `invoke`
+
+```java
+final class StandardContextValve extends ValveBase {
+
+    @Override
+    public final void invoke(Request request, Response response)
+        throws IOException, ServletException {
+
+        wrapper.getPipeline().getFirst().invoke(request, response);
+    }
+}
+```
+
+`getFirst()` 를 통해 `StandardWrapperValve` 의 `invoke` 메서드를 호출하여 `Request`, `Response` 를 전달한다.
+
+> StandardWrapperValve 클래스의 `invoke`
+
+```java
+final class StandardWrapperValve extends ValveBase {
+
+    @Override
+    public final void invoke(Request request, Response response)
+        throws IOException, ServletException {
+
+        // 생성되어 있는 DispatcherServlet 객체를 servlet 변수에 할당받는다.
+        servlet = wrapper.allocate();
+
+        ApplicationFilterChain filterChain =
+            ApplicationFilterFactory.createFilterChain(request, wrapper, servlet);
+
+        filterChain.doFilter(request.getRequest(), response.getResponse());
+    }
+}
+```
+
+`StandardWrapperValve` 클래스의 `invoke` 메서드는 가장 중요하다. 내부에서 생성되어 있는 `DispatcherServlet` 을 할당받아 `Filter` 를 생성하고,
+`filterChain.doFilter(Request, Response)` 를 통해 실질적으로 `Spring` 환경에서의 `Request`, `Response` 처리 작업이 시작된다.
+
+> ApplicationFilterChain 클래스의 `doFilter`, `internalDoFilter` 메서드
+
+```java
+public final class ApplicationFilterChain implements FilterChain {
+
+    @Override
+    public void doFilter(ServletRequest request, ServletResponse response)
+        throws IOException, ServletException {
+
+        internalDoFilter(request, response);
+    }
+
+    private void internalDoFilter(ServletRequest request,
+                                  ServletResponse response)
+        throws IOException, ServletException {
+
+        if (pos < n) {
+            // 생략
+
+            filter.doFilter(request, response, this);
+
+
+            // 생략
+            return;
+        }
+
+        // service 호출
+        servlet.service(request, response);
+    }
+}
+```
+
+`internalDoFilter` 에서는 `filter` 가 여러개 존재하면, `if (pos < n)` 조건에 따라 `doFilter` 메서드가 호출된다. 필터가 존재할 때까지
+`doFilter` 메서드는 `재귀 호출` 되며, 필터가 없으면 `return` 에 의해서 종료된다. 그 이후에 `service` 메서드를 통해 `Servlet` 영역으로 넘어간다.
+
+> FrameworkServlet 클래스의 `service`, `processRequest` 메서드
+
+```java
+public abstract class FrameworkServlet extends HttpServletBean implements ApplicationContextAware {
+
+    @Override
+    protected void service(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+
+        HttpMethod httpMethod = HttpMethod.resolve(request.getMethod());
+        if (httpMethod == HttpMethod.PATCH || httpMethod == null) {
+            processRequest(request, response);
+        } else {
+            super.service(request, response);
+        }
+    }
+
+    protected final void processRequest(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+
+        // DispatcherServlet 클래스의 doService 메서드를 호출한다.
+        doService(request, response);
+    }
+}
+```
+
+이제 마지막으로 `FrameworkServlet` 클래스를 보면 되는데, 필터에서 요청이 넘어오면 HTTP 메서드가 `PATCH` 인 경우에는 `processRequest` 메서드가 호출되고,
+나머지 HTTP 메서드는 상위 클래스인 `HttpServlet` 클래스의 `service` 메서드를 호출하게 된다. (`super.service` 호출)
+그리고 `processRequest` 내부에서는 하위 클래스인 `DispatcherServlet` 클래스의 `doService` 메서드를 호출하면서 `Request`, `Response` 를 전달한다.
+
+## 정리
