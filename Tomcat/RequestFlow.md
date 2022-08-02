@@ -601,12 +601,12 @@ public abstract class AbstractProtocol<S> implements ProtocolHandler, MBeanRegis
 ```
 
 조건에 따라 `Processor` 구현체를 가져오거나, 어딘가에서 꺼내거나 없으면 새롭게 생성한다. 그리고 생성된 `Processor` 구현체 클래스의 `process` 메서드를 호출하는데
-이 때, `SocketWrapper` 와 `SocketEvent` 도 역시 같이 인수에 전달한다.
+이 때, `SocketWrapper` 와 `SocketEvent` 도 역시 같이 인자에 전달한다.
 
 <img width="351" alt="스크린샷 2022-08-02 오후 9 27 24" src="https://user-images.githubusercontent.com/23515771/182374346-342c6636-7c9d-474d-8d3a-33e0edc72279.png">
 
-그리고 여기서 중요한 부분이 있는데, `Processor` 의 하위 클래스 중에서 `Http11Processor` 클래스가 있는데, 해당 클래스가 생성될 때, `Request`, `Response` 객체를
-생성하며, `CoyoteAdapter` 도 연결한다.
+위의 이미지에서 확인할 수 있듯이 `Processor` 의 하위 클래스 중에서 `Http11Processor` 클래스가 있는데, 해당 클래스가 생성될 때 `Request`, `Response` 객체를
+생성하며 `CoyoteAdapter` 도 연결한다.
 
 > AbstractProcessorLight 클래스의 `process` 메서드
 
@@ -686,16 +686,12 @@ public class CoyoteAdapter implements Adapter {
 내부 로직이 상당히 길어 모든 부분을 생략하고 핵심 부분 하나만 남겨뒀는데, 바로 `connector` 를 통해 `Service`, `Engine(Container)` 를 호출하는 코드이며,
 `getFirst` 메서드를 통해 `Vavle` 라는 구현체를 가져오고 마지막에 `invoke` 메서드를 통해 `Request`, `Response` 객체를 인자로 보낸다.
 
-### Valve
+여기서 **`Valve`** 는 하나의 특정 컨테이너와 관련된 **`요청 처리`** 컴포넌트이며, 아래의 4가지 `Valve` 를 하나씩 거쳐 `Request`, `Response` 가 전달된다.
 
-하나의 특정 컨테이너와 관련된 **`요청 처리`** 컴포넌트이다.
-
-- StandardEngineValve
-- StandardHostValve
-- StandardContextValve
-- StandardWrapperValve
-
-4가지 `Valve` 를 하나씩 거쳐 `Request`, `Response` 가 전달된다.
+- `StandardEngineValve`
+- `StandardHostValve`
+- `StandardContextValve`
+- `StandardWrapperValve`
 
 > StandardEngineValve 클래스의 `invoke`
 
