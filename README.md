@@ -248,7 +248,7 @@
 
 - [@MapsId](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/MapsId.md)
 
-- [Kotlin 기반의 JPA 사용하는 방법 정리 (개발시 참고)](https://github.com/bestdevhyo1225/dev-log/tree/master/JPA)
+- [`Kotlin` 과 `JPA` 를 함께 사용하는 방법 정리 (개발시 참고)](https://github.com/bestdevhyo1225/dev-log/tree/master/JPA)
 
 ### :blue_book: Reactor
 
