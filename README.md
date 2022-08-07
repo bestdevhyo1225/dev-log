@@ -248,6 +248,8 @@
 
 - [@MapsId](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/MapsId.md)
 
+- [Kotlin 기반의 JPA 사용하는 방법 정리 (개발시 참고)](https://github.com/bestdevhyo1225/dev-log/tree/master/JPA)
+
 ### :blue_book: Reactor
 
 - [Reactive Streams - Publisher, Subscriber, Subscription 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Reactor/Reative_Streams.md)
