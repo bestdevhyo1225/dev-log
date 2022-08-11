@@ -48,81 +48,81 @@
 
 - **`DataStructure`**
 
-  - [이진 검색 트리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_binary_search_tree.md)
+    - [이진 검색 트리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_binary_search_tree.md)
 
-  - [상호 배타적 집합](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_DisjointSet.md)
+    - [상호 배타적 집합](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_DisjointSet.md)
 
-  - [선형 자료구조 (배열, 연결리스트)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_LinearDatastructure_Array_LinkedList.md)
+    - [선형 자료구조 (배열, 연결리스트)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_LinearDatastructure_Array_LinkedList.md)
 
-  - [선형 자료구조 (큐, 스택, 데크)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_LinearDatastructure_Queue_Stack_Deque.md)
+    - [선형 자료구조 (큐, 스택, 데크)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_LinearDatastructure_Queue_Stack_Deque.md)
 
 - **`Algorithm`**
 
-  - [안정 정렬과 불안정 정렬에 대해서 간단히 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_stable_sort_unstable_sort.md)
+    - [안정 정렬과 불안정 정렬에 대해서 간단히 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_stable_sort_unstable_sort.md)
 
-  - [선택 정렬 (Selection Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_selection.md)
+    - [선택 정렬 (Selection Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_selection.md)
 
-  - [삽입 정렬 (Insertion Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_insertion.md)
+    - [삽입 정렬 (Insertion Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_insertion.md)
 
-  - [버블 정렬 (Bubble Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_bubble.md)
+    - [버블 정렬 (Bubble Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_bubble.md)
 
-  - [병합 정렬 (Merge Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_merge.md)
+    - [병합 정렬 (Merge Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_merge.md)
 
-  - [퀵 정렬 (Quick Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_quick.md)
+    - [퀵 정렬 (Quick Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_quick.md)
 
-  - [계수 정렬 (Counting Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_counting.md)
+    - [계수 정렬 (Counting Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_counting.md)
 
-  - [기수 정렬 (Radix Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_radix.md)
+    - [기수 정렬 (Radix Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_radix.md)
 
-  - [이분 탐색(Binary Search), Lower_Bound, Upper_Bound 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_binary_search.md)
+    - [이분 탐색(Binary Search), Lower_Bound, Upper_Bound 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_binary_search.md)
 
-  - [깊이 우선 탐색(Depth First Search, DFS)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_depth_first_search.md)
+    - [깊이 우선 탐색(Depth First Search, DFS)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_depth_first_search.md)
 
-  - [다익스트라(Dijkstra) 최단경로 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_dijkstra.md)
+    - [다익스트라(Dijkstra) 최단경로 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_dijkstra.md)
 
-  - [최소 스패닝 트리(Minimum Spanning Tree, MST)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_MinimumSpanningTree.md)
+    - [최소 스패닝 트리(Minimum Spanning Tree, MST)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_MinimumSpanningTree.md)
 
-  - [최장 증가 수열(Longest Increasing Subsequence, LIS) 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_LongestIncreasingSubsequence.md)
+    - [최장 증가 수열(Longest Increasing Subsequence, LIS) 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_LongestIncreasingSubsequence.md)
 
 - **`Operating System`**
 
-  - [Program, Process, Thread](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Program-Process-Thread.md)
+    - [Program, Process, Thread](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Program-Process-Thread.md)
 
-  - [시분할 시스템(Time Sharing System)이란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Time-Sharing-System.md)
+    - [시분할 시스템(Time Sharing System)이란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Time-Sharing-System.md)
 
-  - [프로세스 제어 블록(Process Control Block, PCB)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Process-Control-Block.md)
+    - [프로세스 제어 블록(Process Control Block, PCB)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Process-Control-Block.md)
 
-  - [프로세스 문맥(Process Context)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Process-Context.md)
+    - [프로세스 문맥(Process Context)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Process-Context.md)
 
-  - [Least Recently Used(LRU) 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Least_Recently_Used.md)
-  
-  - [Synchronous, Asynchronous, Blocking, Non-Blocking](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Synchronous_Asynchronous_Blocking_NonBlocking.md)
+    - [Least Recently Used(LRU) 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Least_Recently_Used.md)
+
+    - [Synchronous, Asynchronous, Blocking, Non-Blocking](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Synchronous_Asynchronous_Blocking_NonBlocking.md)
 
 - **`Database`**
 
-  - [색인(Index)이란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Index.md)
+    - [색인(Index)이란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Index.md)
 
-  - [트랜잭션(Transaction)이 뭔가요?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Transaction.md)
+    - [트랜잭션(Transaction)이 뭔가요?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Transaction.md)
 
-  - [Reflection에 대해서 간단한 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Reflection.md)
+    - [Reflection에 대해서 간단한 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Reflection.md)
 
 - **`Network`**
 
-  - [Port & Port 번호](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_Port.md)
+    - [Port & Port 번호](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_Port.md)
 
-  - [SSH(Secure Shell)란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_Secure-Shell.md)
+    - [SSH(Secure Shell)란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_Secure-Shell.md)
 
-  - [서브넷 마스크(Subnet Mask)란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_Subnet-Mask.md)
+    - [서브넷 마스크(Subnet Mask)란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_Subnet-Mask.md)
 
-  - [MTU(Maximum Transmission Unit)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_MTU.md)
+    - [MTU(Maximum Transmission Unit)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_MTU.md)
 
-  - [HTTPS 공부할 참고 자료](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_nginx_https_reference.md)
+    - [HTTPS 공부할 참고 자료](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_nginx_https_reference.md)
 
-  - [gRPC를 사용하기 전에 HTTP2에 대해서 알아보자](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_HTTP2.md)
+    - [gRPC를 사용하기 전에 HTTP2에 대해서 알아보자](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_HTTP2.md)
 
 - **`Computer Architecture`**
 
-  - [캐시(Cache)에 대해서](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Computer_Architecture_cache.md)
+    - [캐시(Cache)에 대해서](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Computer_Architecture_cache.md)
 
 ### :green_book: MySQL
 
@@ -136,7 +136,7 @@
 
 - [MySQL 실행 계획 - select_type 컬럼](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-SelectType.md)
 
-- [MySQL 실행 계획 -  JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-Join.md)
+- [MySQL 실행 계획 - JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-Join.md)
 
 - [MySQL 쿼리 최적화 - JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-JOIN.md)
 
@@ -187,6 +187,8 @@
 - [[Kotlin In Action] Chapter 5 - 람다로 프로그래밍](https://github.com/bestdevhyo1225/dev-log/blob/master/Kotlin/KotlinInAction_Chapter5.md)
 
 - [[Kotlin In Action] Chapter 8 - 고차함수: 파라미터와 반환 값으로 람다 사용](https://github.com/bestdevhyo1225/dev-log/blob/master/Kotlin/KotlinInAction_Chapter8.md)
+
+- [[FastCampus] 고급 Chapter 9 - 스코프 함수](https://github.com/bestdevhyo1225/dev-log/blob/master/Kotlin/FastCampus_Kotlin_09.md)
 
 ### :blue_book: OOP
 
