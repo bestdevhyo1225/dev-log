@@ -252,6 +252,8 @@
 
 - [Kotlin과 JPA를 함께 사용하는 방법 정리 (개발시 참고)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Kotlin.md)
 
+- [@OneToMany에서 자주 사용하는 MappedBy 옵션은 오직 읽기만 가능하다.](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/MappedBy.md)
+
 ### :blue_book: Reactor
 
 - [Reactive Streams - Publisher, Subscriber, Subscription 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Reactor/Reative_Streams.md)
