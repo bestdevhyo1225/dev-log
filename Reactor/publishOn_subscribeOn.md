@@ -68,3 +68,8 @@ it("publisher 처리가 별도의 스레드에서 실행된다. (subscribeOn 사
   때 `subscribeOn(Schedulers.newSingle("sub"))` 코드에 의해서 생성된 `스레드(sub-1)` 에서 데이터를 생성한다.
 
 <img width="1009" alt="스크린샷 2022-08-30 오전 12 58 24" src="https://user-images.githubusercontent.com/23515771/187243518-5b70c3dc-7243-4fe3-8f0a-019aa1465d24.png">
+
+## 참고
+
+- [리액티브 프로그래밍 시리즈 3 - 스레드 스케쥴링 (Thread scheduling)](https://do-study.tistory.com/117)
+  - 해당 링크에서 `2. Reactor publishOn, subscribeOn` 참고 
