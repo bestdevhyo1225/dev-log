@@ -71,4 +71,4 @@ it("publisher 처리가 별도의 스레드에서 실행된다. (subscribeOn 사
 
 ## 참고
 
-- [리액티브 프로그래밍 시리즈 3 - 스레드 스케쥴링 (Thread scheduling)](https://do-study.tistory.com/117) (해당 링크에서 `2. Reactor publishOn, subscribeOn` 참고) 
+- [리액티브 프로그래밍 시리즈 3 - 스레드 스케쥴링 (Thread scheduling)](https://do-study.tistory.com/117) - 해당 링크에서 `2. Reactor publishOn, subscribeOn` 참고 
