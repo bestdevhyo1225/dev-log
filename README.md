@@ -257,6 +257,7 @@
 ### :blue_book: Reactor
 
 - [Reactive Streams - Publisher, Subscriber, Subscription 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Reactor/Reative_Streams.md)
+- [Reactive Streams - publishOn, subscribeOn 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Reactor/publishOn_subscribeOn.md)
 
 ### :blue_book: React
 
