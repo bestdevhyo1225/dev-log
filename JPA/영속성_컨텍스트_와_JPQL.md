@@ -6,7 +6,7 @@
 
 `엔티티 조회` 의 경우에는 영속성 컨텍스트에서 관리한다.
 
-```jpaql
+```sql
 select m from Member m
 ```
 
@@ -16,13 +16,13 @@ select m from Member m
 
 - `address` 필드는 `임베디드 타입`
 
-```jpaql
+```sql
 select o.address from Order o
 ```
 
 `단순 필드 조회` 의 경우에는 영속성 컨텍스트에서 관리하지 않는다.
 
-```jpaql
+```sql
 select m.id, m.username from Member m
 ```
 
