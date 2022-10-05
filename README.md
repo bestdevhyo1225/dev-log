@@ -20,6 +20,8 @@
 
 - [AWS VPC, Subnet, Routing Table, Internet Gateway, NAT Gateway 간단 요약](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/VPC_SUBNET_ROUTINGTABLE_IG_NAT.md)
 
+- [AWS EC2 에서 사용중인 용량이 Full 일때, EBS 용량 늘리기](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/EC2_EBS_Storage.md)
+
 ### :closed_book: Docker
 
 - [자주 사용하는 command 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Docker/Docker-command.md)
