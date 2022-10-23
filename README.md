@@ -182,6 +182,8 @@
 
 - [Java 직렬화 개념 간단 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/Serialization.md)
 
+- [JVM 관련 링크 모음](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/JVM.md)
+
 ### :blue_book: Kotlin
 
 - [[Kotlin In Action] Chapter 4 - 클래스, 객체, 인터페이스](https://github.com/bestdevhyo1225/dev-log/blob/master/Kotlin/KotlinInAction_Chapter4.md)
