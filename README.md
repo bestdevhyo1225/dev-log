@@ -184,6 +184,8 @@
 
 - [String, StringBuilder, StringBuffer 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/String_StringBuilder_StringBuffer.md)
 
+- [System.out.println() 메서드를 사용하면 안되는 이유 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/SystemOutPrintln.md)
+
 - [Java 직렬화 개념 간단 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/Serialization.md)
 
 - [JVM 관련 링크 모음](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/JVM.md)
