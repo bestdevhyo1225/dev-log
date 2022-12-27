@@ -27,3 +27,7 @@
 ### Non-Blocking
 
 `Non-Blocking` 은 현재 스레드 또는 호출한 주체의 `상태` 가 정지되지 않으며, 결과를 받을 때까지 다른 작업을 수행할 수 있다.
+
+## Synchronous / Asynchronous, Blocking / Non-Blocking 이해하기 좋은 글
+
+- [이제 그만 헷갈렸으면 좋겠다. Blocking과 Non-Blocking, Sync와 Async](https://haneepark.github.io/2021/07/18/blocking-nonblocking-sync-async/)
