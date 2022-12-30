@@ -100,6 +100,8 @@
 
     - [Synchronous, Asynchronous, Blocking, Non-Blocking](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Synchronous_Asynchronous_Blocking_NonBlocking.md)
 
+    - [백엔드 개발자들이 알아야 할 동시성 시리즈 (1,2,3,4,5편)](https://choi-geonu.medium.com/%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%93%A4%EC%9D%B4-%EC%95%8C%EC%95%84%EC%95%BC%ED%95%A0-%EB%8F%99%EC%8B%9C%EC%84%B1-1-concurrency%EC%99%80-parallelism-88c51aa2cdc5)
+
 - **`Database`**
 
     - [색인(Index)이란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Index.md)
@@ -279,6 +281,12 @@
 
 - [도메인, 도메인 모델](https://github.com/bestdevhyo1225/dev-log/blob/master/DomainDrivenDesign/Domain_Model.md)
 
+### :orange_book: 서버 성능
+
+- [서버에 걸리는 부하, 추측하지 말고 계측하자](https://injae-kim.github.io/dev/2020/07/09/how-to-check-single-server-load-average.html)
+
+- [성능 테스트시, 서버 모니터링 방법 정리](https://chigon.tistory.com/19)
+
 ### :orange_book: ETC
 
 - [Third-Party가 뭐지?](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/Third-Party.md)
@@ -292,7 +300,3 @@
 - [개발 환경 용어 (local, dev, staging, prod)](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/development_environment.md)
 
 - [인텔리제이 IDE 에서 특정 프로젝트의 JDK 버전 변경 방법](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/%EC%9D%B8%ED%85%94%EB%A6%AC%EC%A0%9C%EC%9D%B4_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_JDK_%EB%B2%84%EC%A0%84_%EB%B3%80%EA%B2%BD.md)
-
-- [서버에 걸리는 부하, 추측하지 말고 계측하자](https://injae-kim.github.io/dev/2020/07/09/how-to-check-single-server-load-average.html)
-
-- [백엔드 개발자들이 알아야 할 동시성 시리즈 (1,2,3,4,5편)](https://choi-geonu.medium.com/%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%93%A4%EC%9D%B4-%EC%95%8C%EC%95%84%EC%95%BC%ED%95%A0-%EB%8F%99%EC%8B%9C%EC%84%B1-1-concurrency%EC%99%80-parallelism-88c51aa2cdc5)
