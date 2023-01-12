@@ -124,6 +124,10 @@
 
     - [gRPC를 사용하기 전에 HTTP2에 대해서 알아보자](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_HTTP2.md)
 
+    - [TCP가 연결을 생성하고 종료하는 방법, 핸드쉐이크](https://evan-moon.github.io/2019/11/17/tcp-handshake/#%EB%A7%88%EC%B9%98%EB%A9%B0)
+
+    - [HTTP/3는 왜 UDP를 선택한 것일까?](https://evan-moon.github.io/2019/10/08/what-is-http3/)
+
 - **`Computer Architecture`**
 
     - [캐시(Cache)에 대해서](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Computer_Architecture_cache.md)
