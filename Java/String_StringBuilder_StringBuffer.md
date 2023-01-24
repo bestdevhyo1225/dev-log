@@ -16,6 +16,38 @@
 - `StringBuffer` 는 `동기화(Synchronization)` 를 지원하기 때문에 멀티 스레드 환경에서 안전하게 동작할 수 있다.
     - `StringBuffer` 에서는 `synchronized` 키워드를 사용한다.
 
+> 멀티 스레드 환경에서 StringBuilder를 써도 되는 예
+
+```java
+public class Service {
+
+	public static StringBuilder sb = new StringBuilder();
+
+	public void go() {
+		sb.append("추가");
+		sb.append("추가");
+	}
+}
+```
+
+- 이렇게 전역변수로 `StringBuilder` 를 선언하면 여러 쓰레드에서 동시에 접근하게 되고, `StringBuilder` 는 쓰레드에 안전하지 않기 때문에 자연스럽게 문제가 생긴다.
+
+> 멀티 스레드 환경에서 StringBuilder를 써도 되는 예
+
+```java
+public class Service {
+
+	public void go() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("추가");
+		sb.append("추가");
+	}
+}
+```
+
+- 지역변수로 `StringBuilder` 를 선언하면 쓰레드가 메소드를 수행할 때 객체가 생성되고 쓰레드마다 서로 다른 객체를 사용하게 된다. 그렇기 때문에 멀티쓰레드 환경에서 아래와 같이 코딩을 하여도 전혀
+  문제가 없다.
+
 ### synchronized 키워드
 
 - 여러 개의 스레드에서 하나의 자원에 접근하려고 할 때, 현재 사용하고 있는 스레드를 제외한 나머지 스레드들이 접근할 수 없도록 막는다.
