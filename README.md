@@ -166,6 +166,10 @@
 
 - [Configuration 옵션 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md)
 
+### :green_book: Kafka
+
+- [카프카 특징](https://github.com/bestdevhyo1225/dev-log/blob/master/Kafka/%EC%B9%B4%ED%94%84%EC%B9%B4_%ED%8A%B9%EC%A7%95.md)
+
 ### :blue_book: JavaScript
 
 - [JavaScript - Iterable / Iterator](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Iterable-Iterator.md)
