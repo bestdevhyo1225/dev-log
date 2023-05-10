@@ -316,3 +316,5 @@
 - [개발 환경 용어 (local, dev, staging, prod)](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/development_environment.md)
 
 - [인텔리제이 IDE 에서 특정 프로젝트의 JDK 버전 변경 방법](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/%EC%9D%B8%ED%85%94%EB%A6%AC%EC%A0%9C%EC%9D%B4_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8_JDK_%EB%B2%84%EC%A0%84_%EB%B3%80%EA%B2%BD.md)
+
+- [Socar의 AWS IoT Core, MSK, ElastiCache(Redis) 기술 관련 번역](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/Socar_Msk_Elasticache.md)
