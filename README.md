@@ -232,6 +232,8 @@
 
 - [Spring 환경 변수 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Spring/SpringBoot-Environment-Priority.md)
 
+- [Spring Actuator (Health, Info, Logger, HTTP, Security) 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Spring/SpringBoot-Actuator-1.md)
+
 ### :blue_book: Akka
 
 - [아카에 대하여](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter1.md)
