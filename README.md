@@ -284,6 +284,8 @@
 
 - [영속성 컨텍스트와 JPQL](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/%EC%98%81%EC%86%8D%EC%84%B1_%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8_%EC%99%80_JPQL.md)
 
+- [JPA Batch Insert 간단 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Batch_Insert.md)
+
 ### :blue_book: Reactor
 
 - [Reactive Streams - Publisher, Subscriber, Subscription 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Reactor/Reative_Streams.md)
