@@ -305,7 +305,11 @@
 
 - [성능 테스트시, 서버 모니터링 방법 정리](https://chigon.tistory.com/19)
 
+### :orange_book: 서버 모니터링
+
 - [실무 모니터링 환경 구성 Tip 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Monitoring/%EC%8B%A4%EB%AC%B4_%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81_%ED%99%98%EA%B2%BD_%EA%B5%AC%EC%84%B1.md)
+
+- [Pinpoint 설치 및 실행 가이드 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Monitoring/%ED%95%80%ED%8F%AC%EC%9D%B8%ED%8A%B8_%EC%84%A4%EC%B9%98_%EB%B0%8F_%EC%8B%A4%ED%96%89_%EA%B0%80%EC%9D%B4%EB%93%9C.md)
 
 ### :orange_book: ETC
 
