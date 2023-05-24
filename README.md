@@ -305,6 +305,8 @@
 
 - [성능 테스트시, 서버 모니터링 방법 정리](https://chigon.tistory.com/19)
 
+- [실무 모니터링 환경 구성 Tip 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Monitoring/%EC%8B%A4%EB%AC%B4_%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81_%ED%99%98%EA%B2%BD_%EA%B5%AC%EC%84%B1.md)
+
 ### :orange_book: ETC
 
 - [Third-Party가 뭐지?](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/Third-Party.md)
