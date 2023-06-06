@@ -51,11 +51,11 @@
 
 > 같은 프로세스에서 발생하는 스레드 간의 컨텍스트 스위칭
 
-<img width="1040" alt="스크린샷 2023-06-06 오후 4 34 14" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/8224d603-b0e4-4c78-9b23-3b9600f203ab">
+<img width="800" alt="스크린샷 2023-06-06 오후 4 34 14" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/8224d603-b0e4-4c78-9b23-3b9600f203ab">
 
 > 서로 다른 프로세스 간에 발생하는 컨텍스트 스위칭
 
-<img width="1080" alt="스크린샷 2023-06-06 오후 4 39 25" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/6e0520bd-78a6-43f8-a099-c47c4c8ba697">
+<img width="800" alt="스크린샷 2023-06-06 오후 4 39 25" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/6e0520bd-78a6-43f8-a099-c47c4c8ba697">
 
 - 초록색 빗금친 영역에서 메모리와 관련된 처리가 일어난다.
 - 서로 다른 프로세스는 독립적인 메모리를 가지고 있기 때문이다.

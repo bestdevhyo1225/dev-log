@@ -84,7 +84,7 @@ A: 100,000건
 B: 3건
 ```
 
-<img width="1700" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/c683bf03-2f3f-4553-b5e3-784470109439">
+<img width="800" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/c683bf03-2f3f-4553-b5e3-784470109439">
 
 - A 테이블에서 `100,000건` 의 데이터가 존재하기 때문에 `100,000번` 접근
 - A 테이블의 각각의 Row는 B 테이블 인덱스의 1번씩 접근하여 B 테이블과 조인하기 때문에 `100,000번` 접근하여 B 테이블과 조인한다.
@@ -97,7 +97,7 @@ A: 3건
 B: 100,000건
 ```
 
-<img width="1700" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/41c06b16-8e4c-4896-b8d7-522b61683432">
+<img width="800" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/41c06b16-8e4c-4896-b8d7-522b61683432">
 
 - A 테이블에서 `3건` 의 데이터가 존재하기 때문에 `3번` 접근
 - A 테이블의 각각의 Row는 B 테이블 인덱스의 1번씩 접근하여 B 테이블과 조인하기 때문에 `100,000` 번 접근하여 B 테이블과 조인한다.
