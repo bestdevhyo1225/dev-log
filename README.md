@@ -103,6 +103,8 @@
     - [백엔드 개발자들이 알아야 할 동시성 시리즈 (1,2,3,4,5편)](https://choi-geonu.medium.com/%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%93%A4%EC%9D%B4-%EC%95%8C%EC%95%84%EC%95%BC%ED%95%A0-%EB%8F%99%EC%8B%9C%EC%84%B1-1-concurrency%EC%99%80-parallelism-88c51aa2cdc5)
 
     - [컨텍스트 스위칭](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Context_Switching.md)
+  
+    - [CPU Bound, I/O Bound](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_CPU_Bound_IO_Bound.md)
 
 - **`Database`**
 
