@@ -105,6 +105,8 @@
     - [컨텍스트 스위칭](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Context_Switching.md)
   
     - [CPU Bound, I/O Bound](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_CPU_Bound_IO_Bound.md)
+  
+    - [스핀락(SpinLock), 뮤텍스(Mutex), 세마포어(Semaphore)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_SpinLock_Mutex_Semaphore.md)
 
 - **`Database`**
 
