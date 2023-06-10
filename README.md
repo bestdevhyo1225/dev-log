@@ -2,7 +2,7 @@
 
 <br>
 
-### :closed_book: AWS
+## :closed_book: AWS
 
 - [AWS Lambda](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Lambda.md)
 
@@ -22,11 +22,11 @@
 
 - [AWS EC2 에서 사용중인 용량이 Full 일때, EBS 용량 늘리기](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/EC2_EBS_Storage.md)
 
-### :closed_book: Docker
+## :closed_book: Docker
 
 - [자주 사용하는 command 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Docker/Docker-command.md)
 
-### :closed_book: Kubernetes
+## :closed_book: Kubernetes
 
 - [쿠버네티스 실습 환경 구성](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes)
 
@@ -42,13 +42,13 @@
 
 - [Replication Controller, ReplicaSet](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/controller)
 
-### :closed_book: Serverless
+## :closed_book: Serverless
 
 - [Serverless Framework](https://github.com/bestdevhyo1225/dev-log/blob/master/Serverless/ServerlessFramework.md)
 
-### :closed_book: CS
+## :closed_book: CS
 
-- **`DataStructure`**
+### DataStructure
 
     - [이진 검색 트리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_binary_search_tree.md)
 
@@ -58,7 +58,7 @@
 
     - [선형 자료구조 (큐, 스택, 데크)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_LinearDatastructure_Queue_Stack_Deque.md)
 
-- **`Algorithm`**
+### Algorithm
 
     - [안정 정렬과 불안정 정렬에 대해서 간단히 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_stable_sort_unstable_sort.md)
 
@@ -86,7 +86,7 @@
 
     - [최장 증가 수열(Longest Increasing Subsequence, LIS) 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_LongestIncreasingSubsequence.md)
 
-- **`Operating System`**
+### Operating System
 
     - [Program, Process, Thread](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Program-Process-Thread.md)
 
@@ -110,7 +110,7 @@
 
     - [모니터(Monitor)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Monitor.md)
 
-- **`Database`**
+### Database
 
     - [색인(Index)이란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Index.md)
 
@@ -118,7 +118,7 @@
 
     - [Reflection에 대해서 간단한 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Reflection.md)
 
-- **`Network`**
+### Network
 
     - [Port & Port 번호](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Network_Port.md)
 
@@ -136,11 +136,11 @@
 
     - [HTTP/3는 왜 UDP를 선택한 것일까?](https://evan-moon.github.io/2019/10/08/what-is-http3/)
 
-- **`Computer Architecture`**
+### Computer Architecture
 
     - [캐시(Cache)에 대해서](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Computer_Architecture_cache.md)
 
-### :green_book: MySQL
+## :green_book: MySQL
 
 - [MySQL Architecture](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Architecture.md)
 
@@ -162,11 +162,11 @@
 
 - [자주 사용할 것 같은 SQL 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-SQL.md)
 
-### :green_book: MongoDB
+## :green_book: MongoDB
 
 - [Mongoose Schema 사용자 정의 메소드 (statics vs methods)](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Mongoose-statics-methods.md)
 
-### :green_book: Redis
+## :green_book: Redis
 
 - [Redis 자료 모음](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Precautions.md)
 
@@ -174,11 +174,11 @@
 
 - [Configuration 옵션 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md)
 
-### :green_book: Kafka
+## :green_book: Kafka
 
 - [카프카 특징](https://github.com/bestdevhyo1225/dev-log/blob/master/Kafka/%EC%B9%B4%ED%94%84%EC%B9%B4_%ED%8A%B9%EC%A7%95.md)
 
-### :blue_book: JavaScript
+## :blue_book: JavaScript
 
 - [JavaScript - Iterable / Iterator](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Iterable-Iterator.md)
 
@@ -192,11 +192,11 @@
 
 - [Javascript - Await 및 Promise.all()을 적절하게 사용하여 수행시간을 단축하자](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Await_Optimization.md)
 
-### :blue_book: TypeScript
+## :blue_book: TypeScript
 
 - [TypeScript를 시작하면서 알아둘 것](https://github.com/bestdevhyo1225/dev-log/blob/master/TypeScript/TypeScript-Starter.md)
 
-### :blue_book: Java
+## :blue_book: Java
 
 - [equals(), hashcode() 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/equals_hashcode.md)
 
@@ -212,7 +212,7 @@
 
 - [Java NIO 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/NIO.md)
 
-### :blue_book: Kotlin
+## :blue_book: Kotlin
 
 - [[Kotlin In Action] Chapter 4 - 클래스, 객체, 인터페이스](https://github.com/bestdevhyo1225/dev-log/blob/master/Kotlin/KotlinInAction_Chapter4.md)
 
@@ -226,11 +226,11 @@
 
 - [객체 지향 설계 원칙 - OCP, DIP](https://github.com/bestdevhyo1225/dev-log/blob/master/OOP/OCP_DIP.md)
 
-### :blue_book: Tomcat
+## :blue_book: Tomcat
 
 - [클라이언트의 요청이 Tomcat을 거쳐 Spring DispatcherServlet에 도달하기까지](https://github.com/bestdevhyo1225/dev-log/blob/master/Tomcat/RequestFlow.md)
 
-### :blue_book: Spring
+## :blue_book: Spring
 
 - [빌드 도구 - Maven 그리고 Gradle](https://github.com/bestdevhyo1225/dev-log/blob/master/Spring/Maven-Gradle.md)
 
@@ -244,7 +244,7 @@
 
 - [Spring Actuator (Health, Info, Logger, HTTP, Security) 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Spring/SpringBoot-Actuator-1.md)
 
-### :blue_book: Akka
+## :blue_book: Akka
 
 - [아카에 대하여](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter1.md)
 
@@ -252,7 +252,7 @@
 
 - [아카 계층구조](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter3.md)
 
-### :blue_book: JPA
+## :blue_book: JPA
 
 - [연관 관계 주인 정하기](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Association_Owner.md)
 
@@ -296,32 +296,32 @@
 
 - [JPA Batch Insert 간단 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Batch_Insert.md)
 
-### :blue_book: Reactor
+## :blue_book: Reactor
 
 - [Reactive Streams - Publisher, Subscriber, Subscription 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Reactor/Reative_Streams.md)
 - [Reactive Streams - publishOn, subscribeOn 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Reactor/publishOn_subscribeOn.md)
 
-### :blue_book: React
+## :blue_book: React
 
 - [함수형 컴포넌트 - useEffect()로 간단한 Life Cycle 사용하기](https://github.com/bestdevhyo1225/dev-log/blob/master/React/function_component_useEffect.md)
 
-### :orange_book: Domain Driven Design
+## :orange_book: Domain Driven Design
 
 - [도메인, 도메인 모델](https://github.com/bestdevhyo1225/dev-log/blob/master/DomainDrivenDesign/Domain_Model.md)
 
-### :orange_book: 서버 성능
+## :orange_book: 서버 성능
 
 - [서버에 걸리는 부하, 추측하지 말고 계측하자](https://injae-kim.github.io/dev/2020/07/09/how-to-check-single-server-load-average.html)
 
 - [성능 테스트시, 서버 모니터링 방법 정리](https://chigon.tistory.com/19)
 
-### :orange_book: 서버 모니터링
+## :orange_book: 서버 모니터링
 
 - [실무 모니터링 환경 구성 Tip 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Monitoring/%EC%8B%A4%EB%AC%B4_%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81_%ED%99%98%EA%B2%BD_%EA%B5%AC%EC%84%B1.md)
 
 - [Pinpoint 설치 및 실행 가이드 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Monitoring/%ED%95%80%ED%8F%AC%EC%9D%B8%ED%8A%B8_%EC%84%A4%EC%B9%98_%EB%B0%8F_%EC%8B%A4%ED%96%89_%EA%B0%80%EC%9D%B4%EB%93%9C.md)
 
-### :orange_book: ETC
+## :orange_book: ETC
 
 - [Third-Party가 뭐지?](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/Third-Party.md)
 
