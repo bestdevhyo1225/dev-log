@@ -110,6 +110,8 @@
 
 - [모니터(Monitor)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Monitor.md)
 
+- [교착상태(DeadLock)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_DeadLock.md)
+
 ### Database
 
 - [색인(Index)이란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Index.md)
