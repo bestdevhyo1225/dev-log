@@ -200,19 +200,21 @@
 
 ## :blue_book: Java
 
-- [equals(), hashcode() 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/equals_hashcode.md)
+- [equals(), hashcode()](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/equals_hashcode.md)
 
-- [String, StringBuilder, StringBuffer 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/String_StringBuilder_StringBuffer.md)
+- [String, StringBuilder, StringBuffer](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/String_StringBuilder_StringBuffer.md)
 
-- [System.out.println() 메서드를 사용하면 안되는 이유 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/SystemOutPrintln.md)
+- [System.out.println() 메서드를 사용하면 안되는 이유](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/SystemOutPrintln.md)
 
-- [Java 직렬화 개념 간단 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/Serialization.md)
+- [Java 직렬화](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/Serialization.md)
 
 - [JVM 관련 링크 모음](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/JVM.md)
 
-- [ExecutorService 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/ExecutorService.md)
+- [ExecutorService](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/ExecutorService.md)
 
-- [Java NIO 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/NIO.md)
+- [Java NIO](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/NIO.md)
+
+- [Java 스레드 상태](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/Thread_State.md)
 
 ## :blue_book: Kotlin
 
