@@ -100,6 +100,7 @@
 
 - `synchronized` 키워드를 통해 `상호 배제(Mutual Exclusion)` 가 보장된다.
 - `wait()`, `notifyAll()` 메소드를 통해 `Condition Variable` 의 `Wating Queue` 로 스레드를 보내거나, `Waiting Queue` 에 있는 스레드를 깨운다.
+  - `wait()` 가 호출되면, 가지고 있던 `Lock` 을 반납한다는 점을 꼭 기억해야한다.
 - 자바 `Monitor` 를 사용할 때, 두 가지 이상의 `Condition Variable` 이 필요하다면, 따로 구현이 필요하다.
 - `java.util.concurrent` 패키지에는 동기화 기능이 탑재된 여러 클래스들이 있으니 참고해서 사용하면 된다.
 
