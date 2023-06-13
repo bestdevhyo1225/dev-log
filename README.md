@@ -248,6 +248,8 @@
 
 - [Spring Actuator (Health, Info, Logger, HTTP, Security) 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Spring/SpringBoot-Actuator-1.md)
 
+- [Spring Gradle 파일에서 Java Container 도커 컨테이너 빌드하기](https://github.com/bestdevhyo1225/dev-log/blob/master/Spring/Spring-Java-Container-Build.md)
+
 ## :blue_book: Akka
 
 - [아카에 대하여](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter1.md)
