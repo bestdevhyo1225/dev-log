@@ -1,6 +1,4 @@
-## :memo: Dev-Log
-
-<br>
+# :memo: Dev-Log
 
 ## :closed_book: AWS
 
@@ -111,6 +109,8 @@
 - [모니터(Monitor)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Monitor.md)
 
 - [교착상태(DeadLock)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_DeadLock.md)
+
+- [인터럽트(Interrupt)와 시스템 콜(System Call)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Interrupt_SystemCall.md)
 
 ### Database
 
