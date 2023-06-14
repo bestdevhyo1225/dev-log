@@ -112,6 +112,8 @@
 
 - [인터럽트(Interrupt)와 시스템 콜(System Call)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Interrupt_SystemCall.md)
 
+- [스레드 종류(하드웨어, OS, 네이티브, 커널, 유저, 그린 스레드)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/OS_Thread_Type.md)
+
 ### Database
 
 - [색인(Index)이란?](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/DB_Index.md)
