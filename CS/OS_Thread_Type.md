@@ -89,11 +89,27 @@
 ### Java 예시
 
 ```java
-Thread thread = new Thread();
-thread.start();
+public class Main {
+    public static void main(String args[]) {
+        Thread thread = new Thread();
+        thread.start();
+    }
+}
 ```
 
-- `Thread` 는 유저 레벨 스레드라고 이해할 수 있다.
+- `Thread` 는 `유저 스레드` 라고 이해할 수 있다.
+- `유저 스레드` 가 CPU에서 실행되려면, `OS 스레드` 와 반드시 연결되어야 한다.
+
+### 유저 스레드와 OS 스레드를 어떻게 연결시킬 것인가?
+
+#### One-to-One Model
+
+- `유저 스레드` 와 `OS 스레드` 가 `1:1` 로 연결이 되는 모델이다.
+- 스레드 관리를 OS에 위임하게 된다. (스케줄링 포함)
+- 스케줄링도 포함하기 때문에 커널이 스케줄링도 수행한다.
+- 멀티코어도 잘 활용한다.
+- 하나의 스레드가 `Block` 상태가 되도 다른 스레드는 영향을 받지 않고, 정상적으로 동작한다.
+- OS 스레드들과 1:1 관계이기 때문에 어떻게 실행되는지에 따라서 `race condition` 이 발생할 수도 있다.
 
 ## 그린 스레드
 
