@@ -176,7 +176,9 @@
 
 - [Hashes Zip List](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Hashes_Ziplist.md)
 
-- [Configuration 옵션 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md)
+- [Configuration 옵션](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md)
+
+- [Pub/Sub](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Pub_Sub.md)
 
 ## :green_book: Kafka
 
