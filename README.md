@@ -306,6 +306,8 @@
 
 - [JPA Batch Insert 간단 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Batch_Insert.md)
 
+- [Hibernate 구현체에서 Auto Commit 최적화](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Hibernate_AutoCommit.md)
+
 ## :blue_book: Reactor
 
 - [Reactive Streams - Publisher, Subscriber, Subscription 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Reactor/Reative_Streams.md)
