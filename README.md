@@ -1,88 +1,6 @@
 # :memo: Dev-Log
 
-## :closed_book: AWS
-
-- [AWS Lambda](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Lambda.md)
-
-- [AWS CloudFront & Lambda@Edge](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/CloudFront-Lambda%40Edge.md)
-
-- [AWS Cognito](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Cognito.md)
-
-- [AWS Network 구성할 참고 자료 (VPC, NAT, Private Subnet 등등)](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Network.md)
-
-- [AWS Network ACL & Security Group](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/NetworkACL_SecurityGroup.md)
-
-- [AWS ECS & ECR 요약](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/ECS_ECR.md)
-
-- [AWS Fargate에 대해서 간단하게 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Fargate.md)
-
-- [AWS VPC, Subnet, Routing Table, Internet Gateway, NAT Gateway 간단 요약](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/VPC_SUBNET_ROUTINGTABLE_IG_NAT.md)
-
-- [AWS EC2 에서 사용중인 용량이 Full 일때, EBS 용량 늘리기](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/EC2_EBS_Storage.md)
-
-## :closed_book: Docker
-
-- [자주 사용하는 command 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Docker/Docker-command.md)
-
-## :closed_book: Kubernetes
-
-- [쿠버네티스 실습 환경 구성](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes)
-
-- [Pod](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/pod)
-
-- [Service](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/service)
-
-- [Volume](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/volume)
-
-- [ConfigMap, Secret](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/configmap-secret)
-
-- [Namespace, ResourceQuota, LimitRange](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/namespace-resourcequota-limitrange)
-
-- [Replication Controller, ReplicaSet](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/controller)
-
-## :closed_book: Serverless
-
-- [Serverless Framework](https://github.com/bestdevhyo1225/dev-log/blob/master/Serverless/ServerlessFramework.md)
-
 ## :closed_book: CS
-
-### DataStructure
-
-- [이진 검색 트리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_binary_search_tree.md)
-
-- [상호 배타적 집합](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_DisjointSet.md)
-
-- [선형 자료구조 (배열, 연결리스트)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_LinearDatastructure_Array_LinkedList.md)
-
-- [선형 자료구조 (큐, 스택, 데크)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_LinearDatastructure_Queue_Stack_Deque.md)
-
-### Algorithm
-
-- [안정 정렬과 불안정 정렬에 대해서 간단히 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_stable_sort_unstable_sort.md)
-
-- [선택 정렬 (Selection Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_selection.md)
-
-- [삽입 정렬 (Insertion Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_insertion.md)
-
-- [버블 정렬 (Bubble Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_bubble.md)
-
-- [병합 정렬 (Merge Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_merge.md)
-
-- [퀵 정렬 (Quick Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_quick.md)
-
-- [계수 정렬 (Counting Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_counting.md)
-
-- [기수 정렬 (Radix Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_radix.md)
-
-- [이분 탐색(Binary Search), Lower_Bound, Upper_Bound 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_binary_search.md)
-
-- [깊이 우선 탐색(Depth First Search, DFS)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_depth_first_search.md)
-
-- [다익스트라(Dijkstra) 최단경로 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_dijkstra.md)
-
-- [최소 스패닝 트리(Minimum Spanning Tree, MST)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_MinimumSpanningTree.md)
-
-- [최장 증가 수열(Longest Increasing Subsequence, LIS) 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_LongestIncreasingSubsequence.md)
 
 ### Operating System
 
@@ -144,6 +62,44 @@
 
 - [캐시(Cache)에 대해서](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Computer_Architecture_cache.md)
 
+### DataStructure
+
+- [이진 검색 트리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_binary_search_tree.md)
+
+- [상호 배타적 집합](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_DisjointSet.md)
+
+- [선형 자료구조 (배열, 연결리스트)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_LinearDatastructure_Array_LinkedList.md)
+
+- [선형 자료구조 (큐, 스택, 데크)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Datastructure_LinearDatastructure_Queue_Stack_Deque.md)
+
+### Algorithm
+
+- [안정 정렬과 불안정 정렬에 대해서 간단히 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_stable_sort_unstable_sort.md)
+
+- [선택 정렬 (Selection Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_selection.md)
+
+- [삽입 정렬 (Insertion Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_insertion.md)
+
+- [버블 정렬 (Bubble Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_bubble.md)
+
+- [병합 정렬 (Merge Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_merge.md)
+
+- [퀵 정렬 (Quick Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_quick.md)
+
+- [계수 정렬 (Counting Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_counting.md)
+
+- [기수 정렬 (Radix Sort)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_sort_radix.md)
+
+- [이분 탐색(Binary Search), Lower_Bound, Upper_Bound 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_binary_search.md)
+
+- [깊이 우선 탐색(Depth First Search, DFS)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_depth_first_search.md)
+
+- [다익스트라(Dijkstra) 최단경로 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_dijkstra.md)
+
+- [최소 스패닝 트리(Minimum Spanning Tree, MST)](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_MinimumSpanningTree.md)
+
+- [최장 증가 수열(Longest Increasing Subsequence, LIS) 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_LongestIncreasingSubsequence.md)
+
 ## :green_book: MySQL
 
 - [MySQL Architecture](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Architecture.md)
@@ -183,24 +139,6 @@
 ## :green_book: Kafka
 
 - [카프카 특징](https://github.com/bestdevhyo1225/dev-log/blob/master/Kafka/%EC%B9%B4%ED%94%84%EC%B9%B4_%ED%8A%B9%EC%A7%95.md)
-
-## :blue_book: JavaScript
-
-- [JavaScript - Iterable / Iterator](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Iterable-Iterator.md)
-
-- [JavaScript - Generator](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Generator.md)
-
-- [JavaScript - Promise](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Promise.md)
-
-- [JavaScript - Async / Await](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Async-Await.md)
-
-- [JavaScript - Filter, Map, Reduce](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Filter-Map-Reduce.md)
-
-- [Javascript - Await 및 Promise.all()을 적절하게 사용하여 수행시간을 단축하자](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Await_Optimization.md)
-
-## :blue_book: TypeScript
-
-- [TypeScript를 시작하면서 알아둘 것](https://github.com/bestdevhyo1225/dev-log/blob/master/TypeScript/TypeScript-Starter.md)
 
 ## :blue_book: Java
 
@@ -256,14 +194,6 @@
 
 - [Spring Boot 프로젝트에서 자주 사용하는 Gradle 명령어 모음](https://github.com/bestdevhyo1225/dev-log/blob/master/Spring/SpringBoot-Gradle-Commands.md)
 
-## :blue_book: Akka
-
-- [아카에 대하여](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter1.md)
-
-- [핑퐁 게임](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter2.md)
-
-- [아카 계층구조](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter3.md)
-
 ## :blue_book: JPA
 
 - [연관 관계 주인 정하기](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Association_Owner.md)
@@ -315,11 +245,82 @@
 ## :blue_book: Reactor
 
 - [Reactive Streams - Publisher, Subscriber, Subscription 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Reactor/Reative_Streams.md)
+
 - [Reactive Streams - publishOn, subscribeOn 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Reactor/publishOn_subscribeOn.md)
+
+## :blue_book: Akka
+
+- [아카에 대하여](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter1.md)
+
+- [핑퐁 게임](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter2.md)
+
+- [아카 계층구조](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter3.md)
+
+## :blue_book: JavaScript
+
+- [JavaScript - Iterable / Iterator](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Iterable-Iterator.md)
+
+- [JavaScript - Generator](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Generator.md)
+
+- [JavaScript - Promise](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Promise.md)
+
+- [JavaScript - Async / Await](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Async-Await.md)
+
+- [JavaScript - Filter, Map, Reduce](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Filter-Map-Reduce.md)
+
+- [Javascript - Await 및 Promise.all()을 적절하게 사용하여 수행시간을 단축하자](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Await_Optimization.md)
+
+## :blue_book: TypeScript
+
+- [TypeScript를 시작하면서 알아둘 것](https://github.com/bestdevhyo1225/dev-log/blob/master/TypeScript/TypeScript-Starter.md)
 
 ## :blue_book: React
 
 - [함수형 컴포넌트 - useEffect()로 간단한 Life Cycle 사용하기](https://github.com/bestdevhyo1225/dev-log/blob/master/React/function_component_useEffect.md)
+
+## :closed_book: AWS
+
+- [AWS Lambda](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Lambda.md)
+
+- [AWS CloudFront & Lambda@Edge](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/CloudFront-Lambda%40Edge.md)
+
+- [AWS Cognito](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Cognito.md)
+
+- [AWS Network 구성할 참고 자료 (VPC, NAT, Private Subnet 등등)](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Network.md)
+
+- [AWS Network ACL & Security Group](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/NetworkACL_SecurityGroup.md)
+
+- [AWS ECS & ECR 요약](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/ECS_ECR.md)
+
+- [AWS Fargate에 대해서 간단하게 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Fargate.md)
+
+- [AWS VPC, Subnet, Routing Table, Internet Gateway, NAT Gateway 간단 요약](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/VPC_SUBNET_ROUTINGTABLE_IG_NAT.md)
+
+- [AWS EC2 에서 사용중인 용량이 Full 일때, EBS 용량 늘리기](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/EC2_EBS_Storage.md)
+
+## :closed_book: Docker
+
+- [자주 사용하는 command 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Docker/Docker-command.md)
+
+## :closed_book: Kubernetes
+
+- [쿠버네티스 실습 환경 구성](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes)
+
+- [Pod](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/pod)
+
+- [Service](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/service)
+
+- [Volume](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/volume)
+
+- [ConfigMap, Secret](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/configmap-secret)
+
+- [Namespace, ResourceQuota, LimitRange](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/namespace-resourcequota-limitrange)
+
+- [Replication Controller, ReplicaSet](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/controller)
+
+## :closed_book: Serverless
+
+- [Serverless Framework](https://github.com/bestdevhyo1225/dev-log/blob/master/Serverless/ServerlessFramework.md)
 
 ## :orange_book: Domain Driven Design
 
