@@ -242,3 +242,4 @@ public abstract class AbstractLogicalConnectionImplementor implements LogicalCon
   상태에서 `spring.jpa.properties.hibernate.provider_disables_autocommit` 옵션 값이 `true` 이면, 즉시 쿼리를 실행하기 때문에 트랜잭션 내부에서 실행되던 모든
   쿼리의 `rollback` 이
   정상적으로 실행되지 않는 점을 반드시 인지해야 한다.
+- SpringBoot 2.x 부터는 커넥션 풀의 auto-commit 설정값에 따라 자동으로 `provider_disables_autocommit` 을 `true` 상태로 설정을 해준다.
