@@ -1,6 +1,6 @@
 # :memo: Dev-Log
 
-## :closed_book: CS
+## :blue_book: CS
 
 ### Operating System
 
@@ -100,47 +100,7 @@
 
 - [최장 증가 수열(Longest Increasing Subsequence, LIS) 알고리즘](https://github.com/bestdevhyo1225/dev-log/blob/master/CS/Algorithm_LongestIncreasingSubsequence.md)
 
-## :green_book: MySQL
-
-- [MySQL Architecture](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Architecture.md)
-
-- [MySQL - InnoDB 잠금 방식](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-InnoDB-Lock.md)
-
-- [MySQL에서 트랜잭션, 잠금, 트랜잭션의 격리 수준](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Transaction-Lock-IsolationLevel.md)
-
-- [MySQL 실행 계획 - id 컬럼](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-Id.md)
-
-- [MySQL 실행 계획 - select_type 컬럼](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-SelectType.md)
-
-- [MySQL 실행 계획 - JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-Join.md)
-
-- [MySQL 쿼리 최적화 - JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-JOIN.md)
-
-- [MySQL 쿼리 최적화 - WHERE(문자열, 상수 비교)](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-Where.md)
-
-- [MySQL 인덱스를 걸때 고려사항](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Index.md)
-
-- [자주 사용할 것 같은 SQL 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-SQL.md)
-
-## :green_book: MongoDB
-
-- [Mongoose Schema 사용자 정의 메소드 (statics vs methods)](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Mongoose-statics-methods.md)
-
-## :green_book: Redis
-
-- [Redis 자료 모음](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Precautions.md)
-
-- [Hashes Zip List](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Hashes_Ziplist.md)
-
-- [Configuration 옵션](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md)
-
-- [Pub/Sub](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Pub_Sub.md)
-
-## :green_book: Kafka
-
-- [카프카 특징](https://github.com/bestdevhyo1225/dev-log/blob/master/Kafka/%EC%B9%B4%ED%94%84%EC%B9%B4_%ED%8A%B9%EC%A7%95.md)
-
-## :blue_book: Java
+## :green_book: Java
 
 - [equals(), hashcode()](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/equals_hashcode.md)
 
@@ -158,7 +118,7 @@
 
 - [Java 스레드 상태](https://github.com/bestdevhyo1225/dev-log/blob/master/Java/Thread_State.md)
 
-## :blue_book: Kotlin
+## :green_book: Kotlin
 
 - [[Kotlin In Action] Chapter 4 - 클래스, 객체, 인터페이스](https://github.com/bestdevhyo1225/dev-log/blob/master/Kotlin/KotlinInAction_Chapter4.md)
 
@@ -168,15 +128,15 @@
 
 - [[FastCampus] 고급 Chapter 9 - 스코프 함수](https://github.com/bestdevhyo1225/dev-log/blob/master/Kotlin/FastCampus_Kotlin_09.md)
 
-### :blue_book: OOP
+### :green_book: OOP
 
 - [객체 지향 설계 원칙 - OCP, DIP](https://github.com/bestdevhyo1225/dev-log/blob/master/OOP/OCP_DIP.md)
 
-## :blue_book: Tomcat
+## :green_book: Tomcat
 
 - [클라이언트의 요청이 Tomcat을 거쳐 Spring DispatcherServlet에 도달하기까지](https://github.com/bestdevhyo1225/dev-log/blob/master/Tomcat/RequestFlow.md)
 
-## :blue_book: Spring
+## :green_book: Spring
 
 - [빌드 도구 - Maven 그리고 Gradle](https://github.com/bestdevhyo1225/dev-log/blob/master/Spring/Maven-Gradle.md)
 
@@ -194,7 +154,7 @@
 
 - [Spring Boot 프로젝트에서 자주 사용하는 Gradle 명령어 모음](https://github.com/bestdevhyo1225/dev-log/blob/master/Spring/SpringBoot-Gradle-Commands.md)
 
-## :blue_book: JPA
+## :green_book: JPA
 
 - [연관 관계 주인 정하기](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Association_Owner.md)
 
@@ -242,13 +202,13 @@
 
 - [Hibernate 구현체에서 Auto Commit 최적화](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Hibernate_AutoCommit.md)
 
-## :blue_book: Reactor
+## :green_book: Reactor
 
 - [Reactive Streams - Publisher, Subscriber, Subscription 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Reactor/Reative_Streams.md)
 
 - [Reactive Streams - publishOn, subscribeOn 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Reactor/publishOn_subscribeOn.md)
 
-## :blue_book: Akka
+## :green_book: Akka
 
 - [아카에 대하여](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter1.md)
 
@@ -256,7 +216,7 @@
 
 - [아카 계층구조](https://github.com/bestdevhyo1225/dev-log/blob/master/Akka/Chapter3.md)
 
-## :blue_book: JavaScript
+## :green_book: JavaScript
 
 - [JavaScript - Iterable / Iterator](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Iterable-Iterator.md)
 
@@ -270,15 +230,55 @@
 
 - [Javascript - Await 및 Promise.all()을 적절하게 사용하여 수행시간을 단축하자](https://github.com/bestdevhyo1225/dev-log/blob/master/JavaScript/Await_Optimization.md)
 
-## :blue_book: TypeScript
+## :green_book: TypeScript
 
 - [TypeScript를 시작하면서 알아둘 것](https://github.com/bestdevhyo1225/dev-log/blob/master/TypeScript/TypeScript-Starter.md)
 
-## :blue_book: React
+## :green_book: React
 
 - [함수형 컴포넌트 - useEffect()로 간단한 Life Cycle 사용하기](https://github.com/bestdevhyo1225/dev-log/blob/master/React/function_component_useEffect.md)
 
-## :closed_book: AWS
+## :orange_book: MySQL
+
+- [MySQL Architecture](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Architecture.md)
+
+- [MySQL - InnoDB 잠금 방식](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-InnoDB-Lock.md)
+
+- [MySQL에서 트랜잭션, 잠금, 트랜잭션의 격리 수준](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Transaction-Lock-IsolationLevel.md)
+
+- [MySQL 실행 계획 - id 컬럼](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-Id.md)
+
+- [MySQL 실행 계획 - select_type 컬럼](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-SelectType.md)
+
+- [MySQL 실행 계획 - JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-Join.md)
+
+- [MySQL 쿼리 최적화 - JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-JOIN.md)
+
+- [MySQL 쿼리 최적화 - WHERE(문자열, 상수 비교)](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-Where.md)
+
+- [MySQL 인덱스를 걸때 고려사항](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Index.md)
+
+- [자주 사용할 것 같은 SQL 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-SQL.md)
+
+## :orange_book: MongoDB
+
+- [Mongoose Schema 사용자 정의 메소드 (statics vs methods)](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Mongoose-statics-methods.md)
+
+## :orange_book: Redis
+
+- [Redis 자료 모음](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Precautions.md)
+
+- [Hashes Zip List](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Hashes_Ziplist.md)
+
+- [Configuration 옵션](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Config_Options.md)
+
+- [Pub/Sub](https://github.com/bestdevhyo1225/dev-log/blob/master/Redis/Pub_Sub.md)
+
+## :orange_book: Kafka
+
+- [카프카 특징](https://github.com/bestdevhyo1225/dev-log/blob/master/Kafka/%EC%B9%B4%ED%94%84%EC%B9%B4_%ED%8A%B9%EC%A7%95.md)
+
+## :orange_book: AWS
 
 - [AWS Lambda](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/Lambda.md)
 
@@ -298,11 +298,11 @@
 
 - [AWS EC2 에서 사용중인 용량이 Full 일때, EBS 용량 늘리기](https://github.com/bestdevhyo1225/dev-log/blob/master/AWS/EC2_EBS_Storage.md)
 
-## :closed_book: Docker
+## :orange_book: Docker
 
 - [자주 사용하는 command 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Docker/Docker-command.md)
 
-## :closed_book: Kubernetes
+## :orange_book: Kubernetes
 
 - [쿠버네티스 실습 환경 구성](https://github.com/bestdevhyo1225/dev-log/blob/master/Kubernetes)
 
@@ -318,27 +318,27 @@
 
 - [Replication Controller, ReplicaSet](https://github.com/bestdevhyo1225/dev-log/tree/master/Kubernetes/controller)
 
-## :closed_book: Serverless
+## :orange_book: Serverless
 
 - [Serverless Framework](https://github.com/bestdevhyo1225/dev-log/blob/master/Serverless/ServerlessFramework.md)
 
-## :orange_book: Domain Driven Design
+## :closed_book: Domain Driven Design
 
 - [도메인, 도메인 모델](https://github.com/bestdevhyo1225/dev-log/blob/master/DomainDrivenDesign/Domain_Model.md)
 
-## :orange_book: 서버 성능
+## :closed_book: 서버 성능
 
 - [서버에 걸리는 부하, 추측하지 말고 계측하자](https://injae-kim.github.io/dev/2020/07/09/how-to-check-single-server-load-average.html)
 
 - [성능 테스트시, 서버 모니터링 방법 정리](https://chigon.tistory.com/19)
 
-## :orange_book: 서버 모니터링
+## :closed_book: 서버 모니터링
 
 - [실무 모니터링 환경 구성 Tip 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Monitoring/%EC%8B%A4%EB%AC%B4_%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81_%ED%99%98%EA%B2%BD_%EA%B5%AC%EC%84%B1.md)
 
 - [Pinpoint 설치 및 실행 가이드 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Monitoring/%ED%95%80%ED%8F%AC%EC%9D%B8%ED%8A%B8_%EC%84%A4%EC%B9%98_%EB%B0%8F_%EC%8B%A4%ED%96%89_%EA%B0%80%EC%9D%B4%EB%93%9C.md)
 
-## :orange_book: ETC
+## :closed_book: ETC
 
 - [Third-Party가 뭐지?](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/Third-Party.md)
 
