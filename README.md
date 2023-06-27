@@ -288,9 +288,11 @@
 
 - [OSIV (Open Session In View)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Open_Session_In_View.md)
 
-- [MultipleBagFetchException 해결 방법](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/MultipleBagFetchException.md)
+- [MultipleBagFetchException 해결 방법 (Fetch Join, default_batch_fetch_size, @BatchSize)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/MultipleBagFetchException.md)
 
-- [JPA Select 쿼리 최적화 방법](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Query_Optimization.md)
+- [JPA Select 쿼리 최적화 방법 (Fetch Join, default_batch_fetch_size, @BatchSize)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Query_Optimization.md)
+
+- [default_batch_fetch_size, @BatchSize, ChunkSize 사용시, MySQL 옵션 확인하기](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Default_Batch_Fetch_Size_Chunk_Size_Check_List.md)
 
 - [트랜잭션을 지원하는 쓰기 지연을 사용할 시, 주의할 점](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Transactional_Write_Behind.md)
 
@@ -302,7 +304,7 @@
 
 - [Kotlin과 JPA를 함께 사용하는 방법 정리 (개발시 참고)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Kotlin.md)
 
-- [@OneToMany에서 자주 사용하는 MappedBy 옵션은 오직 읽기만 가능하다.](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/MappedBy.md)
+- [@OneToMany에서 자주 사용하는 MappedBy 옵션은 오직 읽기만 가능](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/MappedBy.md)
 
 - [영속성 컨텍스트와 JPQL](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/%EC%98%81%EC%86%8D%EC%84%B1_%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8_%EC%99%80_JPQL.md)
 
