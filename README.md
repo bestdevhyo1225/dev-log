@@ -218,9 +218,9 @@
 
 - [OSIV (Open Session In View)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Open_Session_In_View.md)
 
-- [MultipleBagFetchException 해결 방법 (Fetch Join, default_batch_fetch_size, @BatchSize)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/MultipleBagFetchException.md)
+- [Fetch Join, default_batch_fetch_size를 사용하여, MultipleBagFetchException 문제 해결하기](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/MultipleBagFetchException.md)
 
-- [JPA Select 쿼리 최적화 방법 (Fetch Join, default_batch_fetch_size, @BatchSize)](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Query_Optimization.md)
+- [Fetch Join, default_batch_fetch_size를 사용하여, JPA Select 쿼리 최적화하기](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Query_Optimization.md)
 
 - [default_batch_fetch_size, @BatchSize, ChunkSize 사용시, MySQL 옵션 확인하기](https://github.com/bestdevhyo1225/dev-log/blob/master/JPA/Default_Batch_Fetch_Size_Chunk_Size_Check_List.md)
 
