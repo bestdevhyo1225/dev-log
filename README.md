@@ -128,7 +128,7 @@
 
 - [[FastCampus] 고급 Chapter 9 - 스코프 함수](https://github.com/bestdevhyo1225/dev-log/blob/master/Kotlin/FastCampus_Kotlin_09.md)
 
-### :green_book: OOP
+## :green_book: OOP
 
 - [객체 지향 설계 원칙 - OCP, DIP](https://github.com/bestdevhyo1225/dev-log/blob/master/OOP/OCP_DIP.md)
 
