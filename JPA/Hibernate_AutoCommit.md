@@ -35,6 +35,7 @@ set autocommit true; -- 커넥션 풀을 사용하는 경우는 자동 커밋 �
 ```mysql
 set autocommit false; -- 수동 커밋 모드 설정
 insert into member(member_id, money values ('data1', 10000);
+commit;
 set autocommit true; -- 커넥션 풀을 사용하는 경우는 자동 커밋 모드로 다시 변경한다.
 ```
 
