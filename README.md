@@ -328,6 +328,10 @@
 
 - [도메인, 도메인 모델](https://github.com/bestdevhyo1225/dev-log/blob/master/DomainDrivenDesign/Domain_Model.md)
 
+## :closed_book: MSA
+
+- [분산된 서버 환경에서 트랜잭션 처리](https://github.com/bestdevhyo1225/dev-log/blob/master/MSA/MSA-Distributed-Transaction.md)
+
 ## :closed_book: 서버 성능
 
 - [서버에 걸리는 부하, 추측하지 말고 계측하자](https://injae-kim.github.io/dev/2020/07/09/how-to-check-single-server-load-average.html)
