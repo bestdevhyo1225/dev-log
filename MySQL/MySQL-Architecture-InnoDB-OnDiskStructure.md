@@ -37,7 +37,7 @@
 
 ### File-Per-Table Tablespace
 
-- 하나의 `InnoDB Table` 에 대한 `Data` 와 `Index` 를 **`개별 파일`** 로 관리하는 `Tablespace` 를 말한다.
+- 하나의 `InnoDB Table` 에 대한 `Data` 와 `Index` 를 **`하나의 파일(.ibd 파일)`** 로 관리하는 `Tablespace` 를 말한다.
 - 별도의 `Tablespace` 생성 과정이 없으며, `innodb_file_per_table` 값이 `on` 이면, `File-Per-Table Tablespace` 에 `Table` 이 생성된다.
     - `innodb_file_per_table` 의 디폴트 값은 `on` 이다.
     - 즉, `File-Per-Table Tablespace` 에 디폴트로 `Table` 을 생성한다.
