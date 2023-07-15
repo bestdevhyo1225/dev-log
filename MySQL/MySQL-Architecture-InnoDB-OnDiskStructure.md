@@ -85,3 +85,4 @@
 
 - [DB 인사이드 | MySQL Architecture - 7. InnoDB : On-Disk Structure](https://blog.ex-em.com/1699)
 - [데이터베이스 인덱스 (2) - 클러스터형 인덱스와 비클러스터형 인덱스](https://hudi.blog/db-clustered-and-non-clustered-index/)
+- [MySQL Tablespace | System Tablespace | General Tablespace | InnoDB File per Tablespace](http://shrenikp.blogspot.com/2019/10/mysql-tablespace-system-tablespace.html)
