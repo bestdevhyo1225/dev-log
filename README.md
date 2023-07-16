@@ -260,7 +260,9 @@
 
 - [MySQL 인덱스를 걸때 고려사항](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Index.md)
 
-- [자주 사용할 것 같은 SQL 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-SQL.md)
+- [MySQL 자주 사용할 것 같은 SQL 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-SQL.md)
+
+- [MySQL Online DDL Tool 공통점, 차이점](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Online-DDL-Tool.md)
 
 ## :orange_book: MongoDB
 
