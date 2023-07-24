@@ -346,6 +346,8 @@
 
 - [Pinpoint 설치 및 실행 가이드 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/Monitoring/%ED%95%80%ED%8F%AC%EC%9D%B8%ED%8A%B8_%EC%84%A4%EC%B9%98_%EB%B0%8F_%EC%8B%A4%ED%96%89_%EA%B0%80%EC%9D%B4%EB%93%9C.md)
 
+- [리눅스 성능 분석 시작하기 - uptime 명령어](https://github.com/bestdevhyo1225/dev-log/blob/master/Monitoring/%EB%A6%AC%EB%88%85%EC%8A%A4_%EC%84%B1%EB%8A%A5_%EB%B6%84%EC%84%9D_%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0_uptime_%EB%AA%85%EB%A0%B9%EC%96%B4.md)
+
 ## :closed_book: ETC
 
 - [Third-Party가 뭐지?](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/Third-Party.md)
