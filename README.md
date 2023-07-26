@@ -258,7 +258,9 @@
 
 - [MySQL 쿼리 최적화 - WHERE(문자열, 상수 비교)](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-Where.md)
 
-- [MySQL 인덱스를 걸때 고려사항](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Index.md)
+- [MySQL 인덱스 - 비교 조건의 종류와 효율성](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-%EC%9D%B8%EB%8D%B1%EC%8A%A4-%EB%B9%84%EA%B5%90%EC%A1%B0%EA%B1%B4%EC%9D%98-%EC%A2%85%EB%A5%98%EC%99%80_%ED%9A%A8%EC%9C%A8%EC%84%B1.md)
+
+- [MySQL 인덱스 - 고려사항](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Index.md)
 
 - [MySQL 자주 사용할 것 같은 SQL 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-SQL.md)
 
