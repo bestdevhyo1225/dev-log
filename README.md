@@ -352,6 +352,8 @@
 
 - [리눅스 성능 분석 시작하기 - dmesg 명령어](https://github.com/bestdevhyo1225/dev-log/blob/master/Monitoring/%EB%A6%AC%EB%88%85%EC%8A%A4_%EC%84%B1%EB%8A%A5_%EB%B6%84%EC%84%9D_%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0_dmesg_%EB%AA%85%EB%A0%B9%EC%96%B4.md)
 
+- [리눅스 성능 분석 시작하기 - free 명령어](https://github.com/bestdevhyo1225/dev-log/blob/master/Monitoring/%EB%A6%AC%EB%88%85%EC%8A%A4_%EC%84%B1%EB%8A%A5_%EB%B6%84%EC%84%9D_%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0_free_%EB%AA%85%EB%A0%B9%EC%96%B4.md)
+
 ## :closed_book: ETC
 
 - [Third-Party가 뭐지?](https://github.com/bestdevhyo1225/dev-log/blob/master/ETC/Third-Party.md)
