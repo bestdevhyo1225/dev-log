@@ -4,7 +4,7 @@
 
 ### 예시 쿼리
 
-```mysql-sql
+```mysql
 SELECT *
 FROM dept_emp
 WHERE dept_no = 'd002'
@@ -32,7 +32,7 @@ AND emp_no >= 10114;
 
 ### `Not Equal` 로 비교된 경우
 
-```mysql-sql
+```mysql
 WHERE column <> ?
 WHERE column NOT IN (?, ?)
 WHERE column IS NOT NULL
@@ -40,7 +40,7 @@ WHERE column IS NOT NULL
 
 ### `LIKE '%?'` (뒷 부분 일치) 형태로 문자열 패턴이 비교된 경우
 
-```mysql-sql
+```mysql
 WHERE column LIKE '%?'
 WHERE column LIKE '_?'
 WHERE column LIKE '%?%'
@@ -48,25 +48,25 @@ WHERE column LIKE '%?%'
 
 ### 스토어드 함수나 다른 연산자로 인덱스 컬럼이 변형된 경우
 
-```mysql-sql
+```mysql
 WHERE SUBSTRING(column, 1.1) = '?'
 ```
 
 ### NOT-DETERMINISTIC 속성의 스토어드 함수가 비교 조건에 사용된 경우
 
-```mysql-sql
+```mysql
 WHERE column = deterministic_func()
 ```
 
 ### 데이터 타입이 서로 다른 비교 (인덱스 칼럼의 타입을 변환해야 비교가 가능한 경우)
 
-```mysql-sql
+```mysql
 WHERE char_column = 10
 ```
 
 ### 문자열 데이터 타입의 콜레이션이 다른 경우
 
-```mysql-sql
+```mysql
 WHERE utf8_bin_char_column = euckr_bin_char_column
 ```
 
@@ -75,14 +75,14 @@ WHERE utf8_bin_char_column = euckr_bin_char_column
 - 다른 DBMS에서는 NULL 값은 인덱스에 저장되지 않지만, MySQL에서 NULL 값은 인덱스로 관리된다.
 - `WHERE` 절에서 `IS NULL 조건` 은 `작업 범위 결정 조건` 으로 인덱스를 사용한다.
 
-```mysql-sql
+```mysql
 WHERE column IS NULL
 ```
 
 ## 인덱스를 사용하는 경우, 사용하지 못한 경우
 
-```mysql-sql
-INDEX ix_test(column_1, column_2, column_3, column_4, ... , column_n)
+```mysql
+CREATE INDEX idx_test_01 ON test(column_1, column_2, column_3, column_4, column_5, ..., column_n); 
 ```
 
 ### 작업 범위 결정 조건으로 인덱스를 사용하지 않는 경우
@@ -103,19 +103,19 @@ INDEX ix_test(column_1, column_2, column_3, column_4, ... , column_n)
 
 - 아래의 column_1 컬럼은 인덱스를 사용할 수 없다.
 
-```mysql-sql
+```mysql
 WHERE column_1 <> ?
 ```
 
 - 아래의 column_1, column_2 컬럼들은 `작업 범위 결정 조건` 으로 사용된다.
 
-```mysql-sql
+```mysql
 WHERE column_1 = 1 AND column_2 > 10
 ```
 
 - 아래의 column_1, column_2, column_3 컬럼들은 모두 `작업 범위 결정 조건` 으로 사용된다.
 
-```mysql-sql
+```mysql
 WHERE column_1 IN (1, 2)
 AND column_2 = 2
 AND column_3 <= 10
@@ -123,7 +123,7 @@ AND column_3 <= 10
 
 - 아래의 column_1, column_2, column_3 컬럼들은 `작업 범위 결정 조건` 으로 사용되고, column_4 컬럼은 `필터링 조건(체크 조건)` 으로 사용된다.
 
-```mysql-sql
+```mysql
 WHERE column_1 = 1
 AND column_2 = 2
 AND column_3 IN (10, 20, 30)
@@ -132,7 +132,7 @@ AND column_4 <> 100
 
 - 아래의 column_1, column_2, column_3, column_4 컬럼들은 모두 `작업 범위 결정 조건` 으로 사용된다.
 
-```mysql-sql
+```mysql
 WHERE column_1 = 1
 AND column_2 = (2, 4)
 AND column_3 = 30
@@ -141,7 +141,7 @@ AND column_4 LIKE '문자열%'
 
 - 아래의 column_1, column_2, column_3, column_4, column_5 컬럼들은 모두 `작업 범위 결정 조건` 으로 사용된다.
 
-```mysql-sql
+```mysql
 WHERE column_1 = 1
 AND column_2 = (2, 4)
 AND column_3 = 30
@@ -151,7 +151,7 @@ AND column_5 = '서울'
 
 - `between`, `like`, `<`, `>` 연산자를 사용한 컬럼은 `작업 범위 결정 조건` 으로 사용되지만, 그 뒤의 인덱스 컬럼들은 인덱스가 사용되지 않는다.
 
-```mysql-sql
+```mysql
 WHERE column_1 = 1
 AND column_2 = (2, 4)
 AND column_3 BETWEEN 30 AND 50 -- 인덱스 사용됨
@@ -161,7 +161,7 @@ AND column_5 = '서울' -- 인덱스가 사용되지 않음
 
 - `between`, `like`, `<`, `>` 연산자를 사용한 컬럼이 있다면, `GROUP BY` 절도 인덱스를 사용하지 않는다.
 
-```mysql-sql
+```mysql
 WHERE column_1 = 1
 AND column_2 = (2, 4)
 AND column_3 BETWEEN 30 AND 50 -- 인덱스 사용됨
@@ -170,7 +170,7 @@ GROUP BY column_4, column_5 -- 인덱스가 사용되지 않음
 
 - `between` 대신 `in` 절로 풀어낼 수 있다면, 사용하면 된다.
 
-```mysql-sql
+```mysql
 WHERE column_1 = 1
 AND column_2 = (2, 4)
 AND column_3 IN (30, 31, 32, 36, 37, 38, 40, 41, 42, 49)
@@ -181,7 +181,7 @@ AND column_5 = '서울'
 - `between` 을 필수로 사용해야 한다면, 인덱스를 다시 설계하는 방안도 검토해야한다.
 
 ```mysql
-CREATE INDEX idx_table_01 ON table(column_1, column_2, column_4, column_5, column_3); # column_3 컬럼을 마지막에 배치한다.
+CREATE INDEX idx_test_01 ON test(column_1, column_2, column_4, column_5, column_3); # column_3 컬럼을 마지막에 배치한다.
 ```
 
 ## 참고
