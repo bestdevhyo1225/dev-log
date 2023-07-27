@@ -90,14 +90,14 @@ INDEX ix_test(column_1, column_2, column_3, column_4, ... , column_n)
 - column_1 컬럼에 대한 조건이 없는 경우
 - column_1 컬럼의 비교 조건이 위의 `인덱스 사용 불가 조건` 중 하나인 경우
 
-### 작업 범위 결정 조건으로 인덱스를 사용하는 경우 
+### 작업 범위 결정 조건으로 인덱스를 사용하는 경우
 
 - column_1 ~ column_(i-1) 컬럼까지 `Equal(=)` 또는 `IN 절` 로 비교하는 경우
-  - `i-1` 은 2 보다는 크고 n 보다는 작은 임의의 값을 의미
+    - `i-1` 은 2 보다는 크고 n 보다는 작은 임의의 값을 의미
 - column_i 컬럼에 대한 다음 연산자 중 하나로 비교
-  - `Equal(=)` 또는 `IN 절`
-  - `>` 또는 `<`
-  - `LIKE '?%'` (좌측 일치 패턴)
+    - `Equal(=)` 또는 `IN 절`
+    - `>` 또는 `<`
+    - `LIKE '?%'` (좌측 일치 패턴)
 
 ### 위의 ix_test 인덱스를 사용하는 경우들을 확인해보자
 
@@ -147,6 +147,41 @@ AND column_2 = (2, 4)
 AND column_3 = 30
 AND column_4 = '문자열'
 AND column_5 = '서울'
+```
+
+- `between`, `like`, `<`, `>` 연산자를 사용한 컬럼은 `작업 범위 결정 조건` 으로 사용되지만, 그 뒤의 인덱스 컬럼들은 인덱스가 사용되지 않는다.
+
+```mysql-sql
+WHERE column_1 = 1
+AND column_2 = (2, 4)
+AND column_3 BETWEEN 30 AND 50 -- 인덱스 사용됨
+AND column_4 = '문자열' -- 인덱스가 사용되지 않음
+AND column_5 = '서울' -- 인덱스가 사용되지 않음
+```
+
+- `between`, `like`, `<`, `>` 연산자를 사용한 컬럼이 있다면, `GROUP BY` 절도 인덱스를 사용하지 않는다.
+
+```mysql-sql
+WHERE column_1 = 1
+AND column_2 = (2, 4)
+AND column_3 BETWEEN 30 AND 50 -- 인덱스 사용됨
+GROUP BY column_4, column_5 -- 인덱스가 사용되지 않음
+```
+
+- `between` 대신 `in` 절로 풀어낼 수 있다면, 사용하면 된다.
+
+```mysql-sql
+WHERE column_1 = 1
+AND column_2 = (2, 4)
+AND column_3 IN (30, 31, 32, 36, 37, 38, 40, 41, 42, 49)
+AND column_4 = '문자열'
+AND column_5 = '서울'
+```
+
+- `between` 을 필수로 사용해야 한다면, 인덱스를 다시 설계하는 방안도 검토해야한다.
+
+```mysql
+CREATE INDEX idx_table_01 ON table(column_1, column_2, column_4, column_5, column_3); # column_3 컬럼을 마지막에 배치한다.
 ```
 
 ## 참고
