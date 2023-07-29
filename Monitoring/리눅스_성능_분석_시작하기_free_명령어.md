@@ -21,11 +21,11 @@ $ free -m # -m 옵션을 추가하면, MB 단위로 볼 수 있다.
 
 ## 페이지 캐시
 
-<img width="777" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/9470027b-7883-4fd2-8359-75d53fe42f95">
+<img width="1000" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/6c798ee9-5b0f-440c-8875-ef84bd7e190d">
 
 - `open` 시스템 콜을 통해서 블록 디바이스 안에 있는 `test.txt` 파일을 읽는다.
 
-<img width="777" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/bc48ba7a-1d44-4866-836e-52d711cc20c3">
+<img width="1000" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/d3c7c3bf-9d3b-48db-893a-0f80f8ed9b31">
 
 - 실제로 바로 읽는 것은 아니며, `페이지 캐시` 를 통해 읽게된다.
 - 읽기 요청을 하게 되면, 블록 디바이스의 `test.txt` 파일을 `페이지 캐시` 에 저장하고, 애플리케이션은 `페이지 캐시` 에서 `test.txt` 파일을 읽는다.
