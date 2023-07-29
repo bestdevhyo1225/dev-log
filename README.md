@@ -248,6 +248,8 @@
 
 - [MySQL 트랜잭션, 잠금, 트랜잭션 격리 수준](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Transaction-Lock-IsolationLevel.md)
 
+- [MySQL 실행 계획 - ANALYZE 명령](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-Analyze.md)
+
 - [MySQL 실행 계획 - id 컬럼](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-Id.md)
 
 - [MySQL 실행 계획 - select_type 컬럼](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Explain-SelectType.md)
