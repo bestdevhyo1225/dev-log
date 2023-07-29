@@ -63,33 +63,33 @@ $ free -m # -m 옵션을 추가하면, MB 단위로 볼 수 있다.
 
 ## Swap 영역에 할당되는 과정
 
-<img width="777" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/9a781b5c-e88f-445d-865e-67ac3357c90d">
+<img width="1000" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/9a781b5c-e88f-445d-865e-67ac3357c90d">
 
 - 프로세스 B가 커널을 통해 메모리 주소 0번을 요청한다.
 - 메모리 주소 0번의 경우, 이미 프로세스 A의 메모리 주소 0번을 사용하고 있다.
 - 프로세스 A에서 사용중인 메모리 주소 0번을 `Swap Out` 을 통해 `Swap` 영역에 보관한다.
 
-<img width="777" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/66d88a3b-fa0c-4516-8992-00b47fbbc59f">
+<img width="1000" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/66d88a3b-fa0c-4516-8992-00b47fbbc59f">
 
 - 메모리 주소 0번은 비어있는 상태가 된다.
 
-<img width="777" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/f51a879d-5426-4d77-87d0-7d434df8a926">
+<img width="1000" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/f51a879d-5426-4d77-87d0-7d434df8a926">
 
 - 메모리 주소 0번에는 프로세스 B를 할당한다.
 
 ## 프로세스 A가 0번 메모리 영역의 데이터를 원한다면?
 
-<img width="777" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/421a61db-6432-49d2-8ac2-aa3973c53b25">
+<img width="1000" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/421a61db-6432-49d2-8ac2-aa3973c53b25">
 
 - 프로세스 A가 커널을 통해 메모리 주소 0번을 요청한다.
 - 메모리 주소 0번의 경우, 이미 프로세스 B의 메모리 주소 0번을 사용하고 있다.
 - 프로세스 B에서 사용중인 메모리 주소 0번을 `Swap Out` 을 통해 `Swap` 영역에 보관한다.
 
-<img width="777" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/09d560ce-bd6c-4fdf-b1eb-17fd393ee36e">
+<img width="1000" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/09d560ce-bd6c-4fdf-b1eb-17fd393ee36e">
 
 - 메모리 주소 0번은 비어있는 상태가 된다.
 
-<img width="777" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/4175becd-183c-4040-8d45-e9b277951547">
+<img width="1000" alt="image" src="https://github.com/bestdevhyo1225/dev-log/assets/23515771/4175becd-183c-4040-8d45-e9b277951547">
 
 - `Swap In` 을 통해 프로세스 A의 메모리 주소 0번 데이터를 할당한다.
     - `Swap In` 이 되어도 `Swap` 영역에서 프로세스 A의 메모리 주소 0번 데이터는 삭제되지 않는다.
