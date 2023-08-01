@@ -35,7 +35,17 @@ limit 200;
         -> Index range scan on p using PRIMARY over (0 < id)  (cost=3.47 rows=16) (actual time=0.0139..0.0274 rows=16 loops=1)
 ```
 
-- 위의 결과를 토대로 실행 순서를 해석해보면
+- 위의 결과에서 `actual time`, `rows`, `loops` 는 다음과 같이 해석하면 된다.
+    - `actual time`
+        - 레코드를 검색하는데, 걸린 시간(밀리초)을 의미한다.
+        - 첫 번째 숫자 값은 첫 번째 레코드를 가져오는 데 걸린 평균 시간(밀리초)을 의미한다.
+        - 두 번째 숫자 값은 마지막 레코드를 가져오는 데 걸린 평균 시간(밀리초)을 의미한다.
+    - `rows`
+        - 테이블의 평균 레코드 건수를 의미한다.
+    - `loops`
+        - 레코드를 찾는 작업이 반복된 횟수를 의미한다.
+        - 즉, 테이블에서 읽은 개수를 의미한다.
+- 위의 결과를 토대로 실행 순서를 해석해보면, 다음과 같다.
 
 ```markdown
 1. Index range scan on p using PRIMARY
