@@ -66,24 +66,24 @@ WHERE e.first_name = 'Kebin'
 CREATE INDEX idx_test_01 ON test (col_1, col_2, col_3, col_4);
 ```
 
-- 인덱스를 구성하는 컬럼의 순서와 일치하지 않는다.
-
 ```mysql
 GROUP BY col_2, col_1;
 GROUP BY col_1, col_3, col_2;
 ```
 
-- `col_3` 컬럼 앞에 `col_3` 컬럼이 명시되어 있지 않는다.
+- 인덱스를 구성하는 컬럼의 순서와 일치하지 않는다.
 
 ```mysql
 GROUP BY col_1, col_3;
 ```
 
-- `col_5` 컬럼은 인덱스로 구성되어 있지 않아서 인덱스를 사용할 수 없다.
+- `col_3` 컬럼 앞에 `col_3` 컬럼이 명시되어 있지 않는다.
 
 ```mysql
 GROUP BY col_1, col_2, col_3, col_4, col_5;
 ```
+
+- `col_5` 컬럼은 인덱스로 구성되어 있지 않아서 인덱스를 사용할 수 없다.
 
 ### 인덱스를 사용하는 경우
 
@@ -115,44 +115,44 @@ WHERE col_1 = ? AND col_2 = ? AND col_3 = ? GROUP BY col_4;
 CREATE INDEX idx_test_01 ON test (col_1, col_2, col_3, col_4);
 ```
 
+```mysql
+ORDER BY col_2, col_3;
+```
+
 - `col_1` 컬럼이 명시되지 않아서 사용할 수 없다.
 
 ```mysql
-ORDER BY col_2, col_3;
+ORDER BY col_1, col_3, col_2;
 ```
 
 - 인덱스를 구성하는 컬럼의 순서와 일치하지 않는다.
 
 ```mysql
-ORDER BY col_1, col_3, col_2;
+ORDER BY col_1, col_2 desc, col_3;
 ```
 
 - 다른 컬럼은 모두 오름차순인데, `col_2` 컬럼만 내림차순이라 인덱스를 사용할 수 없다.
 - 인덱스를 사용하려면, `(col_1 asc, col_2 desc, col_3 asc, col_4 asc)` 로 정의해야 한다.
 
 ```mysql
-ORDER BY col_1, col_2 desc, col_3;
+ORDER BY col_1, col_3;
 ```
 
 - `col_2` 컬럼이 명시되지 않아서 사용할 수 없다.
 
 ```mysql
-ORDER BY col_1, col_3;
+ORDER BY col_1, col_2, col_3, col_4, col_5;
 ```
 
 - `col_5` 컬럼은 인덱스로 구성되어 있지 않아서 인덱스를 사용할 수 없다.
 
 ```mysql
-ORDER BY col_1, col_2, col_3, col_4, col_5;
+WHERE col_1 > ? ORDER BY col_2, col_3;
 ```
 
 - `col_1` 동등 비교 조건이 아니라 범위 비교 조건으로 검색 되었기 때문에 `ORDER BY` 절은 인덱스를 사용할 수 없다.
     - `WHERE` 절의 `col_1` 은 인덱스를 사용한다.
 - `WHERE`, `ORDER BY` 절을 모두 인덱스로 처리하기에는 불가능하다.
-
-```mysql
-WHERE col_1 > ? ORDER BY col_2, col_3;
-```
 
 - `col_2` 컬럼이 빠졌기 때문에 `ORDER BY` 절은 인덱스를 사용할 수 없다.
     - `WHERE` 절의 `col_1` 은 인덱스를 사용한다.
@@ -162,13 +162,17 @@ WHERE col_1 > ? ORDER BY col_2, col_3;
 WHERE col_1 = ? ORDER BY col_3, col_4;
 ```
 
-- `col_1` 컬럼이 빠졌기 때문에 `ORDER BY` 절은 인덱스를 사용할 수 없다.
+- `col_2` 컬럼이 빠졌기 때문에 `ORDER BY` 절은 인덱스를 사용할 수 없다.
     - `WHERE` 절의 `col_1` 은 인덱스를 사용한다.
 - `WHERE`, `ORDER BY` 절을 모두 인덱스로 처리하기에는 불가능하다.
 
 ```mysql
 WHERE col_1 IN (?, ?, ?, ?, ?) ORDER BY col_2;
 ```
+
+- `col_1` 컬럼이 빠졌기 때문에 `ORDER BY` 절은 인덱스를 사용할 수 없다.
+    - `WHERE` 절의 `col_1` 은 인덱스를 사용한다.
+- `WHERE`, `ORDER BY` 절을 모두 인덱스로 처리하기에는 불가능하다.
 
 ### 인덱스를 사용하는 경우
 
