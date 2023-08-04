@@ -152,6 +152,7 @@ WHERE col_1 > ? ORDER BY col_2, col_3;
 
 - `col_1` 동등 비교 조건이 아니라 범위 비교 조건으로 검색 되었기 때문에 `ORDER BY` 절은 인덱스를 사용할 수 없다.
     - `WHERE` 절의 `col_1` 은 인덱스를 사용한다.
+    - 별도의 정렬 처리 과정(`Using filesort`) 을 거쳐 정렬을 수행한다.
 - `WHERE`, `ORDER BY` 절을 모두 인덱스로 처리하기에는 불가능하다.
 
 ```mysql
@@ -160,6 +161,7 @@ WHERE col_1 = ? ORDER BY col_3, col_4;
 
 - `col_2` 컬럼이 빠졌기 때문에 `ORDER BY` 절은 인덱스를 사용할 수 없다.
     - `WHERE` 절의 `col_1` 은 인덱스를 사용한다.
+    - 별도의 정렬 처리 과정(`Using filesort`) 을 거쳐 정렬을 수행한다.
 - `WHERE`, `ORDER BY` 절을 모두 인덱스로 처리하기에는 불가능하다.
 
 ```mysql
@@ -168,6 +170,7 @@ WHERE col_1 IN (?, ?, ?, ?, ?) ORDER BY col_2;
 
 - `col_1` 컬럼이 빠졌기 때문에 `ORDER BY` 절은 인덱스를 사용할 수 없다.
     - `WHERE` 절의 `col_1` 은 인덱스를 사용한다.
+    - 별도의 정렬 처리 과정(`Using filesort`) 을 거쳐 정렬을 수행한다.
 - `WHERE`, `ORDER BY` 절을 모두 인덱스로 처리하기에는 불가능하다.
 
 ### 인덱스를 사용하는 경우
