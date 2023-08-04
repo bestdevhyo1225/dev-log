@@ -77,7 +77,7 @@ GROUP BY col_1, col_3, col_2;
 GROUP BY col_1, col_3;
 ```
 
-- `col_3` 컬럼 앞에 `col_3` 컬럼이 명시되어 있지 않는다.
+- `col_3` 컬럼 앞에 `col_2` 컬럼이 명시되어 있지 않아서 인덱스를 사용할 수 없다.
 
 ```mysql
 GROUP BY col_1, col_2, col_3, col_4, col_5;
