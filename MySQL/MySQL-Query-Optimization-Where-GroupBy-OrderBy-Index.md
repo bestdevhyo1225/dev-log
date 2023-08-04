@@ -154,10 +154,6 @@ WHERE col_1 > ? ORDER BY col_2, col_3;
     - `WHERE` 절의 `col_1` 은 인덱스를 사용한다.
 - `WHERE`, `ORDER BY` 절을 모두 인덱스로 처리하기에는 불가능하다.
 
-- `col_2` 컬럼이 빠졌기 때문에 `ORDER BY` 절은 인덱스를 사용할 수 없다.
-    - `WHERE` 절의 `col_1` 은 인덱스를 사용한다.
-- `WHERE`, `ORDER BY` 절을 모두 인덱스로 처리하기에는 불가능하다.
-
 ```mysql
 WHERE col_1 = ? ORDER BY col_3, col_4;
 ```
