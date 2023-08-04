@@ -109,19 +109,6 @@ WHERE col_1 = ? AND col_2 = ? AND col_3 = ? GROUP BY col_4;
 
 - `ORDER BY` 절의 컬럼들이 인덱스에 정의된 컬럼의 왼쪽부터 일치해야 하는 것에는 변함이 없다.
 
-```mysql
-ORDER BY col_1;
-ORDER BY col_1, col_2;
-ORDER BY col_1, col_2, col_3;
-ORDER BY col_1, col_2, col_3, col_4;
-```
-
-- `col_1`, `col_2`, `col_3` 순서대로 모두 명시 되었기 때문에 `WHERE`, `ORDER BY` 절 모두 인덱스를 사용한다.
-
-```mysql
-WHERE col_1 > ? ORDER BY col_1, col_2, col_3;
-```
-
 ### 인덱스를 사용하지 못하는 경우
 
 ```mysql
@@ -201,6 +188,8 @@ WHERE col_1 = ? ORDER BY col_2, col_3;
 WHERE col_1 = ? ORDER BY col_1, col_2, col_3;
 WHERE col_1 = ? AND col_2 = ? ORDER BY col_3, col_4;
 WHERE col_1 = ? AND col_2 = ? AND col_3 = ? ORDER BY col_4;
+# col_1, col_2, col_3 순서대로 모두 명시 되었기 때문에 WHERE, ORDER BY 절 모두 인덱스를 사용한다.
+WHERE col_1 > ? ORDER BY col_1, col_2, col_3;
 ```
 
 ## WHERE 조건과 ORDER BY 또는 GROUP BY 절의 인덱스 사용
