@@ -163,6 +163,119 @@ FROM performance_schema.events_stages_current;
 
 - [devlog - MySQL Online DDL Tool 공통점, 차이점](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Online-DDL-Tool.md)
 
+## 컬럼 변경
+
+### 컬럼 추가
+
+- `MySQL 8.0` 에서 테이블 컬럼 추가는 대부분 `INPLACE` 알고리즘을 사용하는 `Online DDL` 로 처리가 가능하다.
+    - `MySQL. 5.7` 에서도 `INPLACE` 로 `Online DDL` 이 가능하다. (정확히는 `마이너 버전` 까지 확인해서 처리 가능 여부를 확인해야한다.)
+- `MySQL 8.0` 에서는 테이블의 제일 `마지막` 에 컬럼을 추가할 경우에는 `INSTANT` 알고리즘으로 즉시 추가된다.
+- 테이블에서 기존 컬럼들 `중간` 에 컬럼을 추가할 경우에는 `테이블 리빌드` 가 필요하기 때문에 `INPLACE` 알고리즘을 사용해야 한다.
+- 그래서 `MySQL 8.0` 을 사용하면서 테이블이 큰 경우라면, 마지막 컬럼에 새로운 컬럼을 추가하는 것을 권장한다.
+
+### 컬럼 삭제
+
+- 항상 `테이블의 리빌드` 를 필요로 하기 때문에 `INSTANT` 알고리즘을 사용할 수 없다.
+- 항상 `INPLACE` 알고리즘으로만 컬럼 삭제가 가능하다.
+
+### 컬럼 이름 및 타입 변경
+
+```mysql
+ALTER TABLE salaries CHANGE to_date end_date DATE NOT NULL, ALGORITHM=INPLACE, LOCK=NONE;
+```
+
+- 이름만 변경하기 때문에 `테이블 리빌드` 가 필요하지 않으며, `INSTANT` 알고리즘과 같이 빠르게 작업이 완료된다.
+
+```mysql
+ALTER TABLE salaries MODIFY salary VARCHAR(20), ALGORITHM=COPY, LOCK=SHARED;
+```
+
+- 컬럼의 데이터 타입을 변경하는 경우에는 `COPY` 알고리즘을 사용해야 한다.
+- 스키마 변경 도중에는 테이블의 쓰기 작업은 불가하다.
+
+```mysql
+ALTER TABLE employees MODIFY last_name VARCHAR(30) NOT NULL, ALGORITHM=INPLACE, LOCK=NONE;
+```
+
+- `VARCHAR` 타입의 길이를 확장하는 경우는 현재 길이와 확장하는 길이 관계에 따라 `테이블 리빌드가 필요할 수도 있고, 아닐 수도 있다.`
+    - `INPLACE` 알고리즘으로 `VARCAHR(10)` 에서 `VARCAHR(20)` 으로 변경하는 경우라면, 둘 다 `255Byte` 이하이므로 `테이블 리빌드가 필요없다.`
+    - `UTF8MB4` 문자 셋은 한 글자가 최대 `4Byte` 를 사용할 수 있기 때문에 `VARCHAR(64)` 는 최대 `256Byte` 를 사용한다. 그래서 이 경우에는 컬럼 값의 길이를 `1Byte`
+      에서 `2Byte` 로 변경해야 하므로 `테이블의 레코드 전체를 다시 리빌드 해야한다.`
+
+```mysql
+ALTER TABLE employees MODIFY last_name VARCHAR(10) NOT NULL, ALGORITHM=COPY, LOCK=SHARED;
+```
+
+- `VARCHAR` 타입의 길이를 축소하는 경우는 완전히 다른 타입으로 변경되는 경우와 같이 `COPY` 알고리즘을 사용해야 한다.
+- 스키마를 변경하는 도중 해당 테이블의 데이터 변경은 허용되지 않으므로 `LOCK` 은 `SHARED` 로 사용돼야 한다.
+
+## 인덱스 변경
+
+- `MySQL 8.0` 버전에서는 대부분의 인덱스 변경 작업이 `Online DDL` 로 처리 가능하도록 개선했다.
+
+### 인덱스 추가
+
+```mysql
+ALTER TABLE employees ADD PRIMARY KEY (emp_no), ALGORITHM=INPLACE, LOCK=NONE;
+ALTER TABLE employees ADD UNIQUE INDEX ux_empno (emp_no), ALGORITHM=INPLACE, LOCK=NONE;
+ALTER TABLE employees ADD INDEX idx_lastname (last_name), ALGORITHM=INPLACE, LOCK=NONE;
+ALTER TABLE employees ADD FULLTEXT INDEX fx_firstname_lastname (first_name, last_name), ALGORITHM=INPLACE, LOCK=SHARED;
+ALTER TABLE employees ADD SPATIAL INDEX fx_loc (last_location), ALGORITHM=INPLACE, LOCK=SHARED;
+```
+
+- `전문 검색을 위한 인덱스(FULLTEXT INDEX)`, `공간 검색을 위한 인덱스(SPATIAL INDEX)` 는 `INPLACE` 알고리즘으로 인덱스 생성이 가능하지만, `SHARED` 잠금이 필요하다.
+- 프라이머리 키라고 하더라도 `INPLACE` 알고리즘에 `잠금 없이` 온라인으로 인덱스 생성이 가능하다.
+
+### 인덱스 이름 변경
+
+- `INPLACE` 알고리즘을 사용하더라도 `테이블 리빌드가 필요하지 않기 때문에` 빠른 시간내로 인덱스를 교체할 수 있다.
+
+### 인덱스 가시성 변경 (MySQL 8.0 이후)
+
+```mysql
+ALTER TABLE employees ALTER INDEX ix_firstname INVISIBLE;
+```
+
+- `MySQL 8.0` 버전부터는 인덱스의 가시성을 제어할 수 있는 기능이 도입됐다.
+- 인덱스의 가시성이란, MySQL 서버가 쿼리를 실행할 때 해당 인덱스를 사용할 수 있게 할지 말지를 결정하는 것이다.
+- 특정 인덱스가 사용되지 못하게 하는 `DDL` 문장이다.
+- MySQL 옵티마이저는 `INVISIBLE` 상태의 인덱스는 없는 것으로 간주하고, 실행 계획을 수립한다.
+
+```mysql
+ALTER TABLE employees ALTER INDEX ix_firstname VISIBLE;
+```
+
+- `INVISIBLE` 상태의 인덱스를 다시 사용할 수 있게 하려면, `VISIBLE` 옵션을 명시하면 된다.
+- 최초 인덱스를 생성할 때도 가시성을 설정할 수 있다.
+
+### 인덱스 삭제
+
+```mysql
+ALTER TABLE employees DROP PRIMARY KEY, ALGORITHM=COPY, LOCK=SHARED;
+ALTER TABLE employees DROP INDEX ux_empno, ALGORITHM=INPLACE, LOCK=NONE;
+ALTER TABLE employees DROP INDEX fx_loc, ALGORITHM=INPLACE, LOCK=NONE;
+```
+
+- 세컨더리 인덱스 삭제 작업은 `INPLACE` 알고리즘을 사용하지만, 실제 `테이블 리빌드를 필요로 하지 않는다.`
+- 프라이머리 키의 삭제 작업은 세컨더리 인덱스의 리프 노드에 저장된 프라이머리 키 값을 삭제해야 하기 때문에 임시 테이블로 레코드를 복사해서 테이블을 재구축해야한다.
+- 프라이머리 키 삭제 도중 레코드 쓰기는 불가능한 `SHARED` 모드의 잠금이 필요하다.
+
+## 테이블 변경 묶음 실행
+
+- `Online DDL` 로 빠르게 스키마 변경을 처리할 수 있다면, 개별로 실행하는 것이 좋지만 그렇지 않다면 모아서 실행하는 것이 효율적이다.
+
+```mysql
+ALTER TABLE employees
+ADD INDEX idx_lastname (last_name, first_name),
+ADD INDEX idx_birthdate (birth_date),
+ALGORITHM=INPLACE, LOCK=NONE;
+```
+
+- 2개의 인덱스를 각각 `ALTER TABLE` 명령으로 생성하는 데, 걸리는 시간보다는 훨씬 시간을 단축할 수 있다.
+- 2개의 스키마 변경 작업이 하나는 `INSTANT`, 다른 하나는 `INPLACE` 를 사용한다면, 모아서 실행할 필요는 없다.
+- 가능하면 같은 알고리즘을 사용하는 스키마 변경 작업이라면, 모아서 실행하는 것이 효율적이다.
+- 같은 `INPLACE` 알고리즘을 사용한다고 하더라도 `테이블 리빌드` 가 필요한 작업과 그렇지 않은 작업끼리도 구분하고 모아서 실행할 수 있다면, 더 효율적으로 스키마 관리를 할 수 있다.
+
 ## 참고
 
 - Real MySQL 8.0 - 개발자와 DBA를 위한 MySQL 실전 가이드
