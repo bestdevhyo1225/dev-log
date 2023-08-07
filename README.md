@@ -266,6 +266,8 @@
 
 - [MySQL 쿼리 최적화 - JOIN](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-JOIN.md)
 
+- [MySQL 쿼리 최적화 - DDL (스키마 조작)](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-DDL.md)
+
 - [MySQL 자주 사용할 것 같은 SQL 정리](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-SQL.md)
 
 - [MySQL Online DDL Tool 공통점, 차이점](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Online-DDL-Tool.md)

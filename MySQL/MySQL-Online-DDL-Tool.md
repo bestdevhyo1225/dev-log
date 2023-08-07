@@ -37,3 +37,4 @@
 - [[Tech] 플랫폼 서버 엔지니어의 pt-osc 도입기](https://www.rapportlabs.kr/product_2023_ptosc)
 - [소소한 데이터 이야기 – pt-online-schema-change 편](https://gywn.net/2017/08/small-talk-pt-osc/)
 - [github/gh-ost](https://github.com/github/gh-ost)
+- [MySQL 쿼리 최적화 - DDL (스키마 조작)](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-DDL.md)
