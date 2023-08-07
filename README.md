@@ -268,8 +268,6 @@
 
 - [MySQL 쿼리 최적화 - DDL (스키마 조작)](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-DDL.md)
 
-- [MySQL Online DDL Tool 공통점, 차이점](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Online-DDL-Tool.md)
-
 ## :orange_book: MongoDB
 
 - [Mongoose Schema 사용자 정의 메소드 (statics vs methods)](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Mongoose-statics-methods.md)

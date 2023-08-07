@@ -16,7 +16,6 @@
 - 스키마 변경 알고리즘의 우선순위가 낮을수록 MySQL 서버는 스키마 변경을 위해서 `더 큰 잠금` 과 `많은 작업` 을 필요로 하고, `서버의 부하도 많이 발생시킨다.`
     - `MySQL 8.0.12 버전` 기준, `INSTANT`, `INPLACE`, `COPY` 순으로 우선순위를 따른다.
 - `ALGORITHM` 과 `LOCK` 옵션이 명시되지 않으면, MySQL 서버가 적절한 수준의 알고리즘과 잠금 수준을 선택하게 된다.
-- `INSTANT` 알고리즘 테이블
 
 #### INSTANT
 
@@ -55,7 +54,7 @@
 - 실제 변경 작업이 실행되면서, 많은 시간이 필요한 `3번` 단계는 다른 커넥션의 `DML` 작업이 `대기 없이 즉시 처리된다.`
     - 작업이 진행되는 동안 새로 유입된 `DML` 쿼리들에 의해 변경되는 데이터를 `온라인 변경 로그(Online alter log)` 라는 `메모리` 공간에 쌓아 두었다가 온라인 스키마 변경이
       완료되면, `로그의 내용을 실제 테이블로 일괄 적용하게 된다.`
-    - `온라인 변경 로그(Online alter log)` 는 디스크가 아닌 `메모리` 에만 생성되며, 크기는 `innodb_online_alter_log_max_size` 시스템 설정 변수에 의해 결정된다.ㅣ
+    - `온라인 변경 로그(Online alter log)` 는 디스크가 아닌 `메모리` 에만 생성되며, 크기는 `innodb_online_alter_log_max_size` 시스템 설정 변수에 의해 결정된다.
     - `온라인 변경 로그(Online alter log)` 의 기본 크기는 `128MB` 이다.
 
 #### COPY
@@ -162,7 +161,7 @@ FROM performance_schema.events_stages_current;
 
 ### Online DDL Tool 비교
 
-- [devlog - MySQL Online DDL Tool](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Online-DDL-Tool.md)
+- [devlog - MySQL Online DDL Tool 공통점, 차이점](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Online-DDL-Tool.md)
 
 ## 참고
 
