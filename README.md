@@ -334,6 +334,10 @@
 
 - [도메인, 도메인 모델](https://github.com/bestdevhyo1225/dev-log/blob/master/DomainDrivenDesign/Domain_Model.md)
 
+## :closed_book: 데이터 중심 애플리케이션 설계
+
+- [5장 - 복제](https://github.com/bestdevhyo1225/dev-log/blob/master/DesigningDataIntensiveApplications/Chapter5_%EB%B3%B5%EC%A0%9C.md)
+
 ## :closed_book: MSA
 
 - [분산된 서버 환경에서 트랜잭션 처리](https://github.com/bestdevhyo1225/dev-log/blob/master/MSA/MSA-Distributed-Transaction.md)
