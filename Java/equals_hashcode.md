@@ -48,3 +48,23 @@
 - `hashCode` 를 잘못 오버라이딩하면 `HashMap` 등 hash 콜렉션의 성능이 떨어질 수가 있습니다. 어떤 케이스일 때 그럴 수 있을까요?
     - 답변) 해시 충돌에 의해서 하나의 `Bucket` 에 객체들이 `LinkedList` 로 추가 되면, 객체를 추가 및 조회하는데 있어서 성능이 느리다. 최악으로는 하나의 `Bucket` 에서 끝까지
       탐색한 후, 객체를 추가하거나 조회하는 케이스가 발생할 수 있다.
+
+## JPA Buddy (참고)
+
+```java
+@Override
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o))
+        return false;
+    Item item = (Item) o;
+    return Objects.equals(id, item.id);
+}
+
+@Override
+public int hashCode() {
+    return id.intValue();
+}
+```
+
+- Java 코드에서 JPA Entity 클래스의 equals, hashcode 재정의시, 위의 형식대로 진행하면 될 듯
