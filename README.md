@@ -268,6 +268,8 @@
 
 - [MySQL 쿼리 최적화 - DDL (스키마 조작)](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Query-Optimization-DDL.md)
 
+- [MySQL 파티션 - Range, List, Hash, Key](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Partition.md)
+
 ## :orange_book: MongoDB
 
 - [Mongoose Schema 사용자 정의 메소드 (statics vs methods)](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Mongoose-statics-methods.md)
