@@ -131,6 +131,7 @@
 ## :green_book: OOP
 
 - [객체 지향 설계 원칙 - OCP, DIP](https://github.com/bestdevhyo1225/dev-log/blob/master/OOP/OCP_DIP.md)
+- [오브젝트(코드로 이해하는 객체지향 설계) - 4장](https://github.com/bestdevhyo1225/dev-log/blob/master/OOP/Object_Chapter4.md)
 
 ## :green_book: Tomcat
 
