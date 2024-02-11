@@ -1,4 +1,4 @@
-# Aggreate
+# Aggreation Stages
 
 ## 예제
 
