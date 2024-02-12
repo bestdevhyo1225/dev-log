@@ -275,6 +275,8 @@
 
 - [Aggregation Stages](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Aggregation-Stages.md)
 
+- [Compound Index, E-S-R Rule](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Compound_Index_ESR_Rule.md)
+
 - [Mongoose Schema 사용자 정의 메소드 (statics vs methods)](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Mongoose-statics-methods.md)
 
 ## :orange_book: Redis
