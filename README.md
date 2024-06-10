@@ -271,6 +271,8 @@
 
 - [MySQL 파티션 - Range, List, Hash, Key](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Partition.md)
 
+- [MySQL CHAR vs VARCHAR vs TEXT](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-CHAR-VARCHAR-TEXT.md)
+
 ## :orange_book: MongoDB
 
 - [Aggregation Stages](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Aggregation-Stages.md)
