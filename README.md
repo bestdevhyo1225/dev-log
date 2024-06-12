@@ -273,6 +273,8 @@
 
 - [MySQL CHAR vs VARCHAR vs TEXT](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-CHAR-VARCHAR-TEXT.md)
 
+- [MySQL 페이지네이션 쿼리](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Pagination-Query.md)
+
 ## :orange_book: MongoDB
 
 - [Aggregation Stages](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Aggregation-Stages.md)
