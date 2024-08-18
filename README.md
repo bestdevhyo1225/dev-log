@@ -275,6 +275,8 @@
 
 - [MySQL 페이지네이션 쿼리](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Pagination-Query.md)
 
+- [MySQL 에러 핸들링](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Error-Handling.md)
+
 ## :orange_book: MongoDB
 
 - [Aggregation Stages](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Aggregation-Stages.md)
