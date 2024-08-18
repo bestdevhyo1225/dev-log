@@ -277,6 +277,8 @@
 
 - [MySQL 에러 핸들링](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Error-Handling.md)
 
+- [MySQL Left Join 주의사항](https://github.com/bestdevhyo1225/dev-log/blob/master/MySQL/MySQL-Left-Join-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD.md)
+
 ## :orange_book: MongoDB
 
 - [Aggregation Stages](https://github.com/bestdevhyo1225/dev-log/blob/master/MongoDB/Aggregation-Stages.md)
